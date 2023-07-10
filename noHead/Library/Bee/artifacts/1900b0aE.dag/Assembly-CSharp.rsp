@@ -388,6 +388,8 @@
 "Assets/Scripts/Managers/InputManager.cs"
 "Assets/Scripts/Managers/Managers.cs"
 "Assets/Scripts/Managers/NetworkManager.cs"
+"Assets/Scripts/Pick&Drop/Item.cs"
+"Assets/Scripts/Pick&Drop/Pick.cs"
 -langversion:9.0
 
 /deterministic
