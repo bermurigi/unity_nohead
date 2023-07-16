@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
+using System.Linq.Expressions;
 
 public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable //기존스크립트에서 건드린부분 MonoBehaviourPunCallbacks, IPunObservable
 {
@@ -11,6 +12,9 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     float _speed = 10.0f;
     [SerializeField]
     float _turnSpeed = 4.0f;
+
+    [SerializeField]
+    GameObject MLight;
 
     [SerializeField]
     Animator GAnimator;
@@ -52,6 +56,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         {
             GAnimator.SetBool("Fly", false);
             MouseRotation();
+            MLight.SetActive(false);
         }
 
     }
@@ -62,9 +67,10 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         // ���� y�� ȸ������ ���� ���ο� ȸ������ ���
         float yRotate = transform.eulerAngles.y + yRotateSize;
 
-
         // ī�޶� ȸ������ ī�޶� �ݿ�(X, Y�ุ ȸ��)
         transform.eulerAngles = new Vector3(0, yRotate, 0);
+
+
     }
 
     void Onkeyboard()
@@ -100,6 +106,12 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
                 GAnimator.SetBool("Fly", true);
                 //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.right), 0.2f);
                 transform.position += transform.TransformDirection(Vector3.right * Time.deltaTime * _speed);
+            }
+
+            //light On/Off
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                MLight.SetActive(true);
             }
         }
     }
