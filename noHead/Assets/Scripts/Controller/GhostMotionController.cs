@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
+using System.Linq.Expressions;
 
 public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable //기존스크립트에서 건드린부분 MonoBehaviourPunCallbacks, IPunObservable
 {
@@ -11,6 +12,10 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     float _speed = 10.0f;
     [SerializeField]
     float _turnSpeed = 4.0f;
+
+    [SerializeField]
+    GameObject MLight;
+    private bool isOn = false;
 
     [SerializeField]
     Animator GAnimator;
@@ -26,6 +31,8 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         NickNameText.text = PV.IsMine ? PhotonNetwork.NickName : PV.Owner.NickName;
         NickNameText.color = PV.IsMine ? Color.green : Color.red;
         camera.enabled = false;
+        MLight.SetActive(false);
+       
         if (PV.IsMine)
         {
             camera.enabled = true;
@@ -52,6 +59,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         {
             GAnimator.SetBool("Fly", false);
             MouseRotation();
+            
         }
 
     }
@@ -62,9 +70,10 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         // ���� y�� ȸ������ ���� ���ο� ȸ������ ���
         float yRotate = transform.eulerAngles.y + yRotateSize;
 
-
         // ī�޶� ȸ������ ī�޶� �ݿ�(X, Y�ุ ȸ��)
         transform.eulerAngles = new Vector3(0, yRotate, 0);
+
+
     }
 
     void Onkeyboard()
@@ -101,6 +110,15 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
                 //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.right), 0.2f);
                 transform.position += transform.TransformDirection(Vector3.right * Time.deltaTime * _speed);
             }
+
+            //light On/Off
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                
+                isOn = !isOn; // 손전등의 상태를 변경합니다.
+                photonView.RPC("ToggleFlashlight", RpcTarget.All, isOn);
+                
+            }
         }
     }
     //기존스크립트에서 추가된 내용 ↓(윤기)
@@ -117,6 +135,19 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
             {
                 ChangeLayer(child);
             }
+        }
+    }
+    [PunRPC]
+    private void ToggleFlashlight(bool state)
+    {
+        // 손전등의 상태에 따라 효과를 적용하거나 끄는 등의 동작을 수행합니다.
+        if (state)
+        {
+            MLight.SetActive(true);
+        }
+        else
+        {
+            MLight.SetActive(false);
         }
     }
 
