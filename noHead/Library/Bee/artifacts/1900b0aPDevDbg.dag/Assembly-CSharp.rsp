@@ -339,10 +339,15 @@
 "Assets/Photon/PhotonRealtime/Demos/DemoLoadBalancing/ConnectAndJoinRandomLb.cs"
 "Assets/Scripts/Controller/CameraController.cs"
 "Assets/Scripts/Controller/GhostMotionController.cs"
+"Assets/Scripts/DropdownController.cs"
+"Assets/Scripts/Enemy/EmemyMovement.cs"
+"Assets/Scripts/Enemy/FallingMangement.cs"
 "Assets/Scripts/Managers/CameraManager.cs"
 "Assets/Scripts/Managers/InputManager.cs"
 "Assets/Scripts/Managers/Managers.cs"
 "Assets/Scripts/Managers/NetworkManager.cs"
+"Assets/Scripts/Pick&Drop/Item.cs"
+"Assets/Scripts/Pick&Drop/Pick.cs"
 -langversion:9.0
 
 /deterministic

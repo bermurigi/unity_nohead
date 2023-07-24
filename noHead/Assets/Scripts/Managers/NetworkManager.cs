@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using TMPro;
 using UnityEngine.UI;   
 //윤기 작업
 public class NetworkManager : MonoBehaviourPunCallbacks
@@ -11,11 +12,21 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public InputField NickNameInput;
     public GameObject DisconnectPanel;
 
+    [SerializeField]
+    private int colorIndex;
+
+    [SerializeField] 
+    private TMP_Dropdown dropdown;
+    
+    
+
     private void Awake()
     {
         Screen.SetResolution(960,540,false);
         PhotonNetwork.SendRate = 60;
         PhotonNetwork.SerializationRate = 30;
+        dropdown.onValueChanged.AddListener(OnDropdownEvent);
+        
         
     }
 
@@ -45,10 +56,20 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         
     }
 
+   
     public void spawn()
     {
-        PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity);
+        GameObject playerObj = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity);
+        GhostMotionController playerScript = playerObj.GetComponent<GhostMotionController>();
+        playerScript.i=colorIndex; //플레이어스크립트 색정하기
         
+    }
+
+    
+
+    public void OnDropdownEvent(int index)
+    {
+        colorIndex = index;
     }
     
 }

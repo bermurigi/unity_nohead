@@ -24,6 +24,18 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     public Text NickNameText; 
     public PhotonView PV;
     public Camera camera;
+    //캐릭터 색 설정
+    public Material[] mat = new Material[3];
+    public SkinnedMeshRenderer playerRenderer;
+    
+   
+
+    public int i = 0;
+    //0=노랑
+    //1=검정
+    //2=빨강
+    //캐릭터 우산설정도만들어야함
+        
 
     void Awake() 
     {
@@ -32,6 +44,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         NickNameText.color = PV.IsMine ? Color.green : Color.red;
         camera.enabled = false;
         MLight.SetActive(false);
+        
        
         if (PV.IsMine)
         {
@@ -48,12 +61,29 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     {
         Managers.Input.KeyAction -= Onkeyboard; 
         Managers.Input.KeyAction += Onkeyboard;
+
+
+      
         
         
     }
+    
+    [PunRPC]
+    private void RPC_ChangeMaterial(int materialIndex)
+    {
+        i = materialIndex;   //재지정
+        // RPC를 수신한 모든 클라이언트의 플레이어 메테리얼을 변경
+        if (materialIndex >= 0 && materialIndex < mat.Length)
+        {
+            playerRenderer.material = mat[materialIndex];
+            
+        }
+    }
+    
 
     void Update()
     {
+        photonView.RPC("RPC_ChangeMaterial", RpcTarget.AllBuffered, i);
         
         if (PV.IsMine) //본인 캐릭터만 조종할 수 있게해줌 (바라보는방향)
         {
@@ -61,6 +91,8 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
             MouseRotation();
             
         }
+
+        
 
     }
     void MouseRotation()
@@ -150,6 +182,9 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
             MLight.SetActive(false);
         }
     }
+
+    
+    
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)  
     {

@@ -232,8 +232,7 @@
         224,
         225,
         226,
-        227,
-        228
+        227
       ],
       "OverwriteOutputs": false,
       "DebugActionIndex": 0
@@ -2790,18 +2789,6 @@
       "DebugActionIndex": 199
     },
     {
-      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Photon3Unity3D.pdb",
-      "DisplayName": "Copying Photon3Unity3D.pdb",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "C:/GitHub/unity_nohead_t/noHead/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.pdb"
-      ],
-      "Outputs": [
-        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Photon3Unity3D.pdb"
-      ],
-      "DebugActionIndex": 200
-    },
-    {
       "Annotation": "WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info",
       "DisplayName": "Writing app.info",
       "ActionType": "WriteFile",
@@ -2812,7 +2799,7 @@
       "Outputs": [
         "Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info"
       ],
-      "DebugActionIndex": 201
+      "DebugActionIndex": 200
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/app.info",
@@ -2825,9 +2812,9 @@
         "C:/Users/이윤기/Desktop/Build/noHead_Data/app.info"
       ],
       "ToBuildDependencies": [
-        201
+        200
       ],
-      "DebugActionIndex": 202
+      "DebugActionIndex": 201
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Resources/unity default resources",
@@ -2839,7 +2826,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Resources/unity default resources"
       ],
-      "DebugActionIndex": 203
+      "DebugActionIndex": 202
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead.exe",
@@ -2851,7 +2838,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead.exe"
       ],
-      "DebugActionIndex": 204
+      "DebugActionIndex": 203
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll",
@@ -2863,7 +2850,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll"
       ],
-      "DebugActionIndex": 205
+      "DebugActionIndex": 204
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll",
@@ -2875,7 +2862,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll"
       ],
-      "DebugActionIndex": 206
+      "DebugActionIndex": 205
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser",
@@ -2887,7 +2874,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 207
+      "DebugActionIndex": 206
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx",
@@ -2899,7 +2886,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 208
+      "DebugActionIndex": 207
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/machine.config",
@@ -2911,7 +2898,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/machine.config"
       ],
-      "DebugActionIndex": 209
+      "DebugActionIndex": 208
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/settings.map",
@@ -2923,7 +2910,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/settings.map"
       ],
-      "DebugActionIndex": 210
+      "DebugActionIndex": 209
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/web.config",
@@ -2935,7 +2922,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/web.config"
       ],
-      "DebugActionIndex": 211
+      "DebugActionIndex": 210
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser",
@@ -2947,7 +2934,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 212
+      "DebugActionIndex": 211
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx",
@@ -2959,7 +2946,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 213
+      "DebugActionIndex": 212
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/machine.config",
@@ -2971,7 +2958,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/machine.config"
       ],
-      "DebugActionIndex": 214
+      "DebugActionIndex": 213
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/settings.map",
@@ -2983,7 +2970,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/settings.map"
       ],
-      "DebugActionIndex": 215
+      "DebugActionIndex": 214
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/web.config",
@@ -2995,7 +2982,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/web.config"
       ],
-      "DebugActionIndex": 216
+      "DebugActionIndex": 215
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser",
@@ -3007,7 +2994,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 217
+      "DebugActionIndex": 216
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx",
@@ -3019,7 +3006,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 218
+      "DebugActionIndex": 217
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/machine.config",
@@ -3031,7 +3018,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/machine.config"
       ],
-      "DebugActionIndex": 219
+      "DebugActionIndex": 218
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/settings.map",
@@ -3043,7 +3030,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/settings.map"
       ],
-      "DebugActionIndex": 220
+      "DebugActionIndex": 219
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/web.config",
@@ -3055,7 +3042,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/web.config"
       ],
-      "DebugActionIndex": 221
+      "DebugActionIndex": 220
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/browscap.ini",
@@ -3067,7 +3054,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/browscap.ini"
       ],
-      "DebugActionIndex": 222
+      "DebugActionIndex": 221
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/config",
@@ -3079,7 +3066,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/config"
       ],
-      "DebugActionIndex": 223
+      "DebugActionIndex": 222
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/mconfig/config.xml",
@@ -3091,7 +3078,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/mconfig/config.xml"
       ],
-      "DebugActionIndex": 224
+      "DebugActionIndex": 223
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/UnityCrashHandler64.exe",
@@ -3103,7 +3090,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/UnityCrashHandler64.exe"
       ],
-      "DebugActionIndex": 225
+      "DebugActionIndex": 224
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/UnityPlayer.dll",
@@ -3115,7 +3102,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/UnityPlayer.dll"
       ],
-      "DebugActionIndex": 226
+      "DebugActionIndex": 225
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/WinPixEventRuntime.dll",
@@ -3127,7 +3114,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/WinPixEventRuntime.dll"
       ],
-      "DebugActionIndex": 227
+      "DebugActionIndex": 226
     },
     {
       "Annotation": "Player",
@@ -3332,7 +3319,7 @@
         197,
         198,
         199,
-        200,
+        201,
         202,
         203,
         204,
@@ -3357,11 +3344,10 @@
         223,
         224,
         225,
-        226,
-        227
+        226
       ],
       "OverwriteOutputs": false,
-      "DebugActionIndex": 228
+      "DebugActionIndex": 227
     }
   ],
   "FileSignatures": [
@@ -3874,7 +3860,7 @@
   "EmitDataForBeeWhy": 0,
         "NamedNodes": {
           "all_tundra_nodes": 0,
-          "Player": 228
+          "Player": 227
         }
 ,  "DefaultNodes": [
     0
