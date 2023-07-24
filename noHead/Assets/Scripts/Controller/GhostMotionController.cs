@@ -17,6 +17,10 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     GameObject MLight;
     private bool isOn = false;
 
+    //사운드
+    AudioSource audioSource;
+    public bool SoundOnOff = false;
+
     [SerializeField]
     Animator GAnimator;
     
@@ -32,7 +36,8 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         NickNameText.color = PV.IsMine ? Color.green : Color.red;
         camera.enabled = false;
         MLight.SetActive(false);
-       
+        audioSource = GetComponent<AudioSource>();
+
         if (PV.IsMine)
         {
             camera.enabled = true;
@@ -59,7 +64,10 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         {
             GAnimator.SetBool("Fly", false);
             MouseRotation();
-            
+            //사운드
+            audioSource.mute = true;
+            SoundOnOff = false;
+
         }
 
     }
@@ -118,6 +126,11 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
                 isOn = !isOn; // 손전등의 상태를 변경합니다.
                 photonView.RPC("ToggleFlashlight", RpcTarget.All, isOn);
                 
+            }
+            if (Input.GetKey(KeyCode.Space))
+            {
+                audioSource.mute = false;
+                SoundOnOff = true;
             }
         }
     }
