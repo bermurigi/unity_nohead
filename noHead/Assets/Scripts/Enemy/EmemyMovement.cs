@@ -29,7 +29,10 @@ public class Priest_movement : MonoBehaviour
 
     private void Start()
     {
+       agent.updateRotation = false;
         StartCoroutine(FollowTarget());
+       //  LookAt lookAt = GetComponent<LookAt> ();
+                
     }
      private void HandleLinkStart()
      {
@@ -43,6 +46,10 @@ public class Priest_movement : MonoBehaviour
      }
      private void Update(){
           Animator.SetBool("IsWalking",agent.velocity.magnitude > 0.01f);
+         if(agent.desiredVelocity.sqrMagnitude >= 0.1f *0.1f){
+          Vector3 direction = agent.desiredVelocity;
+          Quaternion targetAngle = Quaternion.LookRotation(direction);
+          transform.rotation = Quaternion.Slerp(transform.rotation,targetAngle,Time.deltaTime*8.0f);}
      }
 
     private IEnumerator FollowTarget()//0.1f의 시간 차이를 두고 지속적으로 플레이어 태그를 가진 대상 추적
