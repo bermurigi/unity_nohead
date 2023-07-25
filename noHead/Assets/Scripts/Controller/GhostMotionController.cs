@@ -16,6 +16,10 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     [SerializeField]
     GameObject MLight;
     private bool isOn = false;
+    
+    //오디오
+    AudioSource audioSource;
+    public bool soundOnOff = false;
 
     [SerializeField]
     Animator GAnimator;
@@ -44,6 +48,8 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         NickNameText.color = PV.IsMine ? Color.green : Color.red;
         camera.enabled = false;
         MLight.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
+        
         
        
         if (PV.IsMine)
@@ -84,6 +90,8 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     void Update()
     {
         photonView.RPC("RPC_ChangeMaterial", RpcTarget.AllBuffered, i);
+        audioSource.mute = true;
+        soundOnOff = false;
         
         if (PV.IsMine) //본인 캐릭터만 조종할 수 있게해줌 (바라보는방향)
         {
@@ -150,6 +158,13 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
                 isOn = !isOn; // 손전등의 상태를 변경합니다.
                 photonView.RPC("ToggleFlashlight", RpcTarget.All, isOn);
                 
+            }
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                audioSource.mute = false;
+                soundOnOff = true;
+
             }
         }
     }
