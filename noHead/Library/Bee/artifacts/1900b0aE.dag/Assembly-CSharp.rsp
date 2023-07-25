@@ -387,6 +387,7 @@
 "Assets/Scripts/DropdownController.cs"
 "Assets/Scripts/Enemy/EmemyMovement.cs"
 "Assets/Scripts/Enemy/FallingMangement.cs"
+"Assets/Scripts/Enemy/Tracker.cs"
 "Assets/Scripts/Managers/CameraManager.cs"
 "Assets/Scripts/Managers/InputManager.cs"
 "Assets/Scripts/Managers/Managers.cs"

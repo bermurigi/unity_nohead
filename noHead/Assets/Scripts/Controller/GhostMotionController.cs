@@ -46,6 +46,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         //멀티플레이어 입장시 기본세팅
         NickNameText.text = PV.IsMine ? PhotonNetwork.NickName : PV.Owner.NickName;
         NickNameText.color = PV.IsMine ? Color.green : Color.red;
+        this.gameObject.tag = "Player"; //적 오브젝트가 추적하기 위해서 태그 추가 여기 입니다!!@@!@!!@@!@!@
         camera.enabled = false;
         MLight.SetActive(false);
         audioSource = GetComponent<AudioSource>();
