@@ -5,52 +5,51 @@ using UnityEngine;
 public class Pick : MonoBehaviour
 {
     public GameObject nearObject;
-    public bool[] hasItems;
-    public GameObject[] CopyItem;
+    public GameObject nowObject;
     public Transform PlayerTransform;
     bool ItemPick;
-    bool ItemDrop;
+    bool MovingItem;
 
     void Update()
     {
         GetInput();
         PickUp();
-        Drop();
+        if (MovingItem)
+        {
+            nowObject.transform.position = PlayerTransform.position;
+        }
     }
 
     void GetInput()
     {
         ItemPick = Input.GetButtonDown("PickUp");
-        ItemDrop = Input.GetButtonDown("Drop");
-    }
-
-    void Drop()
-    {
-        if(ItemDrop && hasItems[0])
-        {
-            Instantiate(CopyItem[0], PlayerTransform.position, PlayerTransform.rotation);
-            hasItems[0] = false;
-        }
     }
 
     void PickUp()
     {
         if (ItemPick && nearObject != null)
         {
-            if (nearObject.tag == "Key")
+            nowObject = nearObject;
+            Item item = nowObject.GetComponent<Item>();
+            if (nearObject.tag == "Key" && MovingItem == false)
             {
-                Item item = nearObject.GetComponent<Item>();
-                int itemIndex = item.value;
-                hasItems[itemIndex] = true;
-
-                Destroy(nearObject);
+                nowObject.transform.position = PlayerTransform.position;
+                nowObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+                MovingItem = true;
+                item.rb.isKinematic = true;
+            }
+            else if (MovingItem)
+            {
+                MovingItem = false;
+                item.rb.isKinematic = false;
+                nowObject = null;
             }
         }
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Key")
+        if (other.tag == "Key" && nearObject == null)
         {
             nearObject = other.gameObject;
         }
