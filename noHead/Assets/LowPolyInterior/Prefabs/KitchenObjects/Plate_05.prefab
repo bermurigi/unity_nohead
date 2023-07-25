@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2033132854870943930}
   - component: {fileID: 2033132854872074874}
   - component: {fileID: 2335677317296241043}
-  - component: {fileID: 2659989493189746441}
   - component: {fileID: 6603013090294488990}
   m_Layer: 0
   m_Name: Plate_05
@@ -108,27 +107,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: d267c6a20d239cd4896cbec290e5a74c, type: 3}
---- !u!135 &2659989493189746441
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033132854874076346}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.4
-  m_Center: {x: -0.000000014901161, y: 0.054333404, z: 0.00024339557}
 --- !u!114 &6603013090294488990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,3 +121,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   value: 0
+  rb: {fileID: 0}

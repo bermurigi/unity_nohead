@@ -7,4 +7,5 @@ public class Item : MonoBehaviour
     public enum Type { KeyItem };
     public Type type;
     public int value;
+    public Rigidbody rb;
 }
