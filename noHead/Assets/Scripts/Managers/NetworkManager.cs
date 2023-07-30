@@ -11,6 +11,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 {
     public InputField NickNameInput;
     public GameObject DisconnectPanel;
+    public Transform spawnPoint;
 
     [SerializeField]
     private int colorIndex;
@@ -59,7 +60,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
    
     public void spawn()
     {
-        GameObject playerObj = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity);
+        GameObject playerObj = PhotonNetwork.Instantiate("Player", spawnPoint.position, Quaternion.identity);
         GhostMotionController playerScript = playerObj.GetComponent<GhostMotionController>();
         playerScript.i=colorIndex; //플레이어스크립트 색정하기
         
