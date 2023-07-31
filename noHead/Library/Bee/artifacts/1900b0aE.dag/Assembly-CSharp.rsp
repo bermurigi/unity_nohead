@@ -382,6 +382,7 @@
 "Assets/Photon/PhotonLibs/WebSocket/SocketWebTcp.cs"
 "Assets/Photon/PhotonLibs/WebSocket/WebSocket.cs"
 "Assets/Photon/PhotonRealtime/Demos/DemoLoadBalancing/ConnectAndJoinRandomLb.cs"
+"Assets/Scripts/CameraMove.cs"
 "Assets/Scripts/Controller/CameraController.cs"
 "Assets/Scripts/Controller/GhostMotionController.cs"
 "Assets/Scripts/DropdownController.cs"
