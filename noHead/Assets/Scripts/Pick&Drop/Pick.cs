@@ -31,18 +31,20 @@ public class Pick : MonoBehaviour
         {
             nowObject = nearObject;
             Item item = nowObject.GetComponent<Item>();
-            if (nearObject.tag == "Key" && MovingItem == false)
+            if (nearObject.tag == "Key" && MovingItem == false && item.PickingItem == false)
             {
                 nowObject.transform.position = PlayerTransform.position;
                 nowObject.transform.rotation = Quaternion.Euler(0, 0, 0);
                 MovingItem = true;
                 item.rb.isKinematic = true;
+                item.PickingItem = true;
             }
             else if (MovingItem)
             {
                 MovingItem = false;
                 item.rb.isKinematic = false;
                 nowObject = null;
+                item.PickingItem = false;
             }
         }
     }
