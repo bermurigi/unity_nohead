@@ -43,6 +43,7 @@ MonoBehaviour:
   - ChangeColor
   - RPC_ChangeMaterial
   - spawn
+  - ToggleRadioOn
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

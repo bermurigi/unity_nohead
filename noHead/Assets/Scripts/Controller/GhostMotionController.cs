@@ -16,32 +16,34 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     [SerializeField]
     GameObject MLight;
     private bool isOn = false;
-    
+
     //오디오
     AudioSource audioSource;
     public bool soundOnOff = false;
+    public bool FollowingOnOff = false;
 
     [SerializeField]
     Animator GAnimator;
-    
+
     //멀티플레이어 관련 변수선언
-    public Text NickNameText; 
+    public Text NickNameText;
     public PhotonView PV;
     public Camera camera;
     //캐릭터 색 설정
     public Material[] mat = new Material[3];
     public SkinnedMeshRenderer playerRenderer;
-    
-   
+
+
+
 
     public int i = 0;
     //0=노랑
     //1=검정
     //2=빨강
     //캐릭터 우산설정도만들어야함
-        
 
-    void Awake() 
+
+    void Awake()
     {
         //멀티플레이어 입장시 기본세팅
         NickNameText.text = PV.IsMine ? PhotonNetwork.NickName : PV.Owner.NickName;
@@ -50,31 +52,32 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         camera.enabled = false;
         MLight.SetActive(false);
         audioSource = GetComponent<AudioSource>();
-        
-        
-       
+        audioSource.enabled = false;
+
+
         if (PV.IsMine)
         {
             camera.enabled = true;
+            audioSource.enabled = true;
 
             this.gameObject.layer = 7;
             ChangeLayer(transform);
 
         }
     }
-    
+
 
     void Start()
     {
-        Managers.Input.KeyAction -= Onkeyboard; 
+        Managers.Input.KeyAction -= Onkeyboard;
         Managers.Input.KeyAction += Onkeyboard;
 
 
-      
-        
-        
+
+
+
     }
-    
+
     [PunRPC]
     private void RPC_ChangeMaterial(int materialIndex)
     {
@@ -83,25 +86,27 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         if (materialIndex >= 0 && materialIndex < mat.Length)
         {
             playerRenderer.material = mat[materialIndex];
-            
+
         }
     }
-    
+
 
     void Update()
     {
         photonView.RPC("RPC_ChangeMaterial", RpcTarget.AllBuffered, i);
-        audioSource.mute = true;
-        soundOnOff = false;
-        
+
+
         if (PV.IsMine) //본인 캐릭터만 조종할 수 있게해줌 (바라보는방향)
         {
             GAnimator.SetBool("Fly", false);
             MouseRotation();
-            
+            soundOnOff = false;
+            photonView.RPC("ToggleRadioOn", RpcTarget.All, soundOnOff);
+
+
         }
 
-        
+
 
     }
     void MouseRotation()
@@ -155,22 +160,23 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
             //light On/Off
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                
+
                 isOn = !isOn; // 손전등의 상태를 변경합니다.
                 photonView.RPC("ToggleFlashlight", RpcTarget.All, isOn);
-                
+
             }
 
             if (Input.GetKey(KeyCode.Space))
             {
-                audioSource.mute = false;
-                soundOnOff = true;
+
+                soundOnOff = true; //유인용 라디오 ON
+                photonView.RPC("ToggleRadioOn", RpcTarget.All, soundOnOff);
 
             }
         }
     }
     //기존스크립트에서 추가된 내용 ↓(윤기)
-    
+
     void ChangeLayer(Transform parent) //자식들 레이어바꿔주기 카메라 culling
     {
         // 부모 오브젝트의 자식들에 대해 레이어를 변경합니다.
@@ -199,11 +205,27 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         }
     }
 
-    
-    
-
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)  
+    [PunRPC]
+    private void ToggleRadioOn(bool state)
     {
-        
+        // 유인용 라디오 소리 On
+        if (state)
+        {
+            audioSource.mute = false;
+            FollowingOnOff = true;
+        }
+        else
+        {
+            audioSource.mute = true;
+            FollowingOnOff = false;
+        }
+
+    }
+
+
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+
     }
 }
