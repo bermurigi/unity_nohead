@@ -3,9 +3,15 @@ ScriptsOnlyBuild:
     Assembly-CSharp:
     - CameraController
     - GhostMotionController
+    - Pick
     Assembly-CSharp.dll:
+    - AgentLinkMover
     - CameraManager
+    - CameraMove
+    - DropdownController
+    - Item
     - NetworkManager
+    - Priest_movement
     PhotonUnityNetworking:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -22,7 +28,12 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
+    - Photon.Pun.PhotonRigidbodyView
+    - Photon.Pun.PhotonTransformView
+    - Photon.Pun.PhotonView
     - Photon.Pun.ServerSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.RiderScriptEditorData
@@ -33,6 +44,13 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_Dropdown
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -61,7 +79,11 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
   serializedClasses:
     PhotonRealtime:
     - Photon.Realtime.AppSettings
@@ -73,6 +95,9 @@ ScriptsOnlyBuild:
     - TMPro.FontAssetCreationSettings
     - TMPro.KerningTable
     - TMPro.TMP_Character
+    - TMPro.TMP_Dropdown/DropdownEvent
+    - TMPro.TMP_Dropdown/OptionData
+    - TMPro.TMP_Dropdown/OptionDataList
     - TMPro.TMP_FontFeatureTable
     - TMPro.TMP_FontWeightPair
     - TMPro.TMP_GlyphAdjustmentRecord
@@ -82,6 +107,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteCharacter
     - TMPro.TMP_SpriteGlyph
     - TMPro.TMP_Style
+    - TMPro.VertexGradient
     UnityEngine.CoreModule:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
@@ -101,9 +127,15 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.InputField/SubmitEvent
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.ScrollRect/ScrollRectEvent
+    - UnityEngine.UI.Scrollbar/ScrollEvent
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
+    - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: DropdownController
+    methodName: onDropEvent
   - assembly: Assembly-CSharp
     fullTypeName: NetworkManager
     methodName: Connect
@@ -142,6 +174,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 90
@@ -171,55 +207,81 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2226}
     - Class: 114
-      Script: {instanceID: 2672}
+      Script: {instanceID: 2402}
     - Class: 114
-      Script: {instanceID: 2880}
+      Script: {instanceID: 2674}
     - Class: 114
-      Script: {instanceID: 2930}
+      Script: {instanceID: 2680}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 2882}
     - Class: 114
-      Script: {instanceID: 3918}
+      Script: {instanceID: 2932}
     - Class: 114
-      Script: {instanceID: 3922}
+      Script: {instanceID: 3096}
     - Class: 114
-      Script: {instanceID: 4082}
+      Script: {instanceID: 3920}
     - Class: 114
-      Script: {instanceID: 4220}
+      Script: {instanceID: 3924}
     - Class: 114
-      Script: {instanceID: 4478}
+      Script: {instanceID: 3954}
     - Class: 114
-      Script: {instanceID: 5142}
+      Script: {instanceID: 3976}
     - Class: 114
-      Script: {instanceID: 5158}
+      Script: {instanceID: 4086}
     - Class: 114
-      Script: {instanceID: 5214}
+      Script: {instanceID: 4192}
     - Class: 114
-      Script: {instanceID: 5560}
+      Script: {instanceID: 4226}
     - Class: 114
-      Script: {instanceID: 5602}
+      Script: {instanceID: 4484}
     - Class: 114
-      Script: {instanceID: 5880}
+      Script: {instanceID: 5094}
     - Class: 114
-      Script: {instanceID: 6162}
+      Script: {instanceID: 5148}
     - Class: 114
-      Script: {instanceID: 6262}
+      Script: {instanceID: 5164}
     - Class: 114
-      Script: {instanceID: 6270}
+      Script: {instanceID: 5220}
     - Class: 114
-      Script: {instanceID: 6604}
+      Script: {instanceID: 5566}
     - Class: 114
-      Script: {instanceID: 6856}
+      Script: {instanceID: 5570}
     - Class: 114
-      Script: {instanceID: 7368}
+      Script: {instanceID: 5610}
     - Class: 114
-      Script: {instanceID: 7720}
+      Script: {instanceID: 5700}
     - Class: 114
-      Script: {instanceID: 7844}
+      Script: {instanceID: 5890}
     - Class: 114
-      Script: {instanceID: 8136}
+      Script: {instanceID: 5950}
     - Class: 114
-      Script: {instanceID: 505920}
+      Script: {instanceID: 6172}
+    - Class: 114
+      Script: {instanceID: 6272}
+    - Class: 114
+      Script: {instanceID: 6280}
+    - Class: 114
+      Script: {instanceID: 6282}
+    - Class: 114
+      Script: {instanceID: 6614}
+    - Class: 114
+      Script: {instanceID: 6866}
+    - Class: 114
+      Script: {instanceID: 7376}
+    - Class: 114
+      Script: {instanceID: 7380}
+    - Class: 114
+      Script: {instanceID: 7730}
+    - Class: 114
+      Script: {instanceID: 7854}
+    - Class: 114
+      Script: {instanceID: 8072}
+    - Class: 114
+      Script: {instanceID: 8114}
+    - Class: 114
+      Script: {instanceID: 8150}
+    - Class: 114
+      Script: {instanceID: 26202}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -233,6 +295,8 @@ ScriptsOnlyBuild:
     - Class: 143
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 195
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
@@ -249,6 +313,8 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 225
+      Script: {instanceID: 0}
+    - Class: 238
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -349,7 +415,7 @@ ScriptsOnlyBuild:
     className: PlayerOverviewPanel
   - hash:
       serializedVersion: 2
-      Hash: 3304f12ab96c4818f5307eb1d9492ccf
+      Hash: 75552eceb2f2be2d1dc40d04809cbdf1
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: NetworkManager
@@ -485,6 +551,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CurrentRoomIsOpenToggle
+  - hash:
+      serializedVersion: 2
+      Hash: 11ca013ac1bdbbf776efe874c6858938
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Item
   - hash:
       serializedVersion: 2
       Hash: 48a3515f4b6da46c63b268dc5abd81fb
@@ -865,6 +937,12 @@ ScriptsOnlyBuild:
     className: PlayerAnimatorManager
   - hash:
       serializedVersion: 2
+      Hash: d64e403e9569c7683754ba4fb412d190
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraMove
+  - hash:
+      serializedVersion: 2
       Hash: 19995c8f57a061f914cfd824cff052b1
     assemblyName: PhotonUnityNetworking.Demos
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -965,6 +1043,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 11bd20f320a707859a4f0a9f89401fbf
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DropdownController
   - hash:
       serializedVersion: 2
       Hash: 2b006c27b595e55e112de0e713333574
@@ -1315,6 +1399,12 @@ ScriptsOnlyBuild:
     className: PlayerControl
   - hash:
       serializedVersion: 2
+      Hash: f03bd9ddf5233b6cfc0b314eff85ef51
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AgentLinkMover
+  - hash:
+      serializedVersion: 2
       Hash: a1df8e53b11f4dea858eed8966c6b1a1
     assemblyName: PhotonUnityNetworking.Demos
     namespaceName: Photon.Pun.Demo.SlotRacer.Utils
@@ -1343,6 +1433,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking
     namespaceName: Photon.Pun
     className: PhotonHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 525676636b0f9afc7f65040079b07596
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Priest_movement
   - hash:
       serializedVersion: 2
       Hash: 2adfa4223160984964690143c3094989
@@ -1411,7 +1507,7 @@ ScriptsOnlyBuild:
     className: SupportLogger
   - hash:
       serializedVersion: 2
-      Hash: c5c2ddc6c24ed606b5bf43296c586ea7
+      Hash: 7245fe85ce9b1ce4a3a6c8f3c796d0b3
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GhostMotionController
@@ -1807,6 +1903,12 @@ ScriptsOnlyBuild:
     className: PhotonStatsGui
   - hash:
       serializedVersion: 2
+      Hash: 92083e05802e86b2f1ae502b32105c3d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TeleportToClosestPlayer
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1927,6 +2029,12 @@ ScriptsOnlyBuild:
     className: UnityOnToggleValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: a8d7f7d235334f2f53050c7bdccdaae1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraManager
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1949,6 +2057,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos
     namespaceName: Photon.Pun.Demo.Cockpit
     className: SendRateField
+  - hash:
+      serializedVersion: 2
+      Hash: 429b9f053ab114b41a0d31f9a085ec1c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Pick
   - hash:
       serializedVersion: 2
       Hash: 0853a9cfe5cc2b0f4d6ca464f2d8e0b6
@@ -1979,12 +2093,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: a8d7f7d235334f2f53050c7bdccdaae1
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CameraManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/Scene.unity
