@@ -8,39 +8,10 @@ public class Item : MonoBehaviour
     public Type type;
     public int value;
     public Rigidbody rb;
-    public GameObject PlayerObject;
-    public bool possibleBurn;
     public bool PickingItem;
-    bool BurnItem;
 
-    void Update()
+    void Start()
     {
-        BurnItem = Input.GetButtonDown("PickUp");
-        DestroyItem();
-    }
-
-    void DestroyItem() 
-    {
-        if (BurnItem && possibleBurn)
-        {
-            Destroy(this.gameObject);
-        }
-    }
-
-    void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Burn")
-        {
-            possibleBurn = true;
-        }
-
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Burn")
-        {
-            possibleBurn = false;
-        }
+        rb = GetComponent<Rigidbody>();
     }
 }
