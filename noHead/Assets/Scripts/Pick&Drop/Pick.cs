@@ -12,15 +12,21 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
     public Transform PlayerTransform;
     bool ItemPick; bool MovingItem;
     private bool firstPick;//이윤기
+    public PhotonView PV;
+    
+    
     
     
     
     void Update()
     {
-        if (!photonView.IsMine)
+        if (!PV.IsMine)
             return;
         GetInput();
-        photonView.RPC("PickUp", RpcTarget.AllBuffered);
+        PV.RPC("PickUp", RpcTarget.AllBuffered);
+        
+        
+        
         
         if (MovingItem)
         {
@@ -62,6 +68,11 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
                 item.rb.isKinematic = true;
                 item.PickingItem = true;
                 
+                item.photonView.RPC("UpdatePickingItem", RpcTarget.AllBuffered, item.PickingItem);
+                item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllBuffered, item.rb.isKinematic);
+            
+                
+                
                 
                 
 
@@ -73,11 +84,23 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
                 nowObject = null;
                 item.PickingItem = false;
                 
-               
-               
+                item.photonView.RPC("UpdatePickingItem", RpcTarget.AllBuffered, item.PickingItem);
+                item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllBuffered, item.rb.isKinematic);
             }
+                
+                
+               
+               
+            
         }
     }
+    
+    
+   
+   
+   
+
+    
 
     void OnTriggerStay(Collider other)
     {

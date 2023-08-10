@@ -24,6 +24,17 @@ public class Item : MonoBehaviourPun
         
         
     }
+    [PunRPC]
+    public void UpdatePickingItem(bool newValue)
+    {
+        PickingItem = newValue;
+    }
+    
+    [PunRPC]
+    public void UpdateIsKinematic(bool newValue)
+    {
+        rb.isKinematic = newValue;
+    }
 
     void DestroyItem() 
     {

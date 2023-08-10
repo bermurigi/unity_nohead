@@ -322,6 +322,7 @@ MonoBehaviour:
   nearObject: {fileID: 0}
   nowObject: {fileID: 0}
   PlayerTransform: {fileID: 1222085776487928564}
+  PV: {fileID: 5386173897617962204}
 --- !u!82 &7629141435290354989
 AudioSource:
   m_ObjectHideFlags: 0

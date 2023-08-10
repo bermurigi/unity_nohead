@@ -54,10 +54,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -281,7 +279,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 8150}
     - Class: 114
-      Script: {instanceID: 26202}
+      Script: {instanceID: 26212}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2059,7 +2057,7 @@ ScriptsOnlyBuild:
     className: SendRateField
   - hash:
       serializedVersion: 2
-      Hash: 429b9f053ab114b41a0d31f9a085ec1c
+      Hash: c571460ef9f9eb0cb810f2a4b9363c2d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Pick
