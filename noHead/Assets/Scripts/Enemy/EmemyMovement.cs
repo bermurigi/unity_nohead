@@ -125,16 +125,6 @@ public class Priest_movement : MonoBehaviourPun
                 }
             }
         }
-        {
-
-            
-            for (int i = 0; i < players.Length; i++)
-            {
-
-            }
-        }
     }
-
-
 }
 
