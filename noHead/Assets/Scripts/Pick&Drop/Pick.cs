@@ -1,31 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Pick : MonoBehaviour
+using Photon.Realtime;
+using Photon.Pun;
+using System.Linq.Expressions;
+using ExitGames.Client.Photon;
+public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
 {
     public GameObject nearObject;
     public GameObject nowObject;
     public Transform PlayerTransform;
-    bool ItemPick;
-    bool MovingItem;
-
+    bool ItemPick; bool MovingItem;
+    private bool firstPick;//이윤기
+    public PhotonView PV;
+    
+    
+    
+    
+    
     void Update()
     {
+        if (!PV.IsMine)
+            return;
         GetInput();
-        PickUp();
+        PV.RPC("PickUp", RpcTarget.AllBuffered);
+        
+        
+        
+        
         if (MovingItem)
         {
+            
+            
             nowObject.transform.position = PlayerTransform.position;
         }
+
+        
     }
 
     void GetInput()
     {
         ItemPick = Input.GetButtonDown("PickUp");
+        
     }
 
-    void PickUp()
+   
+
+    
+    [PunRPC] void PickUp()
     {
         if (ItemPick && nearObject != null)
         {
@@ -35,9 +57,25 @@ public class Pick : MonoBehaviour
             {
                 nowObject.transform.position = PlayerTransform.position;
                 nowObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+                firstPick = true;//이윤기
+                if (firstPick)//이윤기
+                {
+                    nowObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer); //조종권한바꾸기
+                    firstPick = false;
+                }
+                
                 MovingItem = true;
                 item.rb.isKinematic = true;
                 item.PickingItem = true;
+                
+                item.photonView.RPC("UpdatePickingItem", RpcTarget.AllBuffered, item.PickingItem);
+                item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllBuffered, item.rb.isKinematic);
+            
+                
+                
+                
+                
+
             }
             else if (MovingItem)
             {
@@ -45,9 +83,24 @@ public class Pick : MonoBehaviour
                 item.rb.isKinematic = false;
                 nowObject = null;
                 item.PickingItem = false;
+                
+                item.photonView.RPC("UpdatePickingItem", RpcTarget.AllBuffered, item.PickingItem);
+                item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllBuffered, item.rb.isKinematic);
             }
+                
+                
+               
+               
+            
         }
     }
+    
+    
+   
+   
+   
+
+    
 
     void OnTriggerStay(Collider other)
     {
@@ -65,4 +118,23 @@ public class Pick : MonoBehaviour
             nearObject = null;
         }
     }
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)  //이윤기
+    {
+       /* if (stream.IsWriting)
+        {
+            stream.SendNext(transform.position);
+        }
+        else
+        {
+            Vector3 receivedPosition = (Vector3)stream.ReceiveNext();
+            if (!photonView.IsMine && !nowObject)
+            {
+                transform.position = receivedPosition;
+            }
+        }
+        */
+        
+    }
+    
+    
 }

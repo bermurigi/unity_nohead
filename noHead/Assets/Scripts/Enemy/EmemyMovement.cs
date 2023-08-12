@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations.Rigging;
 
 [RequireComponent(typeof(NavMeshAgent), typeof(AgentLinkMover))] //필요한 컴포넌트를 자동적으로 넣어준다.
 public class Priest_movement : MonoBehaviour
@@ -14,10 +15,14 @@ public class Priest_movement : MonoBehaviour
      private const string IsWalking = "IsWalking";
      private const string Jump = "Jump";
      private const string Landed = "Landed";
+     private const string isCaught = "isCaught";
     private NavMeshAgent agent;
+    public GameObject Caught;
+    private RigBuilder rig;
 
     private void Awake()
     {
+        rig = GetComponent<RigBuilder>();
         Animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         LinkMover = GetComponent<AgentLinkMover>();
@@ -59,7 +64,7 @@ public class Priest_movement : MonoBehaviour
         while (enabled)
         {
             FindPlayerTarget();
-            if (target != null)
+            if (target != null && !target.CompareTag("Dead"))
             {
                 agent.SetDestination(target.transform.position);
             }
@@ -80,5 +85,21 @@ public class Priest_movement : MonoBehaviour
                 closestDistance = distance;
             }
         }
+    }
+        void OnTriggerEnter(Collider other){
+        if(other.CompareTag("Player")){
+            Animator.SetTrigger(isCaught);
+        // JumpCam.transform.position = Pos;
+        // Debug.Log("현재 위치 : "+Pos);
+        Caught.SetActive(true);
+        rig.enabled = false;
+        StartCoroutine(end());
+        }
+         IEnumerator end(){
+        yield return new WaitForSeconds(2.03f);
+        Caught.SetActive(false);
+        rig.enabled = true;
+    }
+    
     }
 }

@@ -255,6 +255,7 @@ MonoBehaviour:
   _turnSpeed: 10
   MLight: {fileID: 8489047651489922505}
   soundOnOff: 0
+  FollowingOnOff: 0
   GAnimator: {fileID: 4011417509602413155}
   NickNameText: {fileID: 7442780676980412602}
   PV: {fileID: 5386173897617962204}
@@ -287,6 +288,7 @@ MonoBehaviour:
   - {fileID: 4913826720153286521}
   - {fileID: 5696689250124195621}
   - {fileID: 6286924660183110768}
+  - {fileID: 6986988547236243281}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -321,6 +323,7 @@ MonoBehaviour:
   nearObject: {fileID: 0}
   nowObject: {fileID: 0}
   PlayerTransform: {fileID: 1222085776487928564}
+  PV: {fileID: 5386173897617962204}
 --- !u!82 &7629141435290354989
 AudioSource:
   m_ObjectHideFlags: 0

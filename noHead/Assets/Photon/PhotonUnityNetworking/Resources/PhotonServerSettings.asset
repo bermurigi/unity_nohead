@@ -43,6 +43,16 @@ MonoBehaviour:
   - ChangeColor
   - RPC_ChangeMaterial
   - spawn
+  - PickUp
+  - MoveItem
+  - isKinema
+  - IsKinema
+  - OnPicking
+  - PickItem
+  - UpdatePickingItem
+  - UpdateRigidBodyKinematic
+  - UpdateIsKinematic
+  - ToggleRadioOn
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

@@ -20,6 +20,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     //오디오
     AudioSource audioSource;
     public bool soundOnOff = false;
+    public bool FollowingOnOff = false;
 
     [SerializeField]
     Animator GAnimator;
@@ -163,8 +164,8 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
 
             if (Input.GetKey(KeyCode.Space))
             {
-                audioSource.mute = false;
-                soundOnOff = true;
+                soundOnOff = true; //유인용 라디오 ON
+                photonView.RPC("ToggleRadioOn", RpcTarget.All, soundOnOff);
 
             }
         }
@@ -198,6 +199,24 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
             MLight.SetActive(false);
         }
     }
+    
+    [PunRPC]
+    private void ToggleRadioOn(bool state)
+    {
+        // 유인용 라디오 소리 On
+        if (state)
+        {
+            audioSource.mute = false;
+            FollowingOnOff = true;
+        }
+        else
+        {
+            audioSource.mute = true;
+            FollowingOnOff = false;
+        }
+
+    }
+
 
     
     
@@ -205,5 +224,13 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)  
     {
         
+    }
+    void OnTriggerEnter(Collider other){
+       
+        if(other.CompareTag("Enemy")){
+            this.gameObject.transform.position = new Vector3(-2.2f,7f,5f);
+            this.gameObject.tag = "Dead";
+        
+        }
     }
 }
