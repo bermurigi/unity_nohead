@@ -255,6 +255,7 @@ MonoBehaviour:
   _turnSpeed: 10
   MLight: {fileID: 8489047651489922505}
   soundOnOff: 0
+  FollowingOnOff: 0
   GAnimator: {fileID: 4011417509602413155}
   NickNameText: {fileID: 7442780676980412602}
   PV: {fileID: 5386173897617962204}
