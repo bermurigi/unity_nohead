@@ -9,21 +9,17 @@ public class Item : MonoBehaviourPun
     public Type type;
     public int value;
     public Rigidbody rb;
-    public GameObject PlayerObject;
-    public bool possibleBurn;
+    
     public bool PickingItem;
-    bool BurnItem;
+   
 
-    void Update()
+    
+    
+    void Start()
     {
-        
-        BurnItem = Input.GetButtonDown("PickUp");
-        DestroyItem();
-        
-        
-        
-        
+        rb = GetComponent<Rigidbody>();
     }
+   
     [PunRPC]
     public void UpdatePickingItem(bool newValue)
     {
@@ -36,30 +32,7 @@ public class Item : MonoBehaviourPun
         rb.isKinematic = newValue;
     }
 
-    void DestroyItem() 
-    {
-        if (BurnItem && possibleBurn)
-        {
-            Destroy(this.gameObject);
-        }
-    }
-
-    void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Burn")
-        {
-            possibleBurn = true;
-        }
-
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Burn")
-        {
-            possibleBurn = false;
-        }
-    }
+    
 
     
     
