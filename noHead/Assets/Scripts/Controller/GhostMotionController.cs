@@ -206,4 +206,12 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     {
         
     }
+    void OnTriggerEnter(Collider other){
+       
+        if(other.CompareTag("Enemy")){
+            this.gameObject.transform.position = new Vector3(-2.2f,7f,5f);
+            this.gameObject.tag = "Dead";
+        
+        }
+    }
 }

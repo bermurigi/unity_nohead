@@ -7,6 +7,8 @@ TagManager:
   - Undefined
   - Key
   - Burn
+  - Enemy
+  - Dead
   layers:
   - Default
   - TransparentFX
