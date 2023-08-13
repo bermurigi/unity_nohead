@@ -206,7 +206,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     {
         
     }
-    void OnTriggerEnter(Collider other){
+    void OnTriggerEnter(Collider other){ //캐릭터 죽었을 때 표현 추가 2023-08-10
        
         if(other.CompareTag("Enemy")){
             this.gameObject.transform.position = new Vector3(-2.2f,7f,5f);

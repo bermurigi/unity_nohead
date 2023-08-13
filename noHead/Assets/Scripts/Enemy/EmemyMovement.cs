@@ -15,8 +15,10 @@ public class Priest_movement : MonoBehaviour
      private const string IsWalking = "IsWalking";
      private const string Jump = "Jump";
      private const string Landed = "Landed";
-     private const string isCaught = "isCaught";
+     
     private NavMeshAgent agent;
+    //2023-08-10에 추가됨
+    private const string isCaught = "isCaught";
     public GameObject Caught;
     private RigBuilder rig;
 
@@ -86,7 +88,7 @@ public class Priest_movement : MonoBehaviour
             }
         }
     }
-        void OnTriggerEnter(Collider other){
+        void OnTriggerEnter(Collider other){  //2023-08-10에 추가됨
         if(other.CompareTag("Player")){
             Animator.SetTrigger(isCaught);
         // JumpCam.transform.position = Pos;
