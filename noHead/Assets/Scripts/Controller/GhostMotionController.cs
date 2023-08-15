@@ -53,6 +53,12 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         audioSource = GetComponent<AudioSource>();
         
         
+        if (MaterialManager.Instance != null)
+        {
+            MaterialManager.Instance.MyNum = PV.Owner.ActorNumber;
+        }
+        Debug.Log(PV.Owner.ActorNumber);
+        
        
         if (PV.IsMine)
         {
@@ -60,6 +66,9 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
 
             this.gameObject.layer = 7;
             ChangeLayer(transform);
+            
+            
+            
 
         }
     }
@@ -69,6 +78,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     {
         Managers.Input.KeyAction -= Onkeyboard; 
         Managers.Input.KeyAction += Onkeyboard;
+        
 
 
       
@@ -91,6 +101,8 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
 
     void Update()
     {
+        
+
         photonView.RPC("RPC_ChangeMaterial", RpcTarget.AllBuffered, i);
         audioSource.mute = true;
         soundOnOff = false;

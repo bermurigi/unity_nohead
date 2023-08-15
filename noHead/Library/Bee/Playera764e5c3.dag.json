@@ -233,7 +233,22 @@
         225,
         226,
         227,
-        228
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243
       ],
       "OverwriteOutputs": false,
       "DebugActionIndex": 0
@@ -323,6 +338,18 @@
       "DebugActionIndex": 7
     },
     {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/resources.resource",
+      "DisplayName": "Copying resources.resource",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/PlayerDataCache/Win64/Data/resources.resource"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/resources.resource"
+      ],
+      "DebugActionIndex": 8
+    },
+    {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Resources/unity_builtin_extra",
       "DisplayName": "Copying unity_builtin_extra",
       "ActionType": "CopyFiles",
@@ -332,7 +359,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Resources/unity_builtin_extra"
       ],
-      "DebugActionIndex": 8
+      "DebugActionIndex": 9
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/RuntimeInitializeOnLoads.json",
@@ -344,7 +371,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/RuntimeInitializeOnLoads.json"
       ],
-      "DebugActionIndex": 9
+      "DebugActionIndex": 10
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/ScriptingAssemblies.json",
@@ -356,7 +383,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/ScriptingAssemblies.json"
       ],
-      "DebugActionIndex": 10
+      "DebugActionIndex": 11
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/sharedassets0.assets",
@@ -368,7 +395,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/sharedassets0.assets"
       ],
-      "DebugActionIndex": 11
+      "DebugActionIndex": 12
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/sharedassets0.assets.resS",
@@ -380,20 +407,20 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/sharedassets0.assets.resS"
       ],
-      "DebugActionIndex": 12
+      "DebugActionIndex": 13
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/boot.config_tyr4.info",
       "DisplayName": "Writing boot.config_tyr4.info",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 15069,
+      "PayloadLength": 15820,
       "PayloadDebugContentSnippet": "{\"System.Object\":null,\"Bee.Tun",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/csharpactions/boot.config_tyr4.info"
       ],
-      "DebugActionIndex": 13
+      "DebugActionIndex": 14
     },
     {
       "Annotation": "AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config",
@@ -409,6 +436,7 @@
         "Library/PlayerDataCache/Win64/Data/level0.resS",
         "Library/PlayerDataCache/Win64/Data/resources.assets",
         "Library/PlayerDataCache/Win64/Data/resources.assets.resS",
+        "Library/PlayerDataCache/Win64/Data/resources.resource",
         "Library/PlayerDataCache/Win64/Data/Resources/unity_builtin_extra",
         "Library/PlayerDataCache/Win64/Data/RuntimeInitializeOnLoads.json",
         "Library/PlayerDataCache/Win64/Data/ScriptingAssemblies.json",
@@ -483,20 +511,27 @@
         "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll",
         "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.AI.Navigation.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Burst.dll",
         "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll",
         "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll",
         "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll",
-        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.dll",
         "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonChat.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.dll",
         "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll",
         "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Animation.Rigging.DocCodeExamples.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Mathematics.dll",
         "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Demos.dll",
         "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Utilities.dll",
         "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll",
         "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Animation.Rigging.dll",
         "C:/GitHub/unity_nohead_t/noHead/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll",
         "C:/GitHub/unity_nohead_t/noHead/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll",
         "C:/GitHub/unity_nohead_t/noHead/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/PackageCache/com.unity.burst@1.8.7/Unity.Burst.Unsafe.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Facades/System.Runtime.dll",
         "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Facades/netstandard.dll",
         "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Mono.Security.dll",
         "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.ComponentModel.Composition.dll",
@@ -559,12 +594,12 @@
         "Library/Bee/artifacts/WinPlayerBuildProgram/boot.config"
       ],
       "ToBuildDependencies": [
-        13
+        14
       ],
       "OverwriteOutputs": false,
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 14
+      "DebugActionIndex": 15
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/boot.config",
@@ -577,9 +612,9 @@
         "C:/Users/이윤기/Desktop/Build/noHead_Data/boot.config"
       ],
       "ToBuildDependencies": [
-        14
+        15
       ],
-      "DebugActionIndex": 15
+      "DebugActionIndex": 16
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AIModule.dll",
@@ -591,7 +626,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AIModule.dll"
       ],
-      "DebugActionIndex": 16
+      "DebugActionIndex": 17
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ARModule.dll",
@@ -603,7 +638,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ARModule.dll"
       ],
-      "DebugActionIndex": 17
+      "DebugActionIndex": 18
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AccessibilityModule.dll",
@@ -615,7 +650,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AccessibilityModule.dll"
       ],
-      "DebugActionIndex": 18
+      "DebugActionIndex": 19
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AndroidJNIModule.dll",
@@ -627,7 +662,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AndroidJNIModule.dll"
       ],
-      "DebugActionIndex": 19
+      "DebugActionIndex": 20
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AnimationModule.dll",
@@ -639,7 +674,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AnimationModule.dll"
       ],
-      "DebugActionIndex": 20
+      "DebugActionIndex": 21
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AssetBundleModule.dll",
@@ -651,7 +686,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AssetBundleModule.dll"
       ],
-      "DebugActionIndex": 21
+      "DebugActionIndex": 22
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AudioModule.dll",
@@ -663,7 +698,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AudioModule.dll"
       ],
-      "DebugActionIndex": 22
+      "DebugActionIndex": 23
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ClothModule.dll",
@@ -675,7 +710,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ClothModule.dll"
       ],
-      "DebugActionIndex": 23
+      "DebugActionIndex": 24
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ClusterInputModule.dll",
@@ -687,7 +722,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ClusterInputModule.dll"
       ],
-      "DebugActionIndex": 24
+      "DebugActionIndex": 25
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ClusterRendererModule.dll",
@@ -699,7 +734,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ClusterRendererModule.dll"
       ],
-      "DebugActionIndex": 25
+      "DebugActionIndex": 26
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ContentLoadModule.dll",
@@ -711,7 +746,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ContentLoadModule.dll"
       ],
-      "DebugActionIndex": 26
+      "DebugActionIndex": 27
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.CoreModule.dll",
@@ -723,7 +758,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.CoreModule.dll"
       ],
-      "DebugActionIndex": 27
+      "DebugActionIndex": 28
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.CrashReportingModule.dll",
@@ -735,7 +770,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.CrashReportingModule.dll"
       ],
-      "DebugActionIndex": 28
+      "DebugActionIndex": 29
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.DSPGraphModule.dll",
@@ -747,7 +782,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.DSPGraphModule.dll"
       ],
-      "DebugActionIndex": 29
+      "DebugActionIndex": 30
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.DirectorModule.dll",
@@ -759,7 +794,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.DirectorModule.dll"
       ],
-      "DebugActionIndex": 30
+      "DebugActionIndex": 31
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.GIModule.dll",
@@ -771,7 +806,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.GIModule.dll"
       ],
-      "DebugActionIndex": 31
+      "DebugActionIndex": 32
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.GameCenterModule.dll",
@@ -783,7 +818,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.GameCenterModule.dll"
       ],
-      "DebugActionIndex": 32
+      "DebugActionIndex": 33
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.GridModule.dll",
@@ -795,7 +830,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.GridModule.dll"
       ],
-      "DebugActionIndex": 33
+      "DebugActionIndex": 34
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.HotReloadModule.dll",
@@ -807,7 +842,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.HotReloadModule.dll"
       ],
-      "DebugActionIndex": 34
+      "DebugActionIndex": 35
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.IMGUIModule.dll",
@@ -819,7 +854,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.IMGUIModule.dll"
       ],
-      "DebugActionIndex": 35
+      "DebugActionIndex": 36
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ImageConversionModule.dll",
@@ -831,7 +866,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ImageConversionModule.dll"
       ],
-      "DebugActionIndex": 36
+      "DebugActionIndex": 37
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.InputLegacyModule.dll",
@@ -843,7 +878,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.InputLegacyModule.dll"
       ],
-      "DebugActionIndex": 37
+      "DebugActionIndex": 38
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.InputModule.dll",
@@ -855,7 +890,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.InputModule.dll"
       ],
-      "DebugActionIndex": 38
+      "DebugActionIndex": 39
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.JSONSerializeModule.dll",
@@ -867,7 +902,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.JSONSerializeModule.dll"
       ],
-      "DebugActionIndex": 39
+      "DebugActionIndex": 40
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.LocalizationModule.dll",
@@ -879,7 +914,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.LocalizationModule.dll"
       ],
-      "DebugActionIndex": 40
+      "DebugActionIndex": 41
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.NVIDIAModule.dll",
@@ -891,7 +926,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.NVIDIAModule.dll"
       ],
-      "DebugActionIndex": 41
+      "DebugActionIndex": 42
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ParticleSystemModule.dll",
@@ -903,7 +938,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ParticleSystemModule.dll"
       ],
-      "DebugActionIndex": 42
+      "DebugActionIndex": 43
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.PerformanceReportingModule.dll",
@@ -915,7 +950,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.PerformanceReportingModule.dll"
       ],
-      "DebugActionIndex": 43
+      "DebugActionIndex": 44
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.Physics2DModule.dll",
@@ -927,7 +962,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.Physics2DModule.dll"
       ],
-      "DebugActionIndex": 44
+      "DebugActionIndex": 45
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.PhysicsModule.dll",
@@ -939,7 +974,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.PhysicsModule.dll"
       ],
-      "DebugActionIndex": 45
+      "DebugActionIndex": 46
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ProfilerModule.dll",
@@ -951,7 +986,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ProfilerModule.dll"
       ],
-      "DebugActionIndex": 46
+      "DebugActionIndex": 47
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.PropertiesModule.dll",
@@ -963,7 +998,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.PropertiesModule.dll"
       ],
-      "DebugActionIndex": 47
+      "DebugActionIndex": 48
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
@@ -975,7 +1010,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll"
       ],
-      "DebugActionIndex": 48
+      "DebugActionIndex": 49
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ScreenCaptureModule.dll",
@@ -987,7 +1022,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ScreenCaptureModule.dll"
       ],
-      "DebugActionIndex": 49
+      "DebugActionIndex": 50
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SharedInternalsModule.dll",
@@ -999,7 +1034,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SharedInternalsModule.dll"
       ],
-      "DebugActionIndex": 50
+      "DebugActionIndex": 51
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SpriteMaskModule.dll",
@@ -1011,7 +1046,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SpriteMaskModule.dll"
       ],
-      "DebugActionIndex": 51
+      "DebugActionIndex": 52
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SpriteShapeModule.dll",
@@ -1023,7 +1058,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SpriteShapeModule.dll"
       ],
-      "DebugActionIndex": 52
+      "DebugActionIndex": 53
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.StreamingModule.dll",
@@ -1035,7 +1070,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.StreamingModule.dll"
       ],
-      "DebugActionIndex": 53
+      "DebugActionIndex": 54
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SubstanceModule.dll",
@@ -1047,7 +1082,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SubstanceModule.dll"
       ],
-      "DebugActionIndex": 54
+      "DebugActionIndex": 55
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SubsystemsModule.dll",
@@ -1059,7 +1094,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SubsystemsModule.dll"
       ],
-      "DebugActionIndex": 55
+      "DebugActionIndex": 56
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TLSModule.dll",
@@ -1071,7 +1106,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TLSModule.dll"
       ],
-      "DebugActionIndex": 56
+      "DebugActionIndex": 57
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TerrainModule.dll",
@@ -1083,7 +1118,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TerrainModule.dll"
       ],
-      "DebugActionIndex": 57
+      "DebugActionIndex": 58
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TerrainPhysicsModule.dll",
@@ -1095,7 +1130,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TerrainPhysicsModule.dll"
       ],
-      "DebugActionIndex": 58
+      "DebugActionIndex": 59
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll",
@@ -1107,7 +1142,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll"
       ],
-      "DebugActionIndex": 59
+      "DebugActionIndex": 60
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll",
@@ -1119,7 +1154,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll"
       ],
-      "DebugActionIndex": 60
+      "DebugActionIndex": 61
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TextRenderingModule.dll",
@@ -1131,7 +1166,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TextRenderingModule.dll"
       ],
-      "DebugActionIndex": 61
+      "DebugActionIndex": 62
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TilemapModule.dll",
@@ -1143,7 +1178,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TilemapModule.dll"
       ],
-      "DebugActionIndex": 62
+      "DebugActionIndex": 63
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UIElementsModule.dll",
@@ -1155,7 +1190,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UIElementsModule.dll"
       ],
-      "DebugActionIndex": 63
+      "DebugActionIndex": 64
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UIModule.dll",
@@ -1167,7 +1202,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UIModule.dll"
       ],
-      "DebugActionIndex": 64
+      "DebugActionIndex": 65
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UmbraModule.dll",
@@ -1179,7 +1214,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UmbraModule.dll"
       ],
-      "DebugActionIndex": 65
+      "DebugActionIndex": 66
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll",
@@ -1191,7 +1226,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll"
       ],
-      "DebugActionIndex": 66
+      "DebugActionIndex": 67
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityAnalyticsModule.dll",
@@ -1203,7 +1238,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityAnalyticsModule.dll"
       ],
-      "DebugActionIndex": 67
+      "DebugActionIndex": 68
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityConnectModule.dll",
@@ -1215,7 +1250,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityConnectModule.dll"
       ],
-      "DebugActionIndex": 68
+      "DebugActionIndex": 69
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityCurlModule.dll",
@@ -1227,7 +1262,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityCurlModule.dll"
       ],
-      "DebugActionIndex": 69
+      "DebugActionIndex": 70
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityTestProtocolModule.dll",
@@ -1239,7 +1274,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityTestProtocolModule.dll"
       ],
-      "DebugActionIndex": 70
+      "DebugActionIndex": 71
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll",
@@ -1251,7 +1286,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll"
       ],
-      "DebugActionIndex": 71
+      "DebugActionIndex": 72
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll",
@@ -1263,7 +1298,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll"
       ],
-      "DebugActionIndex": 72
+      "DebugActionIndex": 73
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestModule.dll",
@@ -1275,7 +1310,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestModule.dll"
       ],
-      "DebugActionIndex": 73
+      "DebugActionIndex": 74
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll",
@@ -1287,7 +1322,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll"
       ],
-      "DebugActionIndex": 74
+      "DebugActionIndex": 75
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll",
@@ -1299,7 +1334,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll"
       ],
-      "DebugActionIndex": 75
+      "DebugActionIndex": 76
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VFXModule.dll",
@@ -1311,7 +1346,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VFXModule.dll"
       ],
-      "DebugActionIndex": 76
+      "DebugActionIndex": 77
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VRModule.dll",
@@ -1323,7 +1358,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VRModule.dll"
       ],
-      "DebugActionIndex": 77
+      "DebugActionIndex": 78
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VehiclesModule.dll",
@@ -1335,7 +1370,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VehiclesModule.dll"
       ],
-      "DebugActionIndex": 78
+      "DebugActionIndex": 79
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VideoModule.dll",
@@ -1347,7 +1382,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VideoModule.dll"
       ],
-      "DebugActionIndex": 79
+      "DebugActionIndex": 80
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VirtualTexturingModule.dll",
@@ -1359,7 +1394,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VirtualTexturingModule.dll"
       ],
-      "DebugActionIndex": 80
+      "DebugActionIndex": 81
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.WindModule.dll",
@@ -1371,7 +1406,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.WindModule.dll"
       ],
-      "DebugActionIndex": 81
+      "DebugActionIndex": 82
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.XRModule.dll",
@@ -1383,7 +1418,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.XRModule.dll"
       ],
-      "DebugActionIndex": 82
+      "DebugActionIndex": 83
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.dll",
@@ -1395,7 +1430,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.dll"
       ],
-      "DebugActionIndex": 83
+      "DebugActionIndex": 84
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Assembly-CSharp.dll",
@@ -1407,7 +1442,31 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Assembly-CSharp.dll"
       ],
-      "DebugActionIndex": 84
+      "DebugActionIndex": 85
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.AI.Navigation.dll",
+      "DisplayName": "Copying Unity.AI.Navigation.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.AI.Navigation.dll"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.AI.Navigation.dll"
+      ],
+      "DebugActionIndex": 86
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Burst.dll",
+      "DisplayName": "Copying Unity.Burst.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Burst.dll"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Burst.dll"
+      ],
+      "DebugActionIndex": 87
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.VisualScripting.Core.dll",
@@ -1419,7 +1478,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.VisualScripting.Core.dll"
       ],
-      "DebugActionIndex": 85
+      "DebugActionIndex": 88
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UI.dll",
@@ -1431,7 +1490,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UI.dll"
       ],
-      "DebugActionIndex": 86
+      "DebugActionIndex": 89
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.VisualScripting.Flow.dll",
@@ -1443,19 +1502,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.VisualScripting.Flow.dll"
       ],
-      "DebugActionIndex": 87
-    },
-    {
-      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonRealtime.dll",
-      "DisplayName": "Copying PhotonRealtime.dll",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.dll"
-      ],
-      "Outputs": [
-        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonRealtime.dll"
-      ],
-      "DebugActionIndex": 88
+      "DebugActionIndex": 90
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonChat.dll",
@@ -1467,7 +1514,19 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonChat.dll"
       ],
-      "DebugActionIndex": 89
+      "DebugActionIndex": 91
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonRealtime.dll",
+      "DisplayName": "Copying PhotonRealtime.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.dll"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonRealtime.dll"
+      ],
+      "DebugActionIndex": 92
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Timeline.dll",
@@ -1479,7 +1538,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Timeline.dll"
       ],
-      "DebugActionIndex": 90
+      "DebugActionIndex": 93
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonUnityNetworking.dll",
@@ -1491,7 +1550,31 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonUnityNetworking.dll"
       ],
-      "DebugActionIndex": 91
+      "DebugActionIndex": 94
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Animation.Rigging.DocCodeExamples.dll",
+      "DisplayName": "Copying Unity.Animation.Rigging.DocCodeExamples.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Animation.Rigging.DocCodeExamples.dll"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Animation.Rigging.DocCodeExamples.dll"
+      ],
+      "DebugActionIndex": 95
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Mathematics.dll",
+      "DisplayName": "Copying Unity.Mathematics.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Mathematics.dll"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Mathematics.dll"
+      ],
+      "DebugActionIndex": 96
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonUnityNetworking.Demos.dll",
@@ -1503,7 +1586,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonUnityNetworking.Demos.dll"
       ],
-      "DebugActionIndex": 92
+      "DebugActionIndex": 97
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonUnityNetworking.Utilities.dll",
@@ -1515,7 +1598,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonUnityNetworking.Utilities.dll"
       ],
-      "DebugActionIndex": 93
+      "DebugActionIndex": 98
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.TextMeshPro.dll",
@@ -1527,7 +1610,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.TextMeshPro.dll"
       ],
-      "DebugActionIndex": 94
+      "DebugActionIndex": 99
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.VisualScripting.State.dll",
@@ -1539,7 +1622,19 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.VisualScripting.State.dll"
       ],
-      "DebugActionIndex": 95
+      "DebugActionIndex": 100
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Animation.Rigging.dll",
+      "DisplayName": "Copying Unity.Animation.Rigging.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Animation.Rigging.dll"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Animation.Rigging.dll"
+      ],
+      "DebugActionIndex": 101
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/websocket-sharp.dll",
@@ -1551,7 +1646,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/websocket-sharp.dll"
       ],
-      "DebugActionIndex": 96
+      "DebugActionIndex": 102
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll",
@@ -1563,7 +1658,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll"
       ],
-      "DebugActionIndex": 97
+      "DebugActionIndex": 103
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Photon3Unity3D.dll",
@@ -1575,7 +1670,31 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Photon3Unity3D.dll"
       ],
-      "DebugActionIndex": 98
+      "DebugActionIndex": 104
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Burst.Unsafe.dll",
+      "DisplayName": "Copying Unity.Burst.Unsafe.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/GitHub/unity_nohead_t/noHead/Library/PackageCache/com.unity.burst@1.8.7/Unity.Burst.Unsafe.dll"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Burst.Unsafe.dll"
+      ],
+      "DebugActionIndex": 105
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Runtime.dll",
+      "DisplayName": "Copying System.Runtime.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Facades/System.Runtime.dll"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Runtime.dll"
+      ],
+      "DebugActionIndex": 106
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/netstandard.dll",
@@ -1587,7 +1706,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/netstandard.dll"
       ],
-      "DebugActionIndex": 99
+      "DebugActionIndex": 107
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Mono.Security.dll",
@@ -1599,7 +1718,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Mono.Security.dll"
       ],
-      "DebugActionIndex": 100
+      "DebugActionIndex": 108
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.ComponentModel.Composition.dll",
@@ -1611,7 +1730,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.ComponentModel.Composition.dll"
       ],
-      "DebugActionIndex": 101
+      "DebugActionIndex": 109
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Configuration.dll",
@@ -1623,7 +1742,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Configuration.dll"
       ],
-      "DebugActionIndex": 102
+      "DebugActionIndex": 110
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Core.dll",
@@ -1635,7 +1754,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Core.dll"
       ],
-      "DebugActionIndex": 103
+      "DebugActionIndex": 111
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Data.DataSetExtensions.dll",
@@ -1647,7 +1766,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Data.DataSetExtensions.dll"
       ],
-      "DebugActionIndex": 104
+      "DebugActionIndex": 112
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Data.dll",
@@ -1659,7 +1778,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Data.dll"
       ],
-      "DebugActionIndex": 105
+      "DebugActionIndex": 113
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Drawing.dll",
@@ -1671,7 +1790,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Drawing.dll"
       ],
-      "DebugActionIndex": 106
+      "DebugActionIndex": 114
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.EnterpriseServices.dll",
@@ -1683,7 +1802,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.EnterpriseServices.dll"
       ],
-      "DebugActionIndex": 107
+      "DebugActionIndex": 115
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.IO.Compression.FileSystem.dll",
@@ -1695,7 +1814,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.IO.Compression.FileSystem.dll"
       ],
-      "DebugActionIndex": 108
+      "DebugActionIndex": 116
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.IO.Compression.dll",
@@ -1707,7 +1826,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.IO.Compression.dll"
       ],
-      "DebugActionIndex": 109
+      "DebugActionIndex": 117
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Net.Http.dll",
@@ -1719,7 +1838,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Net.Http.dll"
       ],
-      "DebugActionIndex": 110
+      "DebugActionIndex": 118
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Numerics.dll",
@@ -1731,7 +1850,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Numerics.dll"
       ],
-      "DebugActionIndex": 111
+      "DebugActionIndex": 119
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Runtime.Serialization.dll",
@@ -1743,7 +1862,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Runtime.Serialization.dll"
       ],
-      "DebugActionIndex": 112
+      "DebugActionIndex": 120
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Security.dll",
@@ -1755,7 +1874,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Security.dll"
       ],
-      "DebugActionIndex": 113
+      "DebugActionIndex": 121
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.ServiceModel.Internals.dll",
@@ -1767,7 +1886,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.ServiceModel.Internals.dll"
       ],
-      "DebugActionIndex": 114
+      "DebugActionIndex": 122
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Transactions.dll",
@@ -1779,7 +1898,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Transactions.dll"
       ],
-      "DebugActionIndex": 115
+      "DebugActionIndex": 123
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Xml.Linq.dll",
@@ -1791,7 +1910,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Xml.Linq.dll"
       ],
-      "DebugActionIndex": 116
+      "DebugActionIndex": 124
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Xml.dll",
@@ -1803,7 +1922,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.Xml.dll"
       ],
-      "DebugActionIndex": 117
+      "DebugActionIndex": 125
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.dll",
@@ -1815,7 +1934,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/System.dll"
       ],
-      "DebugActionIndex": 118
+      "DebugActionIndex": 126
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/mscorlib.dll",
@@ -1827,7 +1946,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/mscorlib.dll"
       ],
-      "DebugActionIndex": 119
+      "DebugActionIndex": 127
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AIModule.pdb",
@@ -1839,7 +1958,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AIModule.pdb"
       ],
-      "DebugActionIndex": 120
+      "DebugActionIndex": 128
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ARModule.pdb",
@@ -1851,7 +1970,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ARModule.pdb"
       ],
-      "DebugActionIndex": 121
+      "DebugActionIndex": 129
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AccessibilityModule.pdb",
@@ -1863,7 +1982,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AccessibilityModule.pdb"
       ],
-      "DebugActionIndex": 122
+      "DebugActionIndex": 130
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AndroidJNIModule.pdb",
@@ -1875,7 +1994,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AndroidJNIModule.pdb"
       ],
-      "DebugActionIndex": 123
+      "DebugActionIndex": 131
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AnimationModule.pdb",
@@ -1887,7 +2006,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AnimationModule.pdb"
       ],
-      "DebugActionIndex": 124
+      "DebugActionIndex": 132
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AssetBundleModule.pdb",
@@ -1899,7 +2018,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AssetBundleModule.pdb"
       ],
-      "DebugActionIndex": 125
+      "DebugActionIndex": 133
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AudioModule.pdb",
@@ -1911,7 +2030,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.AudioModule.pdb"
       ],
-      "DebugActionIndex": 126
+      "DebugActionIndex": 134
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ClothModule.pdb",
@@ -1923,7 +2042,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ClothModule.pdb"
       ],
-      "DebugActionIndex": 127
+      "DebugActionIndex": 135
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ClusterInputModule.pdb",
@@ -1935,7 +2054,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ClusterInputModule.pdb"
       ],
-      "DebugActionIndex": 128
+      "DebugActionIndex": 136
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ClusterRendererModule.pdb",
@@ -1947,7 +2066,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ClusterRendererModule.pdb"
       ],
-      "DebugActionIndex": 129
+      "DebugActionIndex": 137
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ContentLoadModule.pdb",
@@ -1959,7 +2078,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ContentLoadModule.pdb"
       ],
-      "DebugActionIndex": 130
+      "DebugActionIndex": 138
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.CoreModule.pdb",
@@ -1971,7 +2090,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.CoreModule.pdb"
       ],
-      "DebugActionIndex": 131
+      "DebugActionIndex": 139
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.CrashReportingModule.pdb",
@@ -1983,7 +2102,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.CrashReportingModule.pdb"
       ],
-      "DebugActionIndex": 132
+      "DebugActionIndex": 140
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.DSPGraphModule.pdb",
@@ -1995,7 +2114,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.DSPGraphModule.pdb"
       ],
-      "DebugActionIndex": 133
+      "DebugActionIndex": 141
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.DirectorModule.pdb",
@@ -2007,7 +2126,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.DirectorModule.pdb"
       ],
-      "DebugActionIndex": 134
+      "DebugActionIndex": 142
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.GIModule.pdb",
@@ -2019,7 +2138,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.GIModule.pdb"
       ],
-      "DebugActionIndex": 135
+      "DebugActionIndex": 143
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.GameCenterModule.pdb",
@@ -2031,7 +2150,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.GameCenterModule.pdb"
       ],
-      "DebugActionIndex": 136
+      "DebugActionIndex": 144
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.GridModule.pdb",
@@ -2043,7 +2162,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.GridModule.pdb"
       ],
-      "DebugActionIndex": 137
+      "DebugActionIndex": 145
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.HotReloadModule.pdb",
@@ -2055,7 +2174,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.HotReloadModule.pdb"
       ],
-      "DebugActionIndex": 138
+      "DebugActionIndex": 146
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.IMGUIModule.pdb",
@@ -2067,7 +2186,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.IMGUIModule.pdb"
       ],
-      "DebugActionIndex": 139
+      "DebugActionIndex": 147
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ImageConversionModule.pdb",
@@ -2079,7 +2198,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ImageConversionModule.pdb"
       ],
-      "DebugActionIndex": 140
+      "DebugActionIndex": 148
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.InputLegacyModule.pdb",
@@ -2091,7 +2210,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.InputLegacyModule.pdb"
       ],
-      "DebugActionIndex": 141
+      "DebugActionIndex": 149
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.InputModule.pdb",
@@ -2103,7 +2222,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.InputModule.pdb"
       ],
-      "DebugActionIndex": 142
+      "DebugActionIndex": 150
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.JSONSerializeModule.pdb",
@@ -2115,7 +2234,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.JSONSerializeModule.pdb"
       ],
-      "DebugActionIndex": 143
+      "DebugActionIndex": 151
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.LocalizationModule.pdb",
@@ -2127,7 +2246,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.LocalizationModule.pdb"
       ],
-      "DebugActionIndex": 144
+      "DebugActionIndex": 152
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.NVIDIAModule.pdb",
@@ -2139,7 +2258,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.NVIDIAModule.pdb"
       ],
-      "DebugActionIndex": 145
+      "DebugActionIndex": 153
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ParticleSystemModule.pdb",
@@ -2151,7 +2270,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ParticleSystemModule.pdb"
       ],
-      "DebugActionIndex": 146
+      "DebugActionIndex": 154
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.PerformanceReportingModule.pdb",
@@ -2163,7 +2282,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.PerformanceReportingModule.pdb"
       ],
-      "DebugActionIndex": 147
+      "DebugActionIndex": 155
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.Physics2DModule.pdb",
@@ -2175,7 +2294,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.Physics2DModule.pdb"
       ],
-      "DebugActionIndex": 148
+      "DebugActionIndex": 156
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.PhysicsModule.pdb",
@@ -2187,7 +2306,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.PhysicsModule.pdb"
       ],
-      "DebugActionIndex": 149
+      "DebugActionIndex": 157
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ProfilerModule.pdb",
@@ -2199,7 +2318,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ProfilerModule.pdb"
       ],
-      "DebugActionIndex": 150
+      "DebugActionIndex": 158
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.PropertiesModule.pdb",
@@ -2211,7 +2330,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.PropertiesModule.pdb"
       ],
-      "DebugActionIndex": 151
+      "DebugActionIndex": 159
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.pdb",
@@ -2223,7 +2342,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.pdb"
       ],
-      "DebugActionIndex": 152
+      "DebugActionIndex": 160
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ScreenCaptureModule.pdb",
@@ -2235,7 +2354,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.ScreenCaptureModule.pdb"
       ],
-      "DebugActionIndex": 153
+      "DebugActionIndex": 161
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SharedInternalsModule.pdb",
@@ -2247,7 +2366,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SharedInternalsModule.pdb"
       ],
-      "DebugActionIndex": 154
+      "DebugActionIndex": 162
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SpriteMaskModule.pdb",
@@ -2259,7 +2378,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SpriteMaskModule.pdb"
       ],
-      "DebugActionIndex": 155
+      "DebugActionIndex": 163
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SpriteShapeModule.pdb",
@@ -2271,7 +2390,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SpriteShapeModule.pdb"
       ],
-      "DebugActionIndex": 156
+      "DebugActionIndex": 164
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.StreamingModule.pdb",
@@ -2283,7 +2402,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.StreamingModule.pdb"
       ],
-      "DebugActionIndex": 157
+      "DebugActionIndex": 165
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SubstanceModule.pdb",
@@ -2295,7 +2414,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SubstanceModule.pdb"
       ],
-      "DebugActionIndex": 158
+      "DebugActionIndex": 166
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SubsystemsModule.pdb",
@@ -2307,7 +2426,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.SubsystemsModule.pdb"
       ],
-      "DebugActionIndex": 159
+      "DebugActionIndex": 167
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TLSModule.pdb",
@@ -2319,7 +2438,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TLSModule.pdb"
       ],
-      "DebugActionIndex": 160
+      "DebugActionIndex": 168
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TerrainModule.pdb",
@@ -2331,7 +2450,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TerrainModule.pdb"
       ],
-      "DebugActionIndex": 161
+      "DebugActionIndex": 169
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TerrainPhysicsModule.pdb",
@@ -2343,7 +2462,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TerrainPhysicsModule.pdb"
       ],
-      "DebugActionIndex": 162
+      "DebugActionIndex": 170
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TextCoreFontEngineModule.pdb",
@@ -2355,7 +2474,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TextCoreFontEngineModule.pdb"
       ],
-      "DebugActionIndex": 163
+      "DebugActionIndex": 171
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TextCoreTextEngineModule.pdb",
@@ -2367,7 +2486,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TextCoreTextEngineModule.pdb"
       ],
-      "DebugActionIndex": 164
+      "DebugActionIndex": 172
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TextRenderingModule.pdb",
@@ -2379,7 +2498,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TextRenderingModule.pdb"
       ],
-      "DebugActionIndex": 165
+      "DebugActionIndex": 173
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TilemapModule.pdb",
@@ -2391,7 +2510,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.TilemapModule.pdb"
       ],
-      "DebugActionIndex": 166
+      "DebugActionIndex": 174
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UIElementsModule.pdb",
@@ -2403,7 +2522,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UIElementsModule.pdb"
       ],
-      "DebugActionIndex": 167
+      "DebugActionIndex": 175
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UIModule.pdb",
@@ -2415,7 +2534,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UIModule.pdb"
       ],
-      "DebugActionIndex": 168
+      "DebugActionIndex": 176
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UmbraModule.pdb",
@@ -2427,7 +2546,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UmbraModule.pdb"
       ],
-      "DebugActionIndex": 169
+      "DebugActionIndex": 177
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.pdb",
@@ -2439,7 +2558,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.pdb"
       ],
-      "DebugActionIndex": 170
+      "DebugActionIndex": 178
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityAnalyticsModule.pdb",
@@ -2451,7 +2570,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityAnalyticsModule.pdb"
       ],
-      "DebugActionIndex": 171
+      "DebugActionIndex": 179
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityConnectModule.pdb",
@@ -2463,7 +2582,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityConnectModule.pdb"
       ],
-      "DebugActionIndex": 172
+      "DebugActionIndex": 180
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityCurlModule.pdb",
@@ -2475,7 +2594,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityCurlModule.pdb"
       ],
-      "DebugActionIndex": 173
+      "DebugActionIndex": 181
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityTestProtocolModule.pdb",
@@ -2487,7 +2606,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityTestProtocolModule.pdb"
       ],
-      "DebugActionIndex": 174
+      "DebugActionIndex": 182
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.pdb",
@@ -2499,7 +2618,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.pdb"
       ],
-      "DebugActionIndex": 175
+      "DebugActionIndex": 183
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestAudioModule.pdb",
@@ -2511,7 +2630,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestAudioModule.pdb"
       ],
-      "DebugActionIndex": 176
+      "DebugActionIndex": 184
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestModule.pdb",
@@ -2523,7 +2642,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestModule.pdb"
       ],
-      "DebugActionIndex": 177
+      "DebugActionIndex": 185
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestTextureModule.pdb",
@@ -2535,7 +2654,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestTextureModule.pdb"
       ],
-      "DebugActionIndex": 178
+      "DebugActionIndex": 186
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestWWWModule.pdb",
@@ -2547,7 +2666,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UnityWebRequestWWWModule.pdb"
       ],
-      "DebugActionIndex": 179
+      "DebugActionIndex": 187
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VFXModule.pdb",
@@ -2559,7 +2678,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VFXModule.pdb"
       ],
-      "DebugActionIndex": 180
+      "DebugActionIndex": 188
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VRModule.pdb",
@@ -2571,7 +2690,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VRModule.pdb"
       ],
-      "DebugActionIndex": 181
+      "DebugActionIndex": 189
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VehiclesModule.pdb",
@@ -2583,7 +2702,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VehiclesModule.pdb"
       ],
-      "DebugActionIndex": 182
+      "DebugActionIndex": 190
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VideoModule.pdb",
@@ -2595,7 +2714,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VideoModule.pdb"
       ],
-      "DebugActionIndex": 183
+      "DebugActionIndex": 191
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VirtualTexturingModule.pdb",
@@ -2607,7 +2726,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.VirtualTexturingModule.pdb"
       ],
-      "DebugActionIndex": 184
+      "DebugActionIndex": 192
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.WindModule.pdb",
@@ -2619,7 +2738,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.WindModule.pdb"
       ],
-      "DebugActionIndex": 185
+      "DebugActionIndex": 193
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.XRModule.pdb",
@@ -2631,7 +2750,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.XRModule.pdb"
       ],
-      "DebugActionIndex": 186
+      "DebugActionIndex": 194
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.pdb",
@@ -2643,7 +2762,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.pdb"
       ],
-      "DebugActionIndex": 187
+      "DebugActionIndex": 195
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Assembly-CSharp.pdb",
@@ -2655,7 +2774,31 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Assembly-CSharp.pdb"
       ],
-      "DebugActionIndex": 188
+      "DebugActionIndex": 196
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.AI.Navigation.pdb",
+      "DisplayName": "Copying Unity.AI.Navigation.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.AI.Navigation.pdb"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.AI.Navigation.pdb"
+      ],
+      "DebugActionIndex": 197
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Burst.pdb",
+      "DisplayName": "Copying Unity.Burst.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Burst.pdb"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Burst.pdb"
+      ],
+      "DebugActionIndex": 198
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.VisualScripting.Core.pdb",
@@ -2667,7 +2810,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.VisualScripting.Core.pdb"
       ],
-      "DebugActionIndex": 189
+      "DebugActionIndex": 199
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UI.pdb",
@@ -2679,7 +2822,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/UnityEngine.UI.pdb"
       ],
-      "DebugActionIndex": 190
+      "DebugActionIndex": 200
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.VisualScripting.Flow.pdb",
@@ -2691,19 +2834,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.VisualScripting.Flow.pdb"
       ],
-      "DebugActionIndex": 191
-    },
-    {
-      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonRealtime.pdb",
-      "DisplayName": "Copying PhotonRealtime.pdb",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.pdb"
-      ],
-      "Outputs": [
-        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonRealtime.pdb"
-      ],
-      "DebugActionIndex": 192
+      "DebugActionIndex": 201
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonChat.pdb",
@@ -2715,7 +2846,19 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonChat.pdb"
       ],
-      "DebugActionIndex": 193
+      "DebugActionIndex": 202
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonRealtime.pdb",
+      "DisplayName": "Copying PhotonRealtime.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.pdb"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonRealtime.pdb"
+      ],
+      "DebugActionIndex": 203
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Timeline.pdb",
@@ -2727,7 +2870,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Timeline.pdb"
       ],
-      "DebugActionIndex": 194
+      "DebugActionIndex": 204
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonUnityNetworking.pdb",
@@ -2739,7 +2882,31 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonUnityNetworking.pdb"
       ],
-      "DebugActionIndex": 195
+      "DebugActionIndex": 205
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Animation.Rigging.DocCodeExamples.pdb",
+      "DisplayName": "Copying Unity.Animation.Rigging.DocCodeExamples.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Animation.Rigging.DocCodeExamples.pdb"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Animation.Rigging.DocCodeExamples.pdb"
+      ],
+      "DebugActionIndex": 206
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Mathematics.pdb",
+      "DisplayName": "Copying Unity.Mathematics.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Mathematics.pdb"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Mathematics.pdb"
+      ],
+      "DebugActionIndex": 207
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonUnityNetworking.Demos.pdb",
@@ -2751,7 +2918,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonUnityNetworking.Demos.pdb"
       ],
-      "DebugActionIndex": 196
+      "DebugActionIndex": 208
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonUnityNetworking.Utilities.pdb",
@@ -2763,7 +2930,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/PhotonUnityNetworking.Utilities.pdb"
       ],
-      "DebugActionIndex": 197
+      "DebugActionIndex": 209
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.TextMeshPro.pdb",
@@ -2775,7 +2942,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.TextMeshPro.pdb"
       ],
-      "DebugActionIndex": 198
+      "DebugActionIndex": 210
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.VisualScripting.State.pdb",
@@ -2787,32 +2954,217 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.VisualScripting.State.pdb"
       ],
-      "DebugActionIndex": 199
+      "DebugActionIndex": 211
     },
     {
-      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Photon3Unity3D.pdb",
-      "DisplayName": "Copying Photon3Unity3D.pdb",
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Animation.Rigging.pdb",
+      "DisplayName": "Copying Unity.Animation.Rigging.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/GitHub/unity_nohead_t/noHead/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.pdb"
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Animation.Rigging.pdb"
       ],
       "Outputs": [
-        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Photon3Unity3D.pdb"
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Managed/Unity.Animation.Rigging.pdb"
       ],
-      "DebugActionIndex": 200
+      "DebugActionIndex": 212
+    },
+    {
+      "Annotation": "GenerateNativePluginsForAssemblies Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker",
+      "DisplayName": "Running Burst Compiler",
+      "ActionType": "RunRPCCommand",
+      "PayloadOffset": 16026,
+      "PayloadLength": 14780,
+      "PayloadDebugContentSnippet": "{\"PlayerBuildProgramLibrary.Da",
+      "Action": "GenerateNativePluginsForAssemblies",
+      "Inputs": [
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AIModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ARModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AccessibilityModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AndroidJNIModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AnimationModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AssetBundleModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AudioModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ClothModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ClusterInputModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ClusterRendererModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ContentLoadModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.CoreModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.CrashReportingModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.DSPGraphModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.DirectorModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.GIModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.GameCenterModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.GridModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.HotReloadModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.IMGUIModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ImageConversionModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.InputLegacyModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.InputModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.JSONSerializeModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.LocalizationModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.NVIDIAModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ParticleSystemModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.PerformanceReportingModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.Physics2DModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.PhysicsModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ProfilerModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.PropertiesModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ScreenCaptureModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SharedInternalsModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SpriteMaskModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SpriteShapeModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.StreamingModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SubstanceModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SubsystemsModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TLSModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TerrainModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TerrainPhysicsModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TextCoreFontEngineModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TextCoreTextEngineModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TextRenderingModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TilemapModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UIElementsModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UIModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UmbraModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityAnalyticsCommonModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityAnalyticsModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityConnectModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityCurlModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityTestProtocolModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestAudioModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestTextureModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestWWWModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VFXModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VRModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VehiclesModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VideoModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VirtualTexturingModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.AI.Navigation.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Burst.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonChat.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Animation.Rigging.DocCodeExamples.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Mathematics.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Demos.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Utilities.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Animation.Rigging.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll",
+        "C:/GitHub/unity_nohead_t/noHead/Library/PackageCache/com.unity.burst@1.8.7/Unity.Burst.Unsafe.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Facades/System.Runtime.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Facades/netstandard.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Mono.Security.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.ComponentModel.Composition.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Configuration.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Core.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Data.DataSetExtensions.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Data.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Drawing.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.EnterpriseServices.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.IO.Compression.FileSystem.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.IO.Compression.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Net.Http.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Numerics.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Runtime.Serialization.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Security.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.ServiceModel.Internals.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Transactions.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Xml.Linq.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Xml.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.dll",
+        "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/mscorlib.dll",
+        "ProjectSettings/BurstAotSettings_StandaloneWindows.json",
+        "C:/GitHub/unity_nohead_t/noHead/Library/PackageCache/com.unity.burst@1.8.7/.Runtime/bcl.exe"
+      ],
+      "Outputs": [],
+      "TargetDirectories": [
+        "Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker",
+        "Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinkerSymbols"
+      ],
+      "OverwriteOutputs": false,
+      "StatSignatures": [
+        {
+          "File": "Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker"
+        },
+        {
+          "File": "Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker/x86_64"
+        },
+        {
+          "File": "Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinkerSymbols"
+        }
+      ],
+      "GlobSignatures": [
+        {
+          "Path": "Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker"
+        },
+        {
+          "Path": "Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker/x86_64",
+          "Recurse": 1
+        },
+        {
+          "Path": "Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinkerSymbols",
+          "Recurse": 1
+        }
+      ],
+      "DebugActionIndex": 213
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Plugins/x86_64/lib_burst_generated.dll",
+      "DisplayName": "Copying lib_burst_generated.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker/x86_64/lib_burst_generated.dll"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Plugins/x86_64/lib_burst_generated.dll"
+      ],
+      "ToBuildDependencies": [
+        213
+      ],
+      "DebugActionIndex": 214
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Plugins/x86_64/lib_burst_generated.pdb",
+      "DisplayName": "Copying lib_burst_generated.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker/x86_64/lib_burst_generated.pdb"
+      ],
+      "Outputs": [
+        "C:/Users/이윤기/Desktop/Build/noHead_Data/Plugins/x86_64/lib_burst_generated.pdb"
+      ],
+      "ToBuildDependencies": [
+        213
+      ],
+      "DebugActionIndex": 215
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info",
       "DisplayName": "Writing app.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 15241,
+      "PayloadOffset": 30895,
       "PayloadLength": 21,
       "PayloadDebugContentSnippet": "DefaultCompany\nnoHead",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info"
       ],
-      "DebugActionIndex": 201
+      "DebugActionIndex": 216
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/app.info",
@@ -2825,9 +3177,9 @@
         "C:/Users/이윤기/Desktop/Build/noHead_Data/app.info"
       ],
       "ToBuildDependencies": [
-        201
+        216
       ],
-      "DebugActionIndex": 202
+      "DebugActionIndex": 217
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead_Data/Resources/unity default resources",
@@ -2839,7 +3191,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead_Data/Resources/unity default resources"
       ],
-      "DebugActionIndex": 203
+      "DebugActionIndex": 218
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/noHead.exe",
@@ -2851,7 +3203,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/noHead.exe"
       ],
-      "DebugActionIndex": 204
+      "DebugActionIndex": 219
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll",
@@ -2863,7 +3215,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll"
       ],
-      "DebugActionIndex": 205
+      "DebugActionIndex": 220
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll",
@@ -2875,7 +3227,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll"
       ],
-      "DebugActionIndex": 206
+      "DebugActionIndex": 221
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser",
@@ -2887,7 +3239,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 207
+      "DebugActionIndex": 222
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx",
@@ -2899,7 +3251,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 208
+      "DebugActionIndex": 223
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/machine.config",
@@ -2911,7 +3263,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/machine.config"
       ],
-      "DebugActionIndex": 209
+      "DebugActionIndex": 224
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/settings.map",
@@ -2923,7 +3275,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/settings.map"
       ],
-      "DebugActionIndex": 210
+      "DebugActionIndex": 225
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/web.config",
@@ -2935,7 +3287,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/2.0/web.config"
       ],
-      "DebugActionIndex": 211
+      "DebugActionIndex": 226
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser",
@@ -2947,7 +3299,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 212
+      "DebugActionIndex": 227
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx",
@@ -2959,7 +3311,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 213
+      "DebugActionIndex": 228
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/machine.config",
@@ -2971,7 +3323,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/machine.config"
       ],
-      "DebugActionIndex": 214
+      "DebugActionIndex": 229
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/settings.map",
@@ -2983,7 +3335,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/settings.map"
       ],
-      "DebugActionIndex": 215
+      "DebugActionIndex": 230
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/web.config",
@@ -2995,7 +3347,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.0/web.config"
       ],
-      "DebugActionIndex": 216
+      "DebugActionIndex": 231
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser",
@@ -3007,7 +3359,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 217
+      "DebugActionIndex": 232
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx",
@@ -3019,7 +3371,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 218
+      "DebugActionIndex": 233
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/machine.config",
@@ -3031,7 +3383,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/machine.config"
       ],
-      "DebugActionIndex": 219
+      "DebugActionIndex": 234
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/settings.map",
@@ -3043,7 +3395,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/settings.map"
       ],
-      "DebugActionIndex": 220
+      "DebugActionIndex": 235
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/web.config",
@@ -3055,7 +3407,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/4.5/web.config"
       ],
-      "DebugActionIndex": 221
+      "DebugActionIndex": 236
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/browscap.ini",
@@ -3067,7 +3419,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/browscap.ini"
       ],
-      "DebugActionIndex": 222
+      "DebugActionIndex": 237
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/config",
@@ -3079,7 +3431,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/config"
       ],
-      "DebugActionIndex": 223
+      "DebugActionIndex": 238
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/mconfig/config.xml",
@@ -3091,7 +3443,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/MonoBleedingEdge/etc/mono/mconfig/config.xml"
       ],
-      "DebugActionIndex": 224
+      "DebugActionIndex": 239
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/UnityCrashHandler64.exe",
@@ -3103,7 +3455,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/UnityCrashHandler64.exe"
       ],
-      "DebugActionIndex": 225
+      "DebugActionIndex": 240
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/UnityPlayer.dll",
@@ -3115,7 +3467,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/UnityPlayer.dll"
       ],
-      "DebugActionIndex": 226
+      "DebugActionIndex": 241
     },
     {
       "Annotation": "CopyFiles C:/Users/이윤기/Desktop/Build/WinPixEventRuntime.dll",
@@ -3127,7 +3479,7 @@
       "Outputs": [
         "C:/Users/이윤기/Desktop/Build/WinPixEventRuntime.dll"
       ],
-      "DebugActionIndex": 227
+      "DebugActionIndex": 242
     },
     {
       "Annotation": "Player",
@@ -3147,7 +3499,7 @@
         10,
         11,
         12,
-        15,
+        13,
         16,
         17,
         18,
@@ -3333,6 +3685,7 @@
         198,
         199,
         200,
+        201,
         202,
         203,
         204,
@@ -3344,10 +3697,8 @@
         210,
         211,
         212,
-        213,
         214,
         215,
-        216,
         217,
         218,
         219,
@@ -3358,10 +3709,25 @@
         224,
         225,
         226,
-        227
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242
       ],
       "OverwriteOutputs": false,
-      "DebugActionIndex": 228
+      "DebugActionIndex": 243
     }
   ],
   "FileSignatures": [
@@ -3506,6 +3872,21 @@
       "File": "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Utilities.pdb"
     },
     {
+      "File": "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.AI.Navigation.pdb"
+    },
+    {
+      "File": "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Animation.Rigging.DocCodeExamples.pdb"
+    },
+    {
+      "File": "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Animation.Rigging.pdb"
+    },
+    {
+      "File": "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Burst.pdb"
+    },
+    {
+      "File": "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.Mathematics.pdb"
+    },
+    {
       "File": "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.pdb"
     },
     {
@@ -3524,10 +3905,16 @@
       "File": "C:/GitHub/unity_nohead_t/noHead/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.pdb"
     },
     {
+      "File": "C:/GitHub/unity_nohead_t/noHead/Library/PackageCache/com.unity.burst@1.8.7/Unity.Burst.Unsafe.pdb"
+    },
+    {
       "File": "C:/GitHub/unity_nohead_t/noHead/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.pdb"
     },
     {
       "File": "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Facades/netstandard.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Facades/System.Runtime.pdb"
     },
     {
       "File": "C:/Program Files/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Mono.Security.pdb"
@@ -3872,9 +4259,13 @@
   "DigestCacheFileNameTmp": "Library/Bee/tundra.digestcache.tmp",
   "CachedNodeOutputDirectoryName": "Library/Bee/CachedNodeOutput",
   "EmitDataForBeeWhy": 0,
+  "DirectoriesCausingImplicitDependencies": [
+    "Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker",
+    "Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinkerSymbols"
+  ],
         "NamedNodes": {
           "all_tundra_nodes": 0,
-          "Player": 228
+          "Player": 243
         }
 ,  "DefaultNodes": [
     0

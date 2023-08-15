@@ -2,31 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Open : MonoBehaviour
 {
     public bool[] RandomItem = new bool[5];
     public GameObject DoorObject;
     int rand;
     public int Keycount = 3;
+    
+    
+    
 
-    void Start()
+    void RandItem()
     {
-        for (int i = 0; i < 3; i++)
-        {
-            rand = Random.Range(0, 4);
-            if (RandomItem[rand] == false)
+        
+            for (int i = 0; i < 3; i++)
             {
-                RandomItem[rand] = true;
+                rand = Random.Range(0, 4);
+                if (RandomItem[rand] == false)
+                {
+                    RandomItem[rand] = true;
+                }
+                else
+                {
+                    i--;
+                }
             }
-            else
-            {
-                i--;
-            }
-        }
+            
+        
     }
+   
+   
 
     void Update()
     {
+        
         if(Keycount == 0)
         {
             Door door = DoorObject.GetComponent<Door>();
@@ -49,4 +59,6 @@ public class Open : MonoBehaviour
         }
 
     }
+    
+    
 }
