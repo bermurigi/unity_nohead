@@ -56,6 +56,9 @@ MonoBehaviour:
   - SyncRandomItemArray
   - MovePlayersToStartPoint
   - MovePlayerToStartPoint
+  - DeleteStartCanvas
+  - RandItem
+  - DestroyObject
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

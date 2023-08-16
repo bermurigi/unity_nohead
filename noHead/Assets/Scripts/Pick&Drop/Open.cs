@@ -1,18 +1,41 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 
-public class Open : MonoBehaviour
+public class Open : MonoBehaviourPunCallbacks, IPunObservable
 {
     public bool[] RandomItem = new bool[5];
     public GameObject DoorObject;
     int rand;
     public int Keycount = 3;
-    
-    
-    
 
+    public static Open instance = null;
+    private bool isRand;
+
+    private void Awake()
+    {
+        if (null == instance)
+        {
+            instance = this;
+            
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+
+        isRand = false;
+
+
+
+    }
+
+
+    [PunRPC]
     void RandItem()
     {
         
@@ -43,6 +66,12 @@ public class Open : MonoBehaviour
             door.Opendoor = true;
             Keycount = -1;
         }
+
+        if (PhotonNetwork.IsMasterClient && isRand == false) 
+        {
+            photonView.RPC("RandItem",RpcTarget.AllBuffered);
+            isRand = true;
+        }
     }
 
     void OnTriggerStay(Collider other)
@@ -55,10 +84,23 @@ public class Open : MonoBehaviour
                 RandomItem[item.value] = false;
                 Keycount--;
             }
+           
             Destroy(other.gameObject);
         }
 
     }
+
+    /*
+    [PunRPC]
+    void DestroyObject(GameObject gameObject)
+    {
+        Destroy(gameObject);
+    }
+    */
     
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)  
+    {
+        
+    }
     
 }

@@ -4,12 +4,14 @@ using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
 using Photon.Realtime;
-public class StartManager : MonoBehaviour
+public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
 {
     [SerializeField] private GameObject StartCanvas;
     [SerializeField] private Text StartText;
     [SerializeField] private GameObject StartButton;
     [SerializeField] private GameObject StartPoint;
+    
+   
     private void Update()
     {
         int playerCount = PhotonNetwork.PlayerList.Length;
@@ -29,32 +31,44 @@ public class StartManager : MonoBehaviour
 
     
 
-    /*
+    
     public void StartButtonClick()
     {
-        if (PhotonNetwork.IsMasterClient)
-        {
-            // 모든 플레이어의 PhotonView를 가져와서 RPC 메서드 호출
-            foreach (Player player in PhotonNetwork.PlayerList)
-            {
-                PhotonView playerPhotonView = player.TagObject as PhotonView;
-                if (playerPhotonView != null)
-                {
-                    playerPhotonView.RPC("MovePlayerToStartPoint", player);
-                }
-            }
-        }
+        
+        photonView.RPC("MovePlayerToStartPoint", RpcTarget.All);
+        photonView.RPC("DeleteStartCanvas", RpcTarget.All);
+        
     }
 
     [PunRPC]
-    private void MovePlayerToStartPoint()
+    private void MovePlayerToStartPoint()//거의다함 여기건들이면끝날듯
     {
-        // 플레이어 오브젝트를 StartPoint로 이동시킴
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
+        
+        // 플레이어 오브젝트를 새 위치로 이동시킴
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        
+       
+        
+        foreach (GameObject player in players)
         {
-            player.transform.position = StartPoint.transform.position;
+            if (player != null)
+            {
+                player.transform.position = StartPoint.transform.position;
+            }
         }
+        
+        
+
     }
-    */
+
+    [PunRPC]
+    private void DeleteStartCanvas()
+    {
+        StartCanvas.SetActive(false);
+    }
+    
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)  
+    {
+        
+    }
 }

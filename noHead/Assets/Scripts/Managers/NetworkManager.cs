@@ -67,6 +67,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         StartCanvans.SetActive(true);
         choiceChracter.SetActive(false);
         GameObject playerObj = PhotonNetwork.Instantiate("Player", spawnPoint.position, Quaternion.identity);
+        playerObj.name = "Player_" + PhotonNetwork.LocalPlayer.ActorNumber.ToString();
         GhostMotionController playerScript = playerObj.GetComponent<GhostMotionController>();
         playerScript.i=colorIndex; //플레이어스크립트 색정하기
         
