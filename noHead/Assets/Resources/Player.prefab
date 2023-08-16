@@ -187,7 +187,7 @@ Transform:
   - {fileID: 350698327359276812}
   - {fileID: 2654604743361418909}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!54 &1762804260740850334
 Rigidbody:
@@ -265,6 +265,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 78b1d58f8931b82478961e4ed94b1825, type: 2}
   - {fileID: 2100000, guid: cf69c2b8fbd70634fa77ed1d5f0e9797, type: 2}
   playerRenderer: {fileID: 5520213217138702832}
+  MAX_DISTANCE: 500
   i: 0
 --- !u!114 &5386173897617962204
 MonoBehaviour:

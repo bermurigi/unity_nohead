@@ -60,7 +60,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
    
     public void spawn()
     {
-        GameObject playerObj = PhotonNetwork.Instantiate("Player", spawnPoint.position, Quaternion.identity);
+        GameObject playerObj = PhotonNetwork.Instantiate("Player 1", spawnPoint.position, Quaternion.identity);
         GhostMotionController playerScript = playerObj.GetComponent<GhostMotionController>();
         playerScript.i=colorIndex; //플레이어스크립트 색정하기
         

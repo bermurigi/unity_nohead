@@ -33,7 +33,13 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     public Material[] mat = new Material[3];
     public SkinnedMeshRenderer playerRenderer;
     
-   
+   //레이캐스트 관련 변수들
+    private RaycastHit rayHit;
+    private Ray ray;
+    public float MAX_DISTANCE = 500.0f;
+    private Transform highlight;
+    private Transform selection;
+
 
     public int i = 0;
     //0=노랑
@@ -91,6 +97,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
 
     void Update()
     {
+        
         photonView.RPC("RPC_ChangeMaterial", RpcTarget.AllBuffered, i);
         audioSource.mute = true;
         soundOnOff = false;
@@ -98,6 +105,8 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         if (PV.IsMine) //본인 캐릭터만 조종할 수 있게해줌 (바라보는방향)
         {
             GAnimator.SetBool("Fly", false);
+            RayCast();
+            MouseEvent();
             MouseRotation();
             
         }
@@ -116,6 +125,11 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         transform.eulerAngles = new Vector3(0, yRotate, 0);
 
 
+    }
+    void MouseEvent()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Onkeyboard()
@@ -233,4 +247,38 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         
         }
     }
-}
+    void RayCast() {
+        ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f,50f));
+        selection  = rayHit.transform;
+        if(Physics.Raycast (ray, out rayHit,MAX_DISTANCE)){
+            Debug.DrawLine(ray.origin,rayHit.point,Color.green);
+            Debug.Log(rayHit.transform.tag);
+            if(rayHit.transform.tag == "Key" ){
+                highlight = rayHit.transform;
+                if(highlight.gameObject.GetComponent<Outline>() != null)
+                {
+                     highlight.gameObject.GetComponent<Outline>().enabled = true;
+                }
+                else
+                {
+                     Outline outline = highlight.gameObject.AddComponent<Outline>();
+                     outline.enabled = true;
+                    highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.red;
+                    highlight.gameObject.GetComponent<Outline>().OutlineWidth = 14.0f;  
+                }
+                }
+                if(highlight != null && highlight != selection)
+                {
+                    highlight.gameObject.GetComponent<Outline>().enabled = false;
+                }
+        }
+        else
+        {
+            Debug.DrawRay(ray.origin,ray.direction* 100,Color.red);
+        }
+        }
+        
+        
+    }
+   
+
