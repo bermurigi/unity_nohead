@@ -164,7 +164,6 @@ GameObject:
   - component: {fileID: 5696689250124195621}
   - component: {fileID: 6986988547236243281}
   - component: {fileID: 7629141435290354989}
-  - component: {fileID: 5083925384472603925}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -321,8 +320,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearObject: {fileID: 0}
-  nowObject: {fileID: 0}
   PlayerTransform: {fileID: 1222085776487928564}
+  rayItem: 0
+  cameraObject: {fileID: 4720059155031660172}
+  layermask:
+    serializedVersion: 2
+    m_Bits: 256
   PV: {fileID: 5386173897617962204}
 --- !u!82 &7629141435290354989
 AudioSource:
@@ -420,29 +423,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!136 &5083925384472603925
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2322522074262771430}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Height: 1.18
-  m_Direction: 1
-  m_Center: {x: 0.01, y: 0.62, z: 0.25}
 --- !u!1 &2992709463599834152
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,7 +756,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 375
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

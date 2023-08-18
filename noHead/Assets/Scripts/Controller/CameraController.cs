@@ -16,6 +16,7 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         MouseRotation();
+
     }
 
     void MouseRotation()

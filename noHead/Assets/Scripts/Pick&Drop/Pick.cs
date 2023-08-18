@@ -8,9 +8,12 @@ using ExitGames.Client.Photon;
 public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
 {
     public GameObject nearObject;
-    public GameObject nowObject;
     public Transform PlayerTransform;
-    bool ItemPick; bool MovingItem;
+    bool ItemPick; bool MovingItem; public bool rayItem;
+    public GameObject cameraObject;
+    [SerializeField] LayerMask layermask;
+    RaycastHit hit;
+
     private bool firstPick;//이윤기
     public PhotonView PV;
     
@@ -22,52 +25,54 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
     {
         if (!PV.IsMine)
             return;
-        GetInput();
+        ItemPick = Input.GetButtonDown("PickUp");
         PV.RPC("PickUp", RpcTarget.AllBuffered);
-        
-        
-        
-        
+
+
         if (MovingItem)
         {
-            
-            
-            nowObject.transform.position = PlayerTransform.position;
+            nearObject.transform.position = PlayerTransform.position;
         }
 
-        
-    }
+        CameraController camera = cameraObject.GetComponent<CameraController>();
+        Debug.DrawRay(camera.transform.position, camera.transform.forward, Color.red);
 
-    void GetInput()
-    {
-        ItemPick = Input.GetButtonDown("PickUp");
-        
+        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, 20,layermask) && MovingItem != true)
+        {
+            nearObject = hit.collider.gameObject;
+            rayItem = true;
+        }
+        else
+        {
+            rayItem = false;
+            if(MovingItem != true)
+            {
+                nearObject = null;
+            }
+        }
     }
-
-   
 
     
     [PunRPC] void PickUp()
     {
         if (ItemPick && nearObject != null)
         {
-            nowObject = nearObject;
-            Item item = nowObject.GetComponent<Item>();
-            if (nearObject.tag == "Key" && MovingItem == false && item.PickingItem == false)
+            Item item = nearObject.GetComponent<Item>();
+            if (MovingItem == false)
             {
-                nowObject.transform.position = PlayerTransform.position;
-                nowObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+                nearObject.transform.position = PlayerTransform.position;
+                nearObject.transform.rotation = Quaternion.Euler(0, 0, 0);
                 firstPick = true;//이윤기
                 if (firstPick)//이윤기
                 {
-                    nowObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer); //조종권한바꾸기
+                    nearObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer); //조종권한바꾸기
                     firstPick = false;
                 }
                 
                 MovingItem = true;
                 item.rb.isKinematic = true;
-                item.PickingItem = true;
-                
+                Cursor.lockState = CursorLockMode.Locked;
+
                 item.photonView.RPC("UpdatePickingItem", RpcTarget.AllBuffered, item.PickingItem);
                 item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllBuffered, item.rb.isKinematic);
             
@@ -81,43 +86,15 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
             {
                 MovingItem = false;
                 item.rb.isKinematic = false;
-                nowObject = null;
-                item.PickingItem = false;
-                
+                Cursor.lockState = CursorLockMode.None;
+
                 item.photonView.RPC("UpdatePickingItem", RpcTarget.AllBuffered, item.PickingItem);
                 item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllBuffered, item.rb.isKinematic);
             }
-                
-                
-               
-               
-            
+             
         }
     }
-    
-    
-   
-   
-   
 
-    
-
-    void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Key" && nearObject == null)
-        {
-            nearObject = other.gameObject;
-        }
-
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Key")
-        {
-            nearObject = null;
-        }
-    }
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)  //이윤기
     {
        /* if (stream.IsWriting)
