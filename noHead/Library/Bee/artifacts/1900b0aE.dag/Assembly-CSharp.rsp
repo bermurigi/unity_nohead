@@ -394,6 +394,7 @@
 "Assets/Photon/PhotonRealtime/Demos/DemoLoadBalancing/ConnectAndJoinRandomLb.cs"
 "Assets/QuickOutline/Scripts/Outline.cs"
 "Assets/Scripts/CameraMove.cs"
+"Assets/Scripts/Center.cs"
 "Assets/Scripts/Controller/CameraController.cs"
 "Assets/Scripts/Controller/GhostMotionController.cs"
 "Assets/Scripts/DropdownController.cs"

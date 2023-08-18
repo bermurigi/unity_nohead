@@ -5,6 +5,7 @@ using Photon.Realtime;
 using Photon.Pun;
 using System.Linq.Expressions;
 using ExitGames.Client.Photon;
+using UnityEngine.EventSystems;
 public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
 {
     public GameObject nearObject;
@@ -13,9 +14,15 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
     bool ItemPick; bool MovingItem;
     private bool firstPick;//이윤기
     public PhotonView PV;
+    public GhostMotionController ghostMotionController;
+    private RaycastHit raycastHit;
     
+    bool Mouse;
     
-    
+
+    void Start(){
+        ghostMotionController = GetComponent<GhostMotionController>();
+    }
     
     
     void Update()
@@ -23,8 +30,10 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
         if (!PV.IsMine)
             return;
         GetInput();
-        PV.RPC("PickUp", RpcTarget.AllBuffered);
+        Clicking1();
+        PV.RPC("PickUp", RpcTarget.AllBuffered); //모든 플레이어가 똑같이 PickUp함수가 실행되도록 동기화함.
         
+
         
         
         
@@ -32,7 +41,7 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
         {
             
             
-            nowObject.transform.position = PlayerTransform.position;
+            nowObject.transform.position = PlayerTransform.position; //나우 오브젝트를 플레이어 위치로 이동시키는 것
         }
 
         
@@ -49,11 +58,12 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
     
     [PunRPC] void PickUp()
     {
-        if (ItemPick && nearObject != null)
+        if (ItemPick && nearObject != null) //픽업 버튼을 눌렀으며, nearobject가 존재할 때.
         {
-            nowObject = nearObject;
-            Item item = nowObject.GetComponent<Item>();
-            if (nearObject.tag == "Key" && MovingItem == false && item.PickingItem == false)
+            Debug.Log("PickUp 작동됨");
+            nowObject = nearObject; // nowobject는 nearobject가 된다.
+            Item item = nowObject.GetComponent<Item>(); //nowobject의 item 컴포넌트를 가져온다.
+            if (nearObject.tag == "Key" && MovingItem == false && item.PickingItem == false) // nearobject의 태그가 key이고 movingitem이 없으며, item.PickingItem
             {
                 nowObject.transform.position = PlayerTransform.position;
                 nowObject.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -71,8 +81,7 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
                 item.photonView.RPC("UpdatePickingItem", RpcTarget.AllBuffered, item.PickingItem);
                 item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllBuffered, item.rb.isKinematic);
             
-                
-                
+         
                 
                 
 
@@ -83,6 +92,7 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
                 item.rb.isKinematic = false;
                 nowObject = null;
                 item.PickingItem = false;
+                nearObject = null;
                 
                 item.photonView.RPC("UpdatePickingItem", RpcTarget.AllBuffered, item.PickingItem);
                 item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllBuffered, item.rb.isKinematic);
@@ -94,30 +104,22 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
             
         }
     }
-    
-    
-   
-   
-   
-
-    
-
-    void OnTriggerStay(Collider other)
+    void Clicking1()
     {
-        if (other.tag == "Key" && nearObject == null)
+        
+        raycastHit = ghostMotionController.rayHit;
+        // Debug.Log(raycastHit.transform.tag+"2");
+        if(raycastHit.transform.CompareTag("Key") && Input.GetMouseButton(0) && nearObject == null)
         {
-            nearObject = other.gameObject;
+            nearObject = raycastHit.collider.gameObject;
+            
         }
-
+        Debug.Log(nearObject);
+      
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Key")
-        {
-            nearObject = null;
-        }
-    }
+    
+    
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)  //이윤기
     {
        /* if (stream.IsWriting)

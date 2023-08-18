@@ -34,13 +34,14 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     public SkinnedMeshRenderer playerRenderer;
     
    //레이캐스트 관련 변수들
-    private RaycastHit rayHit;
+    public RaycastHit rayHit;
     private Ray ray;
-    public float MAX_DISTANCE = 500.0f;
+    public float MAX_DISTANCE = 1.0f;
     private Transform highlight;
     private Transform selection;
-
-
+    private int layerMask;
+    public Pick pickUpscript;
+    private GameObject nowObject_clone;
     public int i = 0;
     //0=노랑
     //1=검정
@@ -57,6 +58,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         camera.enabled = false;
         MLight.SetActive(false);
         audioSource = GetComponent<AudioSource>();
+        pickUpscript = GetComponent<Pick>();
         
         
        
@@ -248,12 +250,14 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         }
     }
     void RayCast() {
+        nowObject_clone = pickUpscript.nowObject;
         ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f,50f));
         selection  = rayHit.transform;
-        if(Physics.Raycast (ray, out rayHit,MAX_DISTANCE)){
+        layerMask = (-1) - (1 << LayerMask.NameToLayer("Player"));
+        if(Physics.Raycast (ray, out rayHit,MAX_DISTANCE,layerMask)){
             Debug.DrawLine(ray.origin,rayHit.point,Color.green);
             Debug.Log(rayHit.transform.tag);
-            if(rayHit.transform.tag == "Key" ){
+            if(rayHit.transform.tag == "Key" && nowObject_clone == null){
                 highlight = rayHit.transform;
                 if(highlight.gameObject.GetComponent<Outline>() != null)
                 {
