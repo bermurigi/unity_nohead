@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class Open : MonoBehaviour
 {
     public bool[] RandomItem = new bool[5];
-    public GameObject DoorObject;
+    //public GameObject DoorObject;
     int rand;
     public int Keycount = 3;
+    public PlayableDirector EndingAnim;
 
     void Start()
     {
@@ -29,8 +31,10 @@ public class Open : MonoBehaviour
     {
         if(Keycount == 0)
         {
-            Door door = DoorObject.GetComponent<Door>();
-            door.Opendoor = true;
+            //엔딩 애니메이션 수행
+            EndingAnim.Play();
+            //Door door = DoorObject.GetComponent<Door>();
+            //door.Opendoor = true;
             Keycount = -1;
         }
     }
