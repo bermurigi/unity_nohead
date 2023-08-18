@@ -75,7 +75,7 @@ AnimatorStateMachine:
     m_Position: {x: 430, y: 150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7523420741878902286}
-    m_Position: {x: 320, y: 10, z: 0}
+    m_Position: {x: 430, y: -70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1537963525924515431}
     m_Position: {x: 210, y: 210, z: 0}
@@ -100,6 +100,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 7847197859416789565}
     m_Position: {x: 430, y: 610, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -5474759243460882953}
+    m_Position: {x: 465, y: 675, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -187,6 +190,32 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &-5474759243460882953
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: flyEnding
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: cb923274a8574404183e1f6f67689aa0, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &-4999537647013569507
 AnimatorState:
   serializedVersion: 6
@@ -253,7 +282,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

@@ -12,12 +12,16 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public InputField NickNameInput;
     public GameObject DisconnectPanel;
     public Transform spawnPoint;
+    public GameObject choiceChracter;
 
     [SerializeField]
     private int colorIndex;
 
     [SerializeField] 
     private TMP_Dropdown dropdown;
+
+    [SerializeField]
+    private GameObject StartCanvans;
     
     
 
@@ -47,8 +51,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        if(PhotonNetwork.IsConnected)
-            Debug.Log("Connect");
+        //if(PhotonNetwork.IsConnected)
+            //Debug.Log("Connect");
         if(Input.GetKeyDown(KeyCode.Escape)&&PhotonNetwork.IsConnected) PhotonNetwork.Disconnect();
     }
     public override void OnDisconnected(DisconnectCause cause)
@@ -60,7 +64,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
    
     public void spawn()
     {
+        StartCanvans.SetActive(true);
+        choiceChracter.SetActive(false);
         GameObject playerObj = PhotonNetwork.Instantiate("Player", spawnPoint.position, Quaternion.identity);
+        playerObj.name = "Player_" + PhotonNetwork.LocalPlayer.ActorNumber.ToString();
         GhostMotionController playerScript = playerObj.GetComponent<GhostMotionController>();
         playerScript.i=colorIndex; //플레이어스크립트 색정하기
         

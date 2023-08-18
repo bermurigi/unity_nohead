@@ -40,10 +40,21 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     //1=검정
     //2=빨강
     //캐릭터 우산설정도만들어야함
+    
+    public RaycastHit rayHit;
+    private Ray ray;
+    public float MAX_DISTANCE = 1.0f;
+    private Transform highlight;
+    private Transform selection;
+    private int layerMask;
+    public Pick pickUpscript;
+    private GameObject nowObject_clone;
+    
         
 
     void Awake() 
     {
+        pickUpscript = GetComponent<Pick>();
         //멀티플레이어 입장시 기본세팅
         NickNameText.text = PV.IsMine ? PhotonNetwork.NickName : PV.Owner.NickName;
         NickNameText.color = PV.IsMine ? Color.green : Color.red;
@@ -53,6 +64,12 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         audioSource = GetComponent<AudioSource>();
         
         
+        if (MaterialManager.Instance != null)
+        {
+            MaterialManager.Instance.MyNum = PV.Owner.ActorNumber;
+        }
+        Debug.Log(PV.Owner.ActorNumber);
+        
        
         if (PV.IsMine)
         {
@@ -60,6 +77,9 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
 
             this.gameObject.layer = 7;
             ChangeLayer(transform);
+            
+            
+            
 
         }
     }
@@ -69,12 +89,49 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     {
         Managers.Input.KeyAction -= Onkeyboard; 
         Managers.Input.KeyAction += Onkeyboard;
+        
 
 
       
         
         
     }
+    void RayCast() {
+        nowObject_clone = pickUpscript.nowObject;
+        ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f,50f));
+        selection  = rayHit.transform;
+        layerMask = (-1) - (1 << LayerMask.NameToLayer("Player"));
+        if(Physics.Raycast (ray, out rayHit,MAX_DISTANCE,layerMask)){
+            Debug.DrawLine(ray.origin,rayHit.point,Color.green);
+            Debug.Log(rayHit.transform.tag);
+            if(rayHit.transform.tag == "Key" && nowObject_clone == null){
+                highlight = rayHit.transform;
+                if(highlight.gameObject.GetComponent<Outline>() != null)
+                {
+                    highlight.gameObject.GetComponent<Outline>().enabled = true;
+                }
+                else
+                {
+                    Outline outline = highlight.gameObject.AddComponent<Outline>();
+                    outline.enabled = true;
+                    highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.red;
+                    highlight.gameObject.GetComponent<Outline>().OutlineWidth = 14.0f;  
+                }
+            }
+            if(highlight != null && highlight != selection)
+            {
+                highlight.gameObject.GetComponent<Outline>().enabled = false;
+            }
+        }
+        else
+        {
+            Debug.DrawRay(ray.origin,ray.direction* 100,Color.red);
+        }
+    }
+ 
+        
+
+
     
     [PunRPC]
     private void RPC_ChangeMaterial(int materialIndex)
@@ -91,6 +148,8 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
 
     void Update()
     {
+        
+
         photonView.RPC("RPC_ChangeMaterial", RpcTarget.AllBuffered, i);
         audioSource.mute = true;
         soundOnOff = false;
@@ -99,6 +158,8 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         {
             GAnimator.SetBool("Fly", false);
             MouseRotation();
+            RayCast();
+            MouseEvent();
             
         }
 
@@ -217,6 +278,11 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
 
     }
 
+    void MouseEvent()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    } 
 
     
     

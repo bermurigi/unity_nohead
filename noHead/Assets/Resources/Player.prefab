@@ -266,6 +266,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: cf69c2b8fbd70634fa77ed1d5f0e9797, type: 2}
   playerRenderer: {fileID: 5520213217138702832}
   i: 0
+  MAX_DISTANCE: 1
+  pickUpscript: {fileID: 0}
 --- !u!114 &5386173897617962204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +326,7 @@ MonoBehaviour:
   nowObject: {fileID: 0}
   PlayerTransform: {fileID: 1222085776487928564}
   PV: {fileID: 5386173897617962204}
+  ghostMotionController: {fileID: 0}
 --- !u!82 &7629141435290354989
 AudioSource:
   m_ObjectHideFlags: 0
