@@ -25765,6 +25765,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1357445559844659729, guid: e5f53f3e0e1518c4c9ec3be6d16f67b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1176706546}
+    - targetCorrespondingSourceObject: {fileID: 1357445559844659729, guid: e5f53f3e0e1518c4c9ec3be6d16f67b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1176706550}
   m_SourcePrefab: {fileID: 100100000, guid: e5f53f3e0e1518c4c9ec3be6d16f67b5, type: 3}
 --- !u!4 &1176706542 stripped
 Transform:
@@ -25784,6 +25787,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Opendoor: 0
+--- !u!95 &1176706550
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495174836}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 292246fd6f8168c4ba0865d18be561d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1176712716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30992,6 +31016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1397039136}
   - component: {fileID: 1397039135}
+  - component: {fileID: 1397039137}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -31076,6 +31101,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 33.76, y: -94.499, z: -7.866}
+--- !u!320 &1397039137
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397039134}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 7b2465695ca5fa54cabde5ca5a70dcb7, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -4579923557917330637, guid: 7b2465695ca5fa54cabde5ca5a70dcb7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8284431161725857423, guid: 7b2465695ca5fa54cabde5ca5a70dcb7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -7500347584398069050, guid: 7b2465695ca5fa54cabde5ca5a70dcb7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -7839755049228401347, guid: 7b2465695ca5fa54cabde5ca5a70dcb7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -3786101756398364713, guid: 7b2465695ca5fa54cabde5ca5a70dcb7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8053267278397657126, guid: 7b2465695ca5fa54cabde5ca5a70dcb7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -3702676222840049991, guid: 7b2465695ca5fa54cabde5ca5a70dcb7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1291907806869520379, guid: 7b2465695ca5fa54cabde5ca5a70dcb7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6646548476515609558, guid: 7b2465695ca5fa54cabde5ca5a70dcb7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8188742506356422436, guid: 7b2465695ca5fa54cabde5ca5a70dcb7, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1001 &1397840935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41167,8 +41229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RandomItem: 0000000000
-  DoorObject: {fileID: 495174836}
   Keycount: 1
+  EndingAnim: {fileID: 0}
 --- !u!65 &1882913814
 BoxCollider:
   m_ObjectHideFlags: 0
