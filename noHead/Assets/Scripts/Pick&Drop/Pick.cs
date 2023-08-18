@@ -14,8 +14,13 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
     private bool firstPick;//이윤기
     public PhotonView PV;
     
+    public GhostMotionController ghostMotionController;
+    private RaycastHit raycastHit;
+    bool Mouse;
     
-    
+    void Start(){
+        ghostMotionController = GetComponent<GhostMotionController>();
+    }
     
     
     void Update()
@@ -23,6 +28,7 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
         if (!PV.IsMine)
             return;
         GetInput();
+        Clicking1();
         PV.RPC("PickUp", RpcTarget.AllBuffered);
         
         
@@ -44,6 +50,20 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
         
     }
 
+    void Clicking1()
+    {
+        
+        raycastHit = ghostMotionController.rayHit;
+        
+        // Debug.Log(raycastHit.transform.tag+"2");
+        if(raycastHit.transform.CompareTag("Key") && Input.GetMouseButton(0) && nearObject == null)
+        {
+            nearObject = raycastHit.collider.gameObject;
+            
+        }
+        // Debug.Log(nearObject);
+      
+    }
    
 
     
