@@ -58,12 +58,13 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
     
     [PunRPC] void PickUp()
     {
-        if (ItemPick && nearObject != null) //픽업 버튼을 눌렀으며, nearobject가 존재할 때.
+        if (ItemPick && nearObject != null && raycastHit.transform.CompareTag("Key")) //픽업 버튼을 눌렀으며, nearobject가 존재할 때.
         {
             Debug.Log("PickUp 작동됨");
             nowObject = nearObject; // nowobject는 nearobject가 된다.
+            nearObject = null;
             Item item = nowObject.GetComponent<Item>(); //nowobject의 item 컴포넌트를 가져온다.
-            if (nearObject.tag == "Key" && MovingItem == false && item.PickingItem == false) // nearobject의 태그가 key이고 movingitem이 없으며, item.PickingItem
+            if (nowObject.tag == "Key" && MovingItem == false && item.PickingItem == false) // nearobject의 태그가 key이고 movingitem이 없으며, item.PickingItem
             {
                 nowObject.transform.position = PlayerTransform.position;
                 nowObject.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -107,14 +108,15 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
     void Clicking1()
     {
         
-        raycastHit = ghostMotionController.rayHit;
+            raycastHit = ghostMotionController.rayHit;
+        
         // Debug.Log(raycastHit.transform.tag+"2");
         if(raycastHit.transform.CompareTag("Key") && Input.GetMouseButton(0) && nearObject == null)
         {
             nearObject = raycastHit.collider.gameObject;
             
         }
-        Debug.Log(nearObject);
+        // Debug.Log(nearObject);
       
     }
 

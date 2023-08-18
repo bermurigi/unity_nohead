@@ -251,7 +251,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     }
     void RayCast() {
         nowObject_clone = pickUpscript.nowObject;
-        ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f,50f));
+            ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f,50f));
         selection  = rayHit.transform;
         layerMask = (-1) - (1 << LayerMask.NameToLayer("Player"));
         if(Physics.Raycast (ray, out rayHit,MAX_DISTANCE,layerMask)){
@@ -281,7 +281,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
             Debug.DrawRay(ray.origin,ray.direction* 100,Color.red);
         }
         }
-        
+ 
         
     }
    
