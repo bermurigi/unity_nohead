@@ -43,12 +43,14 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     
     public RaycastHit rayHit;
     private Ray ray;
-    public float MAX_DISTANCE = 1.0f;
+    private float MAX_DISTANCE = 500.0f;
     private Transform highlight;
     private Transform selection;
     private int layerMask;
     public Pick pickUpscript;
     private GameObject nowObject_clone;
+    private StartManager startManger;
+    private GameObject startMangerobject;
     
         
 
@@ -62,6 +64,8 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         camera.enabled = false;
         MLight.SetActive(false);
         audioSource = GetComponent<AudioSource>();
+                startMangerobject = GameObject.Find("StartManager");
+        startManger = startMangerobject.GetComponent<StartManager>();
         
         
         if (MaterialManager.Instance != null)
@@ -96,39 +100,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         
         
     }
-    void RayCast() {
-        nowObject_clone = pickUpscript.nowObject;
-        ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f,50f));
-        selection  = rayHit.transform;
-        layerMask = (-1) - (1 << LayerMask.NameToLayer("Player"));
-        if(Physics.Raycast (ray, out rayHit,MAX_DISTANCE,layerMask)){
-            Debug.DrawLine(ray.origin,rayHit.point,Color.green);
-            Debug.Log(rayHit.transform.tag);
-            if(rayHit.transform.tag == "Key" && nowObject_clone == null){
-                highlight = rayHit.transform;
-                if(highlight.gameObject.GetComponent<Outline>() != null)
-                {
-                    highlight.gameObject.GetComponent<Outline>().enabled = true;
-                }
-                else
-                {
-                    Outline outline = highlight.gameObject.AddComponent<Outline>();
-                    outline.enabled = true;
-                    highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.red;
-                    highlight.gameObject.GetComponent<Outline>().OutlineWidth = 14.0f;  
-                }
-            }
-            if(highlight != null && highlight != selection)
-            {
-                highlight.gameObject.GetComponent<Outline>().enabled = false;
-            }
-        }
-        else
-        {
-            Debug.DrawRay(ray.origin,ray.direction* 100,Color.red);
-        }
-    }
- 
+
         
 
 
@@ -158,8 +130,10 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         {
             GAnimator.SetBool("Fly", false);
             MouseRotation();
+            if(startManger.start1){
             RayCast();
             MouseEvent();
+            }
             
         }
 
@@ -285,6 +259,41 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     } 
 
     
+    void RayCast() {
+        nowObject_clone = pickUpscript.nowObject;
+        ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f,50f));
+        selection  = rayHit.transform;
+        layerMask = (-1) - (1 << LayerMask.NameToLayer("Player"));
+        if(Physics.Raycast (ray, out rayHit,MAX_DISTANCE,layerMask)){
+            Debug.DrawLine(ray.origin,rayHit.point,Color.green);
+            Debug.Log(rayHit.transform.tag);
+            if(rayHit.transform.tag == "Key" && nowObject_clone == null){
+                highlight = rayHit.transform;
+                if(highlight.gameObject.GetComponent<Outline>() != null)
+                {
+                     highlight.gameObject.GetComponent<Outline>().enabled = true;
+                }
+                else
+                {
+                     Outline outline = highlight.gameObject.AddComponent<Outline>();
+                     outline.enabled = true;
+                    highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.red;
+                    highlight.gameObject.GetComponent<Outline>().OutlineWidth = 14.0f;  
+                }
+                }
+                if(highlight != null && highlight != selection)
+                {
+                    highlight.gameObject.GetComponent<Outline>().enabled = false;
+                }
+        }
+        else
+        {
+             Debug.DrawRay(ray.origin,ray.direction* 100,Color.red);
+            
+        }
+        }
+ 
+        
     
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)  

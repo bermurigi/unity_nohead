@@ -5,6 +5,7 @@ using Photon.Realtime;
 using Photon.Pun;
 using System.Linq.Expressions;
 using ExitGames.Client.Photon;
+using UnityEngine.EventSystems;
 public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
 {
     public GameObject nearObject;
@@ -17,9 +18,14 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
     public GhostMotionController ghostMotionController;
     private RaycastHit raycastHit;
     bool Mouse;
-    
+
+    private StartManager startManger;
+    private GameObject startMangerobject;
+
     void Start(){
         ghostMotionController = GetComponent<GhostMotionController>();
+        startMangerobject = GameObject.Find("StartManager");
+        startManger = startMangerobject.GetComponent<StartManager>();
     }
     
     
@@ -28,7 +34,10 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
         if (!PV.IsMine)
             return;
         GetInput();
-        Clicking1();
+        if (startManger.start1)
+        {
+            Clicking1();
+        }
         PV.RPC("PickUp", RpcTarget.AllBuffered);
         
         
@@ -50,20 +59,7 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
         
     }
 
-    void Clicking1()
-    {
-        
-        raycastHit = ghostMotionController.rayHit;
-        
-        // Debug.Log(raycastHit.transform.tag+"2");
-        if(raycastHit.transform.CompareTag("Key") && Input.GetMouseButton(0) && nearObject == null)
-        {
-            nearObject = raycastHit.collider.gameObject;
-            
-        }
-        // Debug.Log(nearObject);
-      
-    }
+
    
 
     
@@ -73,7 +69,7 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
         {
             nowObject = nearObject;
             Item item = nowObject.GetComponent<Item>();
-            if (nearObject.tag == "Key" && MovingItem == false && item.PickingItem == false)
+            if (nowObject.tag == "Key" && MovingItem == false && item.PickingItem == false)
             {
                 nowObject.transform.position = PlayerTransform.position;
                 nowObject.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -103,6 +99,7 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
                 item.rb.isKinematic = false;
                 nowObject = null;
                 item.PickingItem = false;
+                nearObject = null;
                 
                 item.photonView.RPC("UpdatePickingItem", RpcTarget.AllBuffered, item.PickingItem);
                 item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllBuffered, item.rb.isKinematic);
@@ -118,26 +115,24 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
     
    
    
-   
+      void Clicking1()
+    {
+        
+        raycastHit = ghostMotionController.rayHit;
+        
+        // Debug.Log(raycastHit.transform.tag+"2");
+        if(raycastHit.transform.CompareTag("Key") && ItemPick && nearObject == null)
+        {
+            nearObject = raycastHit.collider.gameObject;
+            
+        }
+        // Debug.Log(nearObject);
+      
+    } 
 
     
 
-    void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Key" && nearObject == null)
-        {
-            nearObject = other.gameObject;
-        }
-
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Key")
-        {
-            nearObject = null;
-        }
-    }
+   
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)  //이윤기
     {
        /* if (stream.IsWriting)

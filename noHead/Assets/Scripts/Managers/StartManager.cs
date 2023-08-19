@@ -10,13 +10,18 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
     [SerializeField] private Text StartText;
     [SerializeField] private GameObject StartButton;
     [SerializeField] private GameObject StartPoint;
+
+    public bool start1;
     
+    private void start(){
+        start1 = false; 
+    }
    
     private void Update()
     {
         int playerCount = PhotonNetwork.PlayerList.Length;
         StartText.text = "현재 인원 : " + playerCount + "명" + "(" + playerCount + "/2)";
-        if (playerCount >= 2 && PhotonNetwork.IsMasterClient)
+        if (playerCount >= 1 && PhotonNetwork.IsMasterClient)
         {
             StartButton.SetActive(true);
             
@@ -34,7 +39,7 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
     
     public void StartButtonClick()
     {
-        
+        start1 = true;
         photonView.RPC("MovePlayerToStartPoint", RpcTarget.All);
         photonView.RPC("DeleteStartCanvas", RpcTarget.All);
         
