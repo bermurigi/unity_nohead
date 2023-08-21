@@ -76,16 +76,19 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
                 firstPick = true;//이윤기
                 if (firstPick)//이윤기
                 {
-                    nowObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer); //조종권한바꾸기
+                    nowObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer); //조종권한바꾸기    
+                    
+                    
                     firstPick = false;
                 }
                 
                 MovingItem = true;
                 item.rb.isKinematic = true;
                 item.PickingItem = true;
-                
-                item.photonView.RPC("UpdatePickingItem", RpcTarget.AllBuffered, item.PickingItem);
-                item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllBuffered, item.rb.isKinematic);
+
+               
+                item.photonView.RPC("UpdatePickingItem", RpcTarget.AllViaServer, item.PickingItem);
+                item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllViaServer, item.rb.isKinematic);
             
                 
                 
@@ -101,8 +104,8 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
                 item.PickingItem = false;
                 nearObject = null;
                 
-                item.photonView.RPC("UpdatePickingItem", RpcTarget.AllBuffered, item.PickingItem);
-                item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllBuffered, item.rb.isKinematic);
+                item.photonView.RPC("UpdatePickingItem", RpcTarget.AllViaServer, item.PickingItem);
+                item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllViaServer, item.rb.isKinematic);
             }
                 
                 

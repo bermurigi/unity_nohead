@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.004006287, g: 0.00021858487, b: 0.000000052263864, a: 1}
+  m_IndirectSpecularColor: {r: 0.45121944, g: 0.50094575, b: 0.573597, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12512,7 +12512,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 576972755}
@@ -17960,31 +17960,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 692063698773011367, guid: a390344dd4860cd41839405464c6a7d0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.58325785
+      value: 0.761015
       objectReference: {fileID: 0}
     - target: {fileID: 692063698773011367, guid: a390344dd4860cd41839405464c6a7d0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.39857927
+      value: 0.18306185
       objectReference: {fileID: 0}
     - target: {fileID: 692063698773011367, guid: a390344dd4860cd41839405464c6a7d0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.53512985
+      value: 0.21859144
       objectReference: {fileID: 0}
     - target: {fileID: 692063698773011367, guid: a390344dd4860cd41839405464c6a7d0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4632288
+      value: -0.58271974
       objectReference: {fileID: 0}
     - target: {fileID: 692063698773011367, guid: a390344dd4860cd41839405464c6a7d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -73.889
+      value: 32.234
       objectReference: {fileID: 0}
     - target: {fileID: 692063698773011367, guid: a390344dd4860cd41839405464c6a7d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -66.751
+      value: 8.112
       objectReference: {fileID: 0}
     - target: {fileID: 692063698773011367, guid: a390344dd4860cd41839405464c6a7d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -24.206
+      value: -72.536
       objectReference: {fileID: 0}
     - target: {fileID: 5775452904750797926, guid: a390344dd4860cd41839405464c6a7d0, type: 3}
       propertyPath: m_InitialState
@@ -30008,7 +30008,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1329874555}
@@ -32597,7 +32597,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1457758394}
@@ -43024,7 +43024,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1974096602}
@@ -45939,7 +45939,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 2123056578}
