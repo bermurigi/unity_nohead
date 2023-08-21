@@ -87,21 +87,24 @@ public class Priest_movement : MonoBehaviour
             }
         }
     }
-        void OnTriggerEnter(Collider other){ 
-            if(other.CompareTag("Player"))
-            {
-                if (!other.GetComponent<PhotonView>().IsMine)
-                    return;
-            Animator.SetTrigger(isCaught);
-             // JumpCam.transform.position = Pos;
-               // Debug.Log("현재 위치 : "+Pos);
-              Caught.SetActive(true);
-              rig.enabled = false;
-              StartCoroutine(end());
-            }
+        void OnTriggerEnter(Collider other){
             
-            
-         IEnumerator end() 
+                if (other.CompareTag("Player"))
+                {
+                    if (!other.GetComponent<PhotonView>().IsMine)
+                        return;
+
+                        Animator.SetTrigger(isCaught);
+                    // JumpCam.transform.position = Pos;
+                    // Debug.Log("현재 위치 : "+Pos);
+                    Caught.SetActive(true);
+                    rig.enabled = false;
+                    StartCoroutine(end());
+               }
+        }
+
+
+            IEnumerator end() 
          {
         yield return new WaitForSeconds(2.03f);
         Caught.SetActive(false);
@@ -109,4 +112,3 @@ public class Priest_movement : MonoBehaviour
          }
     
     }
-}

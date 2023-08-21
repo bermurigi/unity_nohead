@@ -8,18 +8,15 @@ ScriptsOnlyBuild:
     - Priest_movement
     Assembly-CSharp.dll:
     - AgentLinkMover
-    - CameraController
     - CameraManager
     - CameraMove
     - Door
     - DropdownController
-    - GhostMotionController
     - Item
     - MaterialManager
     - NetworkManager
     - Open
     - Open2
-    - Pick
     - Priest_movement
     - StartManager
     - TeleportToClosestPlayer
@@ -42,7 +39,6 @@ ScriptsOnlyBuild:
     PhotonUnityNetworking.Editor.dll:
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
-    - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
     - Photon.Pun.PhotonTransformView
     - Photon.Pun.PhotonView
