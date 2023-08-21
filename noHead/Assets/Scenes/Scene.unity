@@ -5514,6 +5514,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234951347}
   m_CullTransparentMesh: 1
+--- !u!1 &236986443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2074654198399684444, guid: d5b5c533cdd58cf48bd363c5399e63b4, type: 3}
+  m_PrefabInstance: {fileID: 7410000870124943958}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &237245164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24874,7 +24879,7 @@ MonoBehaviour:
   StartText: {fileID: 2021679985}
   StartButton: {fileID: 414818166}
   StartPoint: {fileID: 1994864390}
-  Enemy: {fileID: 2074654198399684444, guid: d5b5c533cdd58cf48bd363c5399e63b4, type: 3}
+  Enemy: {fileID: 236986443}
   start1: 0
 --- !u!4 &1135875396
 Transform:
@@ -27455,6 +27460,10 @@ PrefabInstance:
     - target: {fileID: 7624360827115310066, guid: 59f3e5ededc5a3d4f87ae094893923de, type: 3}
       propertyPath: m_Name
       value: ending chra2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624360827115310066, guid: 59f3e5ededc5a3d4f87ae094893923de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

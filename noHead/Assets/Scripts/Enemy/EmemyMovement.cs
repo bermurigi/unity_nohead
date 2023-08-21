@@ -73,42 +73,86 @@ public class Priest_movement : MonoBehaviour
         }
     }
 
+    
+        
     private void FindPlayerTarget() //플레이어 태그가 여럿일 때, 가장 가까운 플레이어 태그를 가진 대상을 추적.
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        float closestDistance = Mathf.Infinity;
-        foreach (GameObject player in players)
+        //float closestDistance = Mathf.Infinity;
+
+        if (players.Length == 1)
         {
-            float distance = Vector3.Distance(transform.position, player.transform.position);
-            if (distance < closestDistance)
+            target = players[0];
+        }
+        else if (players.Length == 2)
+        {
+
+            float distance = Vector3.Distance(transform.position, players[0].transform.position);
+            float distance2 = Vector3.Distance(transform.position, players[1].transform.position);
+            if (players[0].GetComponent<GhostMotionController>().FollowingOnOff == true && players[1].GetComponent<GhostMotionController>().FollowingOnOff == true)
             {
-                target = player;
-                closestDistance = distance;
+                if (distance < distance2)
+                {
+                    target = players[0];
+                    //closestDistance = distance;
+                }
+                else
+                {
+                    target = players[1];
+                }
+            }
+            else if (players[0].GetComponent<GhostMotionController>().FollowingOnOff == true)
+            {
+                target = players[0];
+            }
+            else
+            {
+                if (players[1].GetComponent<GhostMotionController>().FollowingOnOff == false)
+                {
+                    if (distance < distance2)
+                    {
+                        target = players[0];
+                        //closestDistance = distance;
+                    }
+                    else
+                    {
+                        target = players[1];
+                    }
+                }
+                else
+                {
+                    target = players[1];
+                }
             }
         }
+
     }
-        void OnTriggerEnter(Collider other){
+    
+    
+    
+    
+    void OnTriggerEnter(Collider other){
             
-                if (other.CompareTag("Player"))
-                {
-                    if (!other.GetComponent<PhotonView>().IsMine)
-                        return;
+        if (other.CompareTag("Player"))
+        {
+            if (!other.GetComponent<PhotonView>().IsMine) 
+                return;
 
-                        Animator.SetTrigger(isCaught);
-                    // JumpCam.transform.position = Pos;
-                    // Debug.Log("현재 위치 : "+Pos);
-                    Caught.SetActive(true);
-                    rig.enabled = false;
-                    StartCoroutine(end());
-               }
+            Animator.SetTrigger(isCaught);
+            // JumpCam.transform.position = Pos;
+            // Debug.Log("현재 위치 : "+Pos);
+            Caught.SetActive(true);
+            rig.enabled = false;
+            StartCoroutine(end());
         }
+    }
 
 
-            IEnumerator end() 
+    IEnumerator end() 
          {
-        yield return new WaitForSeconds(2.03f);
-        Caught.SetActive(false);
-        rig.enabled = true; 
+            yield return new WaitForSeconds(2.03f); 
+            Caught.SetActive(false);
+            rig.enabled = true; 
          }
     
     }

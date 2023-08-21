@@ -548,6 +548,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 78b1d58f8931b82478961e4ed94b1825, type: 2}
   - {fileID: 2100000, guid: cf69c2b8fbd70634fa77ed1d5f0e9797, type: 2}
   playerRenderer: {fileID: 5520213217138702832}
+  test: 0
   i: 0
   pickUpscript: {fileID: 0}
 --- !u!114 &5386173897617962204

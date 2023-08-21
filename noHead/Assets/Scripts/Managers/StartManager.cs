@@ -38,7 +38,9 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
     [PunRPC]
     void EnemySpawn()
     {
-        Instantiate(Enemy, StartPoint.transform.position, Quaternion.identity);
+        Enemy.SetActive(true);
+        
+
     }
 
     
@@ -49,6 +51,7 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
         start1 = true;
         photonView.RPC("MovePlayerToStartPoint", RpcTarget.All);
         photonView.RPC("DeleteStartCanvas", RpcTarget.All);
+        
         Invoke("SpawnEnemyDelayed", 10.0f);
         
     }

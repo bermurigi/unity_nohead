@@ -32,6 +32,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     //캐릭터 색 설정
     public Material[] mat = new Material[3];
     public SkinnedMeshRenderer playerRenderer;
+    public bool test;
     
    
 
@@ -73,6 +74,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
             MaterialManager.Instance.MyNum = PV.Owner.ActorNumber;
         }
         Debug.Log(PV.Owner.ActorNumber);
+        audioSource.mute = true;
         
        
         if (PV.IsMine)
@@ -123,8 +125,9 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         
 
         photonView.RPC("RPC_ChangeMaterial", RpcTarget.AllBuffered, i);
-        audioSource.mute = true;
-        soundOnOff = false;
+        
+        
+        
         
         if (PV.IsMine) //본인 캐릭터만 조종할 수 있게해줌 (바라보는방향)
         {
@@ -136,6 +139,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
             }
             
         }
+        
 
         
 
@@ -197,10 +201,11 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
                 
             }
 
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                soundOnOff = true; //유인용 라디오 ON
+                soundOnOff = !soundOnOff; //유인용 라디오 ON
                 photonView.RPC("ToggleRadioOn", RpcTarget.All, soundOnOff);
+                
 
             }
         }
@@ -234,6 +239,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
             MLight.SetActive(false);
         }
     }
+
     
     [PunRPC]
     private void ToggleRadioOn(bool state)
@@ -243,11 +249,13 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         {
             audioSource.mute = false;
             FollowingOnOff = true;
+            
         }
         else
-        {
+        { 
             audioSource.mute = true;
-            FollowingOnOff = false;
+           FollowingOnOff  = false;
+           
         }
 
     }

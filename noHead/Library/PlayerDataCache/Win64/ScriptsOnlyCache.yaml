@@ -1707,7 +1707,7 @@ ScriptsOnlyBuild:
     className: SupportLogger
   - hash:
       serializedVersion: 2
-      Hash: 4449ab2719168c23373293ac8e0515b9
+      Hash: fb8710cc8345172a9af46b5a444bc670
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GhostMotionController
