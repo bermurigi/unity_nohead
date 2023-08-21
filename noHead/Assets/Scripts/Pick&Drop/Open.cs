@@ -17,6 +17,7 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
     public static Open instance = null;
     private bool isRand;
     public PlayableDirector EndingAnim;
+    public GameObject Enemy;
 
     private void Awake()
     {
@@ -65,6 +66,8 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
         if(Keycount == 0)
         {
             //���� �ִϸ��̼� ����
+            Enemy=GameObject.FindGameObjectWithTag("Enemy");
+            Enemy.SetActive(false);
             EndingAnim.Play();
             //Door door = DoorObject.GetComponent<Door>();
             //door.Opendoor = true;

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using Photon.Realtime;
 
 public class Item : MonoBehaviourPun
 {
@@ -14,7 +15,9 @@ public class Item : MonoBehaviourPun
     public bool PickingItem;
     private MeshRenderer meshRenderer;
     private bool ischange;
-   
+    public int[] playerNum;
+    
+    
 
     
     
@@ -22,9 +25,10 @@ public class Item : MonoBehaviourPun
     {
         rb = GetComponent<Rigidbody>();
         meshRenderer = GetComponent<MeshRenderer>();
-        
-        
-        
+
+        playerNum = new int[2];
+
+
 
 
     }
@@ -35,20 +39,38 @@ public class Item : MonoBehaviourPun
 
         if (Open.instance.RandomItem[value]&& ischange==false)
         {
-            int[] Numbers = MaterialManager.Instance.GenerateDifferentRandomNumbers();
+            if (PhotonNetwork.IsMasterClient)
+            {
+                int[] Numbers = MaterialManager.Instance.GenerateDifferentRandomNumbers();
+                //photonView.RPC("PlayerNumberSet", RpcTarget.AllBuffered,Numbers[0],Numbers[1]);
+                photonView.RPC("PlayerNumberSet", RpcTarget.AllBuffered, Numbers[0], Numbers[1]);
+
+
+            }
+
             if(PhotonNetwork.IsMasterClient)
             {
-                ChangeMaterial(Numbers[0]);
+                
+                ChangeMaterial(playerNum[0]);
             }
             else
             {
-                ChangeMaterial(Numbers[1]);
+                ChangeMaterial(playerNum[1]);
             }
 
             ischange = true;
         }
         
     }
+
+    [PunRPC]
+    public void PlayerNumberSet(int number0, int number1)
+    {
+        playerNum[0] = number0;
+        playerNum[1] = number1;
+    }
+
+   
 
 
     [PunRPC]

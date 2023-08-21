@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations.Rigging;
@@ -86,20 +87,26 @@ public class Priest_movement : MonoBehaviour
             }
         }
     }
-        void OnTriggerEnter(Collider other){
-        if(other.CompareTag("Player")){
+        void OnTriggerEnter(Collider other){ 
+            if(other.CompareTag("Player"))
+            {
+                if (!other.GetComponent<PhotonView>().IsMine)
+                    return;
             Animator.SetTrigger(isCaught);
-        // JumpCam.transform.position = Pos;
-        // Debug.Log("현재 위치 : "+Pos);
-        Caught.SetActive(true);
-        rig.enabled = false;
-        StartCoroutine(end());
-        }
-         IEnumerator end(){
+             // JumpCam.transform.position = Pos;
+               // Debug.Log("현재 위치 : "+Pos);
+              Caught.SetActive(true);
+              rig.enabled = false;
+              StartCoroutine(end());
+            }
+            
+            
+         IEnumerator end() 
+         {
         yield return new WaitForSeconds(2.03f);
         Caught.SetActive(false);
-        rig.enabled = true;
-    }
+        rig.enabled = true; 
+         }
     
     }
 }

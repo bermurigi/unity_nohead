@@ -10,6 +10,7 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
     [SerializeField] private Text StartText;
     [SerializeField] private GameObject StartButton;
     [SerializeField] private GameObject StartPoint;
+    [SerializeField] private GameObject Enemy;
 
     public bool start1;
     
@@ -34,6 +35,11 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
         
     }
 
+    void EnemySpawn()
+    {
+        Instantiate(Enemy, StartPoint.transform);
+    }
+
     
 
     
@@ -42,6 +48,7 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
         start1 = true;
         photonView.RPC("MovePlayerToStartPoint", RpcTarget.All);
         photonView.RPC("DeleteStartCanvas", RpcTarget.All);
+        Invoke("EnemySpawn",10.0f);
         
     }
 
