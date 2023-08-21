@@ -60,6 +60,7 @@ public class Item : MonoBehaviourPun
 
             ischange = true;
         }
+       
         
     }
 
