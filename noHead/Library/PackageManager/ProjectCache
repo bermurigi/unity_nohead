@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638274421010594969
-    m_Hash: 3634559710
+      ticks: 638283485283397214
+    m_Hash: 1088881962
   m_LockFileStatus:
     m_FilePath: C:/GitHub/unity_nohead_t/noHead/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638274421010644969
-    m_Hash: 1566482514
+      ticks: 638283485283407213
+    m_Hash: 2002501073
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -3276,6 +3276,7 @@ m_ResolvedPackages:
     - 1.3.5
     - 1.3.7
     - 1.3.8
+    - 1.3.9
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -3290,6 +3291,7 @@ m_ResolvedPackages:
     - 1.3.5
     - 1.3.7
     - 1.3.8
+    - 1.3.9
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12

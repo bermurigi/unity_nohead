@@ -1,0 +1,603 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.4f1 (35713cd46cd7) revision 3502396'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Education' Language: 'ko' Physical Memory: 16125 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\Unity 2022.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/GitHub/unity_nohead_t/noHead
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+60488
+Successfully changed project path to: C:/GitHub/unity_nohead_t/noHead
+C:/GitHub/unity_nohead_t/noHead
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [1996] Host "[IP] 111.118.47.49 [Port] 0 [Flags] 2 [Guid] 1516933491 [EditorId] 1516933491 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-S6FGN3H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [1996] Host "[IP] 111.118.47.49 [Port] 0 [Flags] 2 [Guid] 1516933491 [EditorId] 1516933491 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-S6FGN3H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 9.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.4f1 (35713cd46cd7)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/Unity 2022.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/GitHub/unity_nohead_t/noHead/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon RX 6500 XT (ID=0x743f)
+    Vendor:   ATI
+    VRAM:     4051 MB
+    Driver:   31.0.14057.5006
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/Unity 2022.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/Unity 2022.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56152
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/Unity 2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005505 seconds.
+- Loaded All Assemblies, in  0.223 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.221 seconds
+Domain Reload Profiling: 442ms
+	BeginReloadAssembly (62ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (38ms)
+	LoadAllAssembliesAndSetupDomain (92ms)
+		LoadAssemblies (61ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (87ms)
+			TypeCache.Refresh (87ms)
+				TypeCache.ScanAssembly (80ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (221ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (179ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (62ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (71ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file data-00000297F6EF40B0 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F6EF40B0 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F6EF40B0 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F7326270 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.AI.Navigation.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F7326270 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F5E72A40 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\PhotonUnityNetworking.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F40BEA30 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.Animation.Rigging.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F3870C40 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F70A6C20 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F70A6C20 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F5E7AA50 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F38A1A60 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F5FA9010 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F5FA9010 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F40CA140 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\PunDemos.DemoSlotcarEditor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F5FEA620 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F6C52090 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F6648010 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F3D7E820 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\PhotonChat.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F38CA930 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F6CA34A0 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\PhotonRealtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F6CA34A0 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F38CA930 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F38CA930 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F603AFD0 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\PhotonUnityNetworking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F66E6C50 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F5E7AA50 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\PhotonUnityNetworking.Utilities.Culling.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F5968020 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F38CA930 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F59B1D70 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F59BC180 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F59BC180 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F58C0050 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\PhotonUnityNetworking.Demos.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F58D0260 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\PhotonUnityNetworking.Utilities.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F3A07AD0 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F5A1D590 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F5A1D590 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F3A482F0 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F6707E60 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F5E7AA50 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\PunDemos.DemoHubEditor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F3A482F0 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000297F3A87820 doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\ScriptAssemblies\Unity.Animation.Rigging.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\GitHub\unity_nohead_t\noHead\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.541 seconds
+Refreshing native plugins compatible for Editor in 3.75 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-noHead
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.389 seconds
+Domain Reload Profiling: 928ms
+	BeginReloadAssembly (90ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (12ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (388ms)
+		LoadAssemblies (223ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (212ms)
+			TypeCache.Refresh (196ms)
+				TypeCache.ScanAssembly (187ms)
+			ScanForSourceGeneratedMonoScriptInfo (12ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (389ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (286ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (45ms)
+			ProcessInitializeOnLoadAttributes (204ms)
+			ProcessInitializeOnLoadMethodAttributes (14ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 3.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3818 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 51 unused Assets / (61.9 KB). Loaded Objects now: 4279.
+Memory consumption went from 145.5 MB to 145.5 MB.
+Total: 2.171400 ms (FindLiveObjects: 0.148700 ms CreateObjectMapping: 0.067800 ms MarkObjects: 1.870100 ms  DeleteObjects: 0.083900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 44604.067352 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Models/Materials/SpaceshipGlow.mat
+  artifactKey: Guid(609dbe3d30c4bf84ca15ce89479d7919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Models/Materials/SpaceshipGlow.mat using Guid(609dbe3d30c4bf84ca15ce89479d7919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d0bc4152d882d56a2bb9c9be87194c1') in 0.073360 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 1218.171952 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/DropDown Arrow.png
+  artifactKey: Guid(936345f7fc3934efa8119a8700d904c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/DropDown Arrow.png using Guid(936345f7fc3934efa8119a8700d904c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f46ca527f80325c3101e1dbcc337a2f') in 0.036253 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.647808 seconds.
+  path: Assets/LowPolyInterior/Prefabs/Flowers/Flower_01.prefab
+  artifactKey: Guid(b5e044afc18c26740abf07b4433951a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Prefabs/Flowers/Flower_01.prefab using Guid(b5e044afc18c26740abf07b4433951a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '683e1dafe8f9532fe4924ec384e4cf82') in 0.019151 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/LowPolyInterior/Models/Flowers/Flower_02.fbx
+  artifactKey: Guid(1575568507977bb41a464f71c73e5527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Models/Flowers/Flower_02.fbx using Guid(1575568507977bb41a464f71c73e5527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e06d44cbc125b90c673e62ce6e30d1a') in 0.052140 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.361915 seconds.
+  path: Assets/LowPolyInterior/Prefabs/Flowers/Flower_03.prefab
+  artifactKey: Guid(66120e87bffcf8540b4c0cb56158faf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Prefabs/Flowers/Flower_03.prefab using Guid(66120e87bffcf8540b4c0cb56158faf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5896660e8a4b71b59881526fdc4a1a70') in 0.013727 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.034952 seconds.
+  path: Assets/LowPolyInterior/Models/Flowers/Flower_04.fbx
+  artifactKey: Guid(a069d7da2d7b64e4da1b6db3353187d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Models/Flowers/Flower_04.fbx using Guid(a069d7da2d7b64e4da1b6db3353187d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cd50070ce33c1a057c66424e218114c') in 0.031635 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/LowPolyInterior/Prefabs/Flowers/Flower_06.prefab
+  artifactKey: Guid(06d98bc93ae0c8543b58cc14e7161a43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Prefabs/Flowers/Flower_06.prefab using Guid(06d98bc93ae0c8543b58cc14e7161a43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ae7e41b66692e1877bdac91cb467da0') in 0.007791 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.170424 seconds.
+  path: Assets/LowPolyInterior/Prefabs/Flowers/Flower_07.prefab
+  artifactKey: Guid(1d6b0040636ddd543b487ed8dbf1caeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Prefabs/Flowers/Flower_07.prefab using Guid(1d6b0040636ddd543b487ed8dbf1caeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd245761531e7d2a8a8df35a7e78be355') in 0.015714 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/LowPolyInterior/Models/Flowers/Flower_07.fbx
+  artifactKey: Guid(9b031476dd9a94140a9b0c53b89e7d19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Models/Flowers/Flower_07.fbx using Guid(9b031476dd9a94140a9b0c53b89e7d19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd22ef860df4384b9dab9a83815ed2422') in 0.038157 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 3.228602 seconds.
+  path: Assets/LowPolyInterior/Prefabs/Christmas/ChristmasLollipop_01.prefab
+  artifactKey: Guid(fbddebe6b9bf18649b7ba19eaa0961dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Prefabs/Christmas/ChristmasLollipop_01.prefab using Guid(fbddebe6b9bf18649b7ba19eaa0961dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0978a6a7d3a8da426103da7a904ce110') in 0.006868 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.004848 seconds.
+  path: Assets/LowPolyInterior/Models/Christmas/ChristmasTree_01.fbx
+  artifactKey: Guid(cb04a9e531d139d4b84572dd1a96c60c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Models/Christmas/ChristmasTree_01.fbx using Guid(cb04a9e531d139d4b84572dd1a96c60c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e748fe5ea5b4abc635124f575dfd9a9') in 0.010789 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/LowPolyInterior/Prefabs/Christmas/ChristmasTree_01.prefab
+  artifactKey: Guid(fa427af83837625498057b2f79907213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Prefabs/Christmas/ChristmasTree_01.prefab using Guid(fa427af83837625498057b2f79907213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '518ffef22a9363ba968b82969bb3d7ec') in 0.018509 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 5.726979 seconds.
+  path: Assets/Photon/PhotonChat/Demos/DemoChat/Files/Jura-Medium.ttf
+  artifactKey: Guid(5abfb0a229c98b3499cffa6c59c2ffb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonChat/Demos/DemoChat/Files/Jura-Medium.ttf using Guid(5abfb0a229c98b3499cffa6c59c2ffb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c45eddd4f2567b1708ad477eb06d3125') in 0.015478 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.151658 seconds.
+  path: Assets/Little_Ghost2/Textures/Ghost/S1 Yellow/Ghost 1 to 3_Ghost2_MetallicSmoothness.png
+  artifactKey: Guid(cdd9fcd39d2513a478c55e5d601ddaf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Little_Ghost2/Textures/Ghost/S1 Yellow/Ghost 1 to 3_Ghost2_MetallicSmoothness.png using Guid(cdd9fcd39d2513a478c55e5d601ddaf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0f848ec66bbdc84bb262ca0a8659c96') in 0.010821 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.060384 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/HumanoidJumpAndFall.fbx
+  artifactKey: Guid(51dd2e4c869794f75a0df7d54b210214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/HumanoidJumpAndFall.fbx using Guid(51dd2e4c869794f75a0df7d54b210214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18a68fb835f1a3ef7fdaebcdd609392b') in 0.004827 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 160
+========================================================================
+Received Import Request.
+  Time since last request: 0.238533 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/HumanoidRunTurnSharp.fbx
+  artifactKey: Guid(f2bed5dc5afacff44a00de8daae9703b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/HumanoidRunTurnSharp.fbx using Guid(f2bed5dc5afacff44a00de8daae9703b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3d349b0e0732d39f2076f963dfd7395') in 0.004248 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 158
+========================================================================
+Received Import Request.
+  Time since last request: 0.234626 seconds.
+  path: Assets/LowPolyInterior/Models/Light/Lamp_02.fbx
+  artifactKey: Guid(1e4afd32a6a62e94ab079f4acbbc6f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Models/Light/Lamp_02.fbx using Guid(1e4afd32a6a62e94ab079f4acbbc6f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f211674beb1dba291ee3795b2c9b015d') in 0.011068 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/LowPolyInterior/Models/Light/Lamp_03.fbx
+  artifactKey: Guid(53991a83b851c3a4d82916138aab39d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Models/Light/Lamp_03.fbx using Guid(53991a83b851c3a4d82916138aab39d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46a3aa9d7043f86d34fc93ddacbc073b') in 0.025097 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/LowPolyInterior/Models/Light/Lamp_07.fbx
+  artifactKey: Guid(07f59b22deba56d4fa653fa42ea5c3e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Models/Light/Lamp_07.fbx using Guid(07f59b22deba56d4fa653fa42ea5c3e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8221550d812a3c83be23acfc0326a22d') in 0.026846 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/leaves_palm_243.mat
+  artifactKey: Guid(6fe15af0e28a31a43bf683296709c6b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/leaves_palm_243.mat using Guid(6fe15af0e28a31a43bf683296709c6b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a10cf583826566d571560a7546e8912') in 0.005075 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/LowPolyInterior/Prefabs/Light/Lamp_02.prefab
+  artifactKey: Guid(c89d0cb5357954f46a53ec5915cb0b68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Prefabs/Light/Lamp_02.prefab using Guid(c89d0cb5357954f46a53ec5915cb0b68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c37e94662f5355a164fc6c1ba7c99118') in 0.017173 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/LowPolyInterior/Models/KithcenObjects/Magnet_for_knifes.fbx
+  artifactKey: Guid(9808468cd427b864fae6c39f89ac81df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Models/KithcenObjects/Magnet_for_knifes.fbx using Guid(9808468cd427b864fae6c39f89ac81df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84269d56067ab04eff9de7e95d5743e1') in 0.022628 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.146728 seconds.
+  path: Assets/LowPolyInterior/Models/Room/Mirror_01.fbx
+  artifactKey: Guid(46685f5ce7cf03a4da79f90b6d4e5470) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Models/Room/Mirror_01.fbx using Guid(46685f5ce7cf03a4da79f90b6d4e5470) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec2b636accdf95ee1df9ed23d35912ab') in 0.014621 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/LowPolyInterior/Models/Room/Mirror_02.fbx
+  artifactKey: Guid(c2aea62f195637c4fa13d23321161cf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Models/Room/Mirror_02.fbx using Guid(c2aea62f195637c4fa13d23321161cf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8f1dd2da4d564796b50e00d93dd5baf') in 0.024809 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Resources/My Robot Kyle -done-.prefab
+  artifactKey: Guid(fe764102aa5aa431795da15fa2dec0e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Resources/My Robot Kyle -done-.prefab using Guid(fe764102aa5aa431795da15fa2dec0e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33e5b3a037ccf610e3c1c03e52cb33fc') in 0.047162 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 173
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/No Name.mat
+  artifactKey: Guid(a773bd7a075f9534e9c9ed1eb6e9a30f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/No Name.mat using Guid(a773bd7a075f9534e9c9ed1eb6e9a30f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcb38071f8128e2f03384f4f9868e4ec') in 0.005502 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/LowPolyInterior/Prefabs/KitchenObjects/Mushroom_02.prefab
+  artifactKey: Guid(204b50f754c9a1e458f314ab942f170c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyInterior/Prefabs/KitchenObjects/Mushroom_02.prefab using Guid(204b50f754c9a1e458f314ab942f170c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23ae57beffefa0fe7e305aecaef14124') in 0.011249 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.203785 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Scripts/BezierCurve/Editor/PunDemos.DemoSlotcarEditor.asmdef
+  artifactKey: Guid(66eabdb1ed6f5d041a6906290472e432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Scripts/BezierCurve/Editor/PunDemos.DemoSlotcarEditor.asmdef using Guid(66eabdb1ed6f5d041a6906290472e432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '090ab1b1526870cdbfcfc439ec538f8d') in 0.000431 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.014692 seconds.
+  path: Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/F2.png
+  artifactKey: Guid(d1fab85dbac391048be5fd2bf2204845) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/F2.png using Guid(d1fab85dbac391048be5fd2bf2204845) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8730c2d4397dbd39a2f01897b7394903') in 0.036425 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/F4.png
+  artifactKey: Guid(79675080000684643b365a9bc26bd645) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/F4.png using Guid(79675080000684643b365a9bc26bd645) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb4a40bc6d1432513b210bb81a919953') in 0.027944 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/F10.png
+  artifactKey: Guid(43cafc459ce25c84682a1b55fd71529c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/F10.png using Guid(43cafc459ce25c84682a1b55fd71529c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92acb73663e6c08451c061d66b2b453d') in 0.034465 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/F5.png
+  artifactKey: Guid(2ca2ca29695d2624db137e2d02c54478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/F5.png using Guid(2ca2ca29695d2624db137e2d02c54478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d4ba9e0e7b6e48426fd3a8c9a0e3fae') in 0.031771 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 24.893020 seconds.
+  path: Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/F14.png
+  artifactKey: Guid(8cf3a8c256e64f84598145b0533300d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/F14.png using Guid(8cf3a8c256e64f84598145b0533300d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b52fbab4a9ffedb5ff5e50b72e60ff39') in 0.034275 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.017371 seconds.
+  path: Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/G.png
+  artifactKey: Guid(3af87487671e5ad4d880bbd001c25adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/G.png using Guid(3af87487671e5ad4d880bbd001c25adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fa1ecd74ce2be566904de14756e8ff6') in 0.032555 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 11.661948 seconds.
+  path: Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/RightArrow.png
+  artifactKey: Guid(cbefe1c451cdb4f47bb468006b78bbae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/RightArrow.png using Guid(cbefe1c451cdb4f47bb468006b78bbae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ebbb8d5b322d0ac55ec1821f0945cb') in 0.043268 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.452156 seconds.
+  path: Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/U.png
+  artifactKey: Guid(99d044e6ba2ad554b9f974bb0cfadad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/U.png using Guid(99d044e6ba2ad554b9f974bb0cfadad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a90eab65d53608a08c44062f34333e57') in 0.023571 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.032934 seconds.
+  path: Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/W.png
+  artifactKey: Guid(6513a8212acaf744bbb48601d992819c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/W.png using Guid(6513a8212acaf744bbb48601d992819c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5edbc86cf87d120e998118c1ffbee506') in 0.030983 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.143862 seconds.
+  path: Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/Z.png
+  artifactKey: Guid(885b8504847ef9948bd402ffb777829d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Keyboard Keys & Mouse Sprites/Sprites/KeyboardKeys&Mouse/BlackVariant/Z.png using Guid(885b8504847ef9948bd402ffb777829d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '557f4043df3bf952062177a62bfa0801') in 0.030143 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
