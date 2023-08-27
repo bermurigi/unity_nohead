@@ -65,7 +65,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         camera.enabled = false;
         MLight.SetActive(false);
         audioSource = GetComponent<AudioSource>();
-                startMangerobject = GameObject.Find("StartManager");
+        startMangerobject = GameObject.Find("StartManager");
         startManger = startMangerobject.GetComponent<StartManager>();
         
         
