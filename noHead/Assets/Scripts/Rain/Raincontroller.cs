@@ -23,6 +23,7 @@ public class Raincontroller : MonoBehaviour
     {
         if(startManger.start1)
         {
+            Debug.Log("작동");
             audio.mute = true;
         }
         
