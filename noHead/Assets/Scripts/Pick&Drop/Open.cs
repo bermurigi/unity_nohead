@@ -67,8 +67,9 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
         {
             //���� �ִϸ��̼� ����
             Enemy=GameObject.FindGameObjectWithTag("Enemy");
-            Enemy.SetActive(false);
             EndingAnim.Play();
+            Enemy.SetActive(false);
+            
             //Door door = DoorObject.GetComponent<Door>();
             //door.Opendoor = true;
             Keycount = -1;

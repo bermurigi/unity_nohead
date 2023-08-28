@@ -7,9 +7,14 @@ public class MaterialManager : MonoBehaviour
 {
     public static MaterialManager Instance;
     public Material[] sharedMaterials;
-    
-    
+
+
     public int MyNum;
+
+    //ending Material 세팅
+    private GameObject[] endingGhost;
+    Open IsOpen;
+    GhostMotionController[] Ghosts;
 
     private void Awake()
     {
@@ -21,8 +26,27 @@ public class MaterialManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        //ending Material 세팅
+        IsOpen = FindObjectOfType<Open>();
     }
-    
+
+    //ending Material 세팅
+    private void Update()
+    {
+        if (IsOpen.Keycount == 0)
+        {
+            endingGhost = GameObject.FindGameObjectsWithTag("endingGhost");
+            Ghosts = FindObjectsOfType<GhostMotionController>();
+            int i = 0;
+            foreach (var ghost in Ghosts)
+            {
+                endingGhost[i].GetComponent<SkinnedMeshRenderer>().material = ghost.mat[ghost.i];
+                ghost.gameObject.SetActive(false);
+                i++;
+            }
+        }
+    }
+
     // 서로 다른 랜덤한 숫자 2개를 반환하는 함수
     public int[] GenerateDifferentRandomNumbers()
     {

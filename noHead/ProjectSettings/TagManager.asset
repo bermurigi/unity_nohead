@@ -8,6 +8,7 @@ TagManager:
   - Key
   - Enemy
   - Dead
+  - endingGhost
   layers:
   - Default
   - TransparentFX
