@@ -342,6 +342,14 @@
 "Assets/Photon/PhotonLibs/WebSocket/WebSocket.cs"
 "Assets/Photon/PhotonRealtime/Demos/DemoLoadBalancing/ConnectAndJoinRandomLb.cs"
 "Assets/QuickOutline/Scripts/Outline.cs"
+"Assets/RainMaker/Demo/DemoScript.cs"
+"Assets/RainMaker/Demo/DemoScript2D.cs"
+"Assets/RainMaker/Demo/DemoScriptStartRainOnSpaceBar.cs"
+"Assets/RainMaker/Prefab/BaseRainScript.cs"
+"Assets/RainMaker/Prefab/RainCollision.cs"
+"Assets/RainMaker/Prefab/RainScript.cs"
+"Assets/RainMaker/Prefab/RainScript2D.cs"
+"Assets/Scripts/BgmStart.cs"
 "Assets/Scripts/CameraMove.cs"
 "Assets/Scripts/Center.cs"
 "Assets/Scripts/Controller/CameraController.cs"
@@ -362,6 +370,7 @@
 "Assets/Scripts/Pick&Drop/Open.cs"
 "Assets/Scripts/Pick&Drop/Open2.cs"
 "Assets/Scripts/Pick&Drop/Pick.cs"
+"Assets/Scripts/Rain/Raincontroller.cs"
 "Assets/Scripts/UI/restart.cs"
 -langversion:9.0
 

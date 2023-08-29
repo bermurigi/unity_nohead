@@ -8,15 +8,19 @@ ScriptsOnlyBuild:
     - Priest_movement
     Assembly-CSharp.dll:
     - AgentLinkMover
+    - BgmStart
+    - CameraController
     - CameraManager
     - CameraMove
     - Door
     - DropdownController
+    - GhostMotionController
     - Item
     - MaterialManager
     - NetworkManager
     - Open
     - Open2
+    - Pick
     - Priest_movement
     - StartManager
     - TeleportToClosestPlayer
@@ -39,10 +43,13 @@ ScriptsOnlyBuild:
     PhotonUnityNetworking.Editor.dll:
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
+    - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
     - Photon.Pun.PhotonTransformView
     - Photon.Pun.PhotonView
     - Photon.Pun.ServerSettings
+    Unity.AI.Navigation.Editor.dll:
+    - Unity.AI.Navigation.Editor.NavigationWindow
     Unity.AI.Navigation.dll:
     - Unity.AI.Navigation.NavMeshLink
     Unity.Animation.Rigging:
@@ -55,7 +62,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Animations.Rigging.RigBuilder
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.RiderScriptEditorData
-    - Packages.Rider.Editor.RiderScriptEditorPersistedState
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
@@ -75,12 +81,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Timeline.AnimationPlayableAsset
     - UnityEngine.Timeline.AnimationTrack
     - UnityEngine.Timeline.TimelineAsset
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -227,125 +227,127 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16618}
-    - Class: 114
       Script: {instanceID: 16620}
     - Class: 114
-      Script: {instanceID: 16626}
+      Script: {instanceID: 16622}
     - Class: 114
-      Script: {instanceID: 16682}
+      Script: {instanceID: 16628}
     - Class: 114
-      Script: {instanceID: 16720}
+      Script: {instanceID: 16684}
     - Class: 114
-      Script: {instanceID: 16734}
+      Script: {instanceID: 16722}
     - Class: 114
-      Script: {instanceID: 16868}
+      Script: {instanceID: 16736}
     - Class: 114
-      Script: {instanceID: 16914}
+      Script: {instanceID: 16870}
     - Class: 114
-      Script: {instanceID: 16986}
+      Script: {instanceID: 16916}
     - Class: 114
-      Script: {instanceID: 17378}
+      Script: {instanceID: 16988}
     - Class: 114
-      Script: {instanceID: 17586}
+      Script: {instanceID: 17380}
     - Class: 114
-      Script: {instanceID: 17882}
+      Script: {instanceID: 17588}
     - Class: 114
-      Script: {instanceID: 17890}
+      Script: {instanceID: 17886}
     - Class: 114
-      Script: {instanceID: 17902}
+      Script: {instanceID: 17894}
     - Class: 114
-      Script: {instanceID: 18110}
+      Script: {instanceID: 17906}
     - Class: 114
-      Script: {instanceID: 18164}
+      Script: {instanceID: 18114}
     - Class: 114
-      Script: {instanceID: 18354}
+      Script: {instanceID: 18168}
     - Class: 114
-      Script: {instanceID: 18992}
+      Script: {instanceID: 18358}
     - Class: 114
-      Script: {instanceID: 19212}
+      Script: {instanceID: 18398}
     - Class: 114
-      Script: {instanceID: 19302}
+      Script: {instanceID: 19002}
     - Class: 114
-      Script: {instanceID: 19306}
+      Script: {instanceID: 19222}
     - Class: 114
-      Script: {instanceID: 19338}
+      Script: {instanceID: 19312}
     - Class: 114
-      Script: {instanceID: 19364}
+      Script: {instanceID: 19316}
     - Class: 114
-      Script: {instanceID: 19478}
+      Script: {instanceID: 19348}
     - Class: 114
-      Script: {instanceID: 19492}
+      Script: {instanceID: 19374}
     - Class: 114
-      Script: {instanceID: 19620}
+      Script: {instanceID: 19488}
     - Class: 114
-      Script: {instanceID: 19658}
+      Script: {instanceID: 19502}
     - Class: 114
-      Script: {instanceID: 19950}
+      Script: {instanceID: 19630}
     - Class: 114
-      Script: {instanceID: 20288}
+      Script: {instanceID: 19670}
     - Class: 114
-      Script: {instanceID: 20350}
+      Script: {instanceID: 19970}
     - Class: 114
-      Script: {instanceID: 20450}
+      Script: {instanceID: 20308}
     - Class: 114
-      Script: {instanceID: 20520}
+      Script: {instanceID: 20370}
     - Class: 114
-      Script: {instanceID: 20634}
+      Script: {instanceID: 20470}
     - Class: 114
-      Script: {instanceID: 20700}
+      Script: {instanceID: 20540}
+    - Class: 114
+      Script: {instanceID: 20654}
     - Class: 114
       Script: {instanceID: 20720}
     - Class: 114
-      Script: {instanceID: 20782}
+      Script: {instanceID: 20740}
     - Class: 114
-      Script: {instanceID: 21196}
+      Script: {instanceID: 20802}
     - Class: 114
-      Script: {instanceID: 21200}
+      Script: {instanceID: 21216}
     - Class: 114
-      Script: {instanceID: 21254}
+      Script: {instanceID: 21220}
     - Class: 114
-      Script: {instanceID: 21260}
+      Script: {instanceID: 21274}
     - Class: 114
-      Script: {instanceID: 21362}
+      Script: {instanceID: 21280}
     - Class: 114
-      Script: {instanceID: 21490}
+      Script: {instanceID: 21382}
     - Class: 114
-      Script: {instanceID: 21496}
+      Script: {instanceID: 21510}
     - Class: 114
-      Script: {instanceID: 21582}
+      Script: {instanceID: 21516}
     - Class: 114
-      Script: {instanceID: 21648}
+      Script: {instanceID: 21604}
     - Class: 114
-      Script: {instanceID: 21904}
+      Script: {instanceID: 21670}
     - Class: 114
-      Script: {instanceID: 22018}
+      Script: {instanceID: 21926}
     - Class: 114
-      Script: {instanceID: 22026}
+      Script: {instanceID: 22048}
     - Class: 114
-      Script: {instanceID: 22028}
+      Script: {instanceID: 22050}
     - Class: 114
-      Script: {instanceID: 22418}
+      Script: {instanceID: 22052}
     - Class: 114
-      Script: {instanceID: 22720}
+      Script: {instanceID: 22442}
     - Class: 114
-      Script: {instanceID: 22728}
+      Script: {instanceID: 22744}
     - Class: 114
-      Script: {instanceID: 23302}
+      Script: {instanceID: 22752}
     - Class: 114
-      Script: {instanceID: 23306}
+      Script: {instanceID: 23326}
     - Class: 114
-      Script: {instanceID: 23538}
+      Script: {instanceID: 23330}
     - Class: 114
-      Script: {instanceID: 23716}
+      Script: {instanceID: 23566}
     - Class: 114
-      Script: {instanceID: 23866}
+      Script: {instanceID: 23746}
     - Class: 114
-      Script: {instanceID: 24126}
+      Script: {instanceID: 23896}
     - Class: 114
-      Script: {instanceID: 24180}
+      Script: {instanceID: 24156}
     - Class: 114
-      Script: {instanceID: 24222}
+      Script: {instanceID: 24210}
+    - Class: 114
+      Script: {instanceID: 24252}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -685,6 +687,12 @@ ScriptsOnlyBuild:
     className: CountdownTimer
   - hash:
       serializedVersion: 2
+      Hash: 7487700f3f6f13e53da961c93e4b316e
+    assemblyName: Assembly-CSharp
+    namespaceName: DigitalRuby.RainMaker
+    className: RainCollision
+  - hash:
+      serializedVersion: 2
       Hash: bcdedb1b3a567eb05111be4716618ce1
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
@@ -847,6 +855,12 @@ ScriptsOnlyBuild:
     className: CurrentRoomIsOfflineProperty
   - hash:
       serializedVersion: 2
+      Hash: 215c03ad88cd4f66529f6687c1aefb70
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BgmStart
+  - hash:
+      serializedVersion: 2
       Hash: 8013930dd683d8f6eaf9ca95bd7680ee
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -875,6 +889,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Animation.Rigging
     namespaceName: UnityEngine.Animations.Rigging
     className: TwoBoneIKConstraint
+  - hash:
+      serializedVersion: 2
+      Hash: 3120e3a744810e88be170babc9154705
+    assemblyName: Assembly-CSharp
+    namespaceName: DigitalRuby.RainMaker
+    className: BaseRainScript
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1183,6 +1203,12 @@ ScriptsOnlyBuild:
     className: DropdownController
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Raincontroller
+  - hash:
+      serializedVersion: 2
       Hash: 2b006c27b595e55e112de0e713333574
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -1205,6 +1231,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnJointBreak2DMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 2d77d932625d275113505ef47bf9f2ef
+    assemblyName: Assembly-CSharp
+    namespaceName: DigitalRuby.RainMaker
+    className: RainScript
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1615,7 +1647,7 @@ ScriptsOnlyBuild:
     className: PhotonHandler
   - hash:
       serializedVersion: 2
-      Hash: 196523c49398fb118b1d62accc29f2eb
+      Hash: b04a3cdd40a3980a9124830aa639f5cc
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Priest_movement
@@ -1649,6 +1681,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Open2
+  - hash:
+      serializedVersion: 2
+      Hash: 420df3b1d2d71ef0caebf910d5560290
+    assemblyName: Assembly-CSharp
+    namespaceName: DigitalRuby.RainMaker
+    className: DemoScriptStartRainOnSpaceBar
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1721,6 +1759,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerStay2DMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: bba1c70feb12e6a5e9653a09d88f4a75
+    assemblyName: Assembly-CSharp
+    namespaceName: DigitalRuby.RainMaker
+    className: RainScript2D
   - hash:
       serializedVersion: 2
       Hash: 751d867553f413cde86fe5db0b02780d
@@ -1921,7 +1965,7 @@ ScriptsOnlyBuild:
     className: Asteroid
   - hash:
       serializedVersion: 2
-      Hash: 2f57a2f25cf55b40a279a007d2219d65
+      Hash: aa206818f9f315ed14ab122bf7814e48
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: StartManager
@@ -2119,6 +2163,12 @@ ScriptsOnlyBuild:
     className: RegionListView
   - hash:
       serializedVersion: 2
+      Hash: 06d18b99cdd47431a5355941e1eb878b
+    assemblyName: Assembly-CSharp
+    namespaceName: DigitalRuby.RainMaker
+    className: DemoScript
+  - hash:
+      serializedVersion: 2
       Hash: 031be1932a89e568a3462895c0583b84
     assemblyName: PhotonUnityNetworking.Utilities
     namespaceName: Photon.Pun.UtilityScripts
@@ -2171,6 +2221,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos
     namespaceName: Photon.Pun.Demo.Asteroids
     className: LobbyTopPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 4e2ad08aa49ae8ee129e069c55950bdb
+    assemblyName: Assembly-CSharp
+    namespaceName: DigitalRuby.RainMaker
+    className: DemoScript2D
   - hash:
       serializedVersion: 2
       Hash: 5229e132142fc9e0a49b7db3a1856d2f
@@ -2311,7 +2367,7 @@ ScriptsOnlyBuild:
     className: SendRateField
   - hash:
       serializedVersion: 2
-      Hash: f1141861ae93be1f443c802659f94cfc
+      Hash: 47b5c3558b37cf94adf9b6310dd89fa4
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Pick

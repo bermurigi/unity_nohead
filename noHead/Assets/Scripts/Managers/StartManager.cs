@@ -11,11 +11,12 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
     [SerializeField] private GameObject StartButton;
     [SerializeField] private GameObject StartPoint;
     [SerializeField] private GameObject Enemy;
+    [SerializeField] private GameObject StartBgm;
 
     public bool start1;
     
     private void start(){
-        start1 = false; 
+        start1 = false;
     }
    
     private void Update()
@@ -71,7 +72,8 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
     [PunRPC]
     private void MovePlayerToStartPoint()//거의다함 여기건들이면끝날듯
     {
-        
+        BgmStart Off = StartBgm.GetComponent<BgmStart>();
+        Off.OffBgm = true;
         // 플레이어 오브젝트를 새 위치로 이동시킴
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         
