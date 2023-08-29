@@ -20,6 +20,8 @@ public class Priest_movement : MonoBehaviour
     private NavMeshAgent agent;
     public GameObject Caught;
     private RigBuilder rig;
+    public AudioSource Walking;
+    public AudioSource Catch;
 
     private void Awake()
     {
@@ -139,6 +141,8 @@ public class Priest_movement : MonoBehaviour
                 return;
 
             Animator.SetTrigger(isCaught);
+            Catch.Play();
+            Walking.Stop();
             // JumpCam.transform.position = Pos;
             // Debug.Log("현재 위치 : "+Pos);
             Caught.SetActive(true);

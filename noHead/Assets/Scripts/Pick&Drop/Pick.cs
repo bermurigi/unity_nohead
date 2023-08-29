@@ -14,7 +14,8 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
     bool ItemPick; bool MovingItem;
     private bool firstPick;//이윤기
     public PhotonView PV;
-    
+    public AudioSource PickSound;
+
     public GhostMotionController ghostMotionController;
     private RaycastHit raycastHit;
     bool Mouse;
@@ -85,8 +86,9 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
                 MovingItem = true;
                 item.rb.isKinematic = true;
                 item.PickingItem = true;
+                PickSound.Play();
 
-               
+
                 item.photonView.RPC("UpdatePickingItem", RpcTarget.AllViaServer, item.PickingItem);
                 item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllViaServer, item.rb.isKinematic);
             
@@ -103,7 +105,8 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
                 nowObject = null;
                 item.PickingItem = false;
                 nearObject = null;
-                
+                PickSound.Play();
+
                 item.photonView.RPC("UpdatePickingItem", RpcTarget.AllViaServer, item.PickingItem);
                 item.photonView.RPC("UpdateIsKinematic", RpcTarget.AllViaServer, item.rb.isKinematic);
             }

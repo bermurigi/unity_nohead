@@ -18,6 +18,7 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
     private bool isRand;
     public PlayableDirector EndingAnim;
     public GameObject Enemy;
+    AudioSource FireSound;
 
     private void Awake()
     {
@@ -33,7 +34,7 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
 
         isRand = false;
 
-
+        FireSound = GetComponent<AudioSource>(); 
 
     }
 
@@ -91,7 +92,7 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
                 RandomItem[item.value] = false;
                 Keycount--;
             }
-           
+            FireSound.Play();
             Destroy(other.gameObject);
         }
 
