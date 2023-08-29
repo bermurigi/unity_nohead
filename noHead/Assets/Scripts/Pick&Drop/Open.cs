@@ -43,7 +43,7 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
     void RandItem()
     {
         
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 1; i++)
             {
                 rand = Random.Range(0, 4);
                 if (RandomItem[rand] == false)
@@ -58,6 +58,15 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
             
         
     }
+
+    [PunRPC]
+    void RPCItem()
+    {
+        for (int i = 0; i < 1; i++)
+        {
+            RandomItem[i] = RandomItem[i];
+        }
+    }
    
    
 
@@ -68,18 +77,28 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
         {
             //���� �ִϸ��̼� ����
             Enemy=GameObject.FindGameObjectWithTag("Enemy");
-            Enemy.SetActive(false);
+            //Enemy.SetActive(false);
             EndingAnim.Play();
             //Door door = DoorObject.GetComponent<Door>();
             //door.Opendoor = true;
             Keycount = -1;
         }
 
-        if (PhotonNetwork.IsMasterClient && isRand == false) 
+        /*
+        if (PhotonNetwork.IsMasterClient && !isRand) 
         {
-            photonView.RPC("RandItem",RpcTarget.AllBuffered);
-            isRand = true;
+            
+            //RandItem();
+            
         }
+        */
+    }
+
+    public void StartRand()
+    
+    {
+        photonView.RPC("RandItem",RpcTarget.AllBuffered);
+        isRand = true;
     }
 
     void OnTriggerStay(Collider other)

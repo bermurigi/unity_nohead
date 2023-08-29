@@ -24,6 +24,16 @@ ScriptsOnlyBuild:
     - Priest_movement
     - StartManager
     - TeleportToClosestPlayer
+    - ToD_Base
+    - ToD_Debug
+    - Weather_Cloudy
+    - Weather_Controller
+    - Weather_Debug
+    - Weather_Rain
+    - Weather_Snow
+    - Weather_SoundFade
+    - Weather_Sun
+    - Weather_Thunderstorm
     PhotonUnityNetworking:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -62,6 +72,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Animations.Rigging.RigBuilder
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.RiderScriptEditorData
+    - Packages.Rider.Editor.RiderScriptEditorPersistedState
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
@@ -145,6 +156,9 @@ ScriptsOnlyBuild:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
     - UnityEngine.Events.PersistentListenerMode
+    UnityEngine.IMGUIModule:
+    - UnityEngine.GUISettings
+    - UnityEngine.GUIStyle
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
     - UnityEngine.TextCore.Glyph
@@ -227,6 +241,8 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 632}
+    - Class: 114
       Script: {instanceID: 16620}
     - Class: 114
       Script: {instanceID: 16622}
@@ -239,115 +255,135 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16736}
     - Class: 114
-      Script: {instanceID: 16870}
+      Script: {instanceID: 16776}
     - Class: 114
-      Script: {instanceID: 16916}
+      Script: {instanceID: 16872}
     - Class: 114
-      Script: {instanceID: 16988}
+      Script: {instanceID: 16918}
     - Class: 114
-      Script: {instanceID: 17380}
+      Script: {instanceID: 16990}
     - Class: 114
-      Script: {instanceID: 17588}
+      Script: {instanceID: 17382}
     - Class: 114
-      Script: {instanceID: 17886}
+      Script: {instanceID: 17590}
     - Class: 114
-      Script: {instanceID: 17894}
+      Script: {instanceID: 17888}
     - Class: 114
-      Script: {instanceID: 17906}
+      Script: {instanceID: 17896}
     - Class: 114
-      Script: {instanceID: 18114}
+      Script: {instanceID: 17908}
     - Class: 114
-      Script: {instanceID: 18168}
+      Script: {instanceID: 18116}
     - Class: 114
-      Script: {instanceID: 18358}
+      Script: {instanceID: 18170}
     - Class: 114
-      Script: {instanceID: 18398}
+      Script: {instanceID: 18362}
     - Class: 114
-      Script: {instanceID: 19002}
+      Script: {instanceID: 18402}
     - Class: 114
-      Script: {instanceID: 19222}
+      Script: {instanceID: 18450}
     - Class: 114
-      Script: {instanceID: 19312}
+      Script: {instanceID: 18608}
     - Class: 114
-      Script: {instanceID: 19316}
+      Script: {instanceID: 19010}
     - Class: 114
-      Script: {instanceID: 19348}
+      Script: {instanceID: 19230}
     - Class: 114
-      Script: {instanceID: 19374}
+      Script: {instanceID: 19320}
     - Class: 114
-      Script: {instanceID: 19488}
+      Script: {instanceID: 19324}
     - Class: 114
-      Script: {instanceID: 19502}
+      Script: {instanceID: 19356}
     - Class: 114
-      Script: {instanceID: 19630}
+      Script: {instanceID: 19382}
     - Class: 114
-      Script: {instanceID: 19670}
+      Script: {instanceID: 19498}
     - Class: 114
-      Script: {instanceID: 19970}
+      Script: {instanceID: 19512}
     - Class: 114
-      Script: {instanceID: 20308}
+      Script: {instanceID: 19642}
     - Class: 114
-      Script: {instanceID: 20370}
+      Script: {instanceID: 19682}
     - Class: 114
-      Script: {instanceID: 20470}
+      Script: {instanceID: 19982}
     - Class: 114
-      Script: {instanceID: 20540}
+      Script: {instanceID: 20322}
     - Class: 114
-      Script: {instanceID: 20654}
+      Script: {instanceID: 20332}
     - Class: 114
-      Script: {instanceID: 20720}
+      Script: {instanceID: 20374}
     - Class: 114
-      Script: {instanceID: 20740}
+      Script: {instanceID: 20386}
     - Class: 114
-      Script: {instanceID: 20802}
+      Script: {instanceID: 20488}
     - Class: 114
-      Script: {instanceID: 21216}
+      Script: {instanceID: 20558}
     - Class: 114
-      Script: {instanceID: 21220}
+      Script: {instanceID: 20672}
     - Class: 114
-      Script: {instanceID: 21274}
+      Script: {instanceID: 20738}
     - Class: 114
-      Script: {instanceID: 21280}
+      Script: {instanceID: 20758}
     - Class: 114
-      Script: {instanceID: 21382}
+      Script: {instanceID: 20820}
     - Class: 114
-      Script: {instanceID: 21510}
+      Script: {instanceID: 20852}
     - Class: 114
-      Script: {instanceID: 21516}
+      Script: {instanceID: 21238}
     - Class: 114
-      Script: {instanceID: 21604}
+      Script: {instanceID: 21242}
     - Class: 114
-      Script: {instanceID: 21670}
+      Script: {instanceID: 21298}
     - Class: 114
-      Script: {instanceID: 21926}
+      Script: {instanceID: 21304}
     - Class: 114
-      Script: {instanceID: 22048}
+      Script: {instanceID: 21406}
     - Class: 114
-      Script: {instanceID: 22050}
+      Script: {instanceID: 21534}
     - Class: 114
-      Script: {instanceID: 22052}
+      Script: {instanceID: 21540}
     - Class: 114
-      Script: {instanceID: 22442}
+      Script: {instanceID: 21628}
     - Class: 114
-      Script: {instanceID: 22744}
+      Script: {instanceID: 21694}
     - Class: 114
-      Script: {instanceID: 22752}
+      Script: {instanceID: 21950}
     - Class: 114
-      Script: {instanceID: 23326}
+      Script: {instanceID: 22072}
     - Class: 114
-      Script: {instanceID: 23330}
+      Script: {instanceID: 22074}
     - Class: 114
-      Script: {instanceID: 23566}
+      Script: {instanceID: 22076}
     - Class: 114
-      Script: {instanceID: 23746}
+      Script: {instanceID: 22206}
     - Class: 114
-      Script: {instanceID: 23896}
+      Script: {instanceID: 22468}
     - Class: 114
-      Script: {instanceID: 24156}
+      Script: {instanceID: 22670}
     - Class: 114
-      Script: {instanceID: 24210}
+      Script: {instanceID: 22772}
     - Class: 114
-      Script: {instanceID: 24252}
+      Script: {instanceID: 22780}
+    - Class: 114
+      Script: {instanceID: 22794}
+    - Class: 114
+      Script: {instanceID: 23356}
+    - Class: 114
+      Script: {instanceID: 23360}
+    - Class: 114
+      Script: {instanceID: 23598}
+    - Class: 114
+      Script: {instanceID: 23778}
+    - Class: 114
+      Script: {instanceID: 23930}
+    - Class: 114
+      Script: {instanceID: 24192}
+    - Class: 114
+      Script: {instanceID: 24246}
+    - Class: 114
+      Script: {instanceID: 24290}
+    - Class: 114
+      Script: {instanceID: 24308}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -457,6 +493,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Animation.Rigging
     namespaceName: UnityEngine.Animations.Rigging
     className: TwistChainConstraint
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Weather_SoundFade
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -879,6 +921,12 @@ ScriptsOnlyBuild:
     className: BoneRenderer
   - hash:
       serializedVersion: 2
+      Hash: b089034dcc727702d32ea8c715a3f9cd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ToD_Debug
+  - hash:
+      serializedVersion: 2
       Hash: a4d905db69ca7f45f45458ae380fb66f
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -915,16 +963,22 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDragMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Unity.VisualScripting.Core
-    namespaceName: Unity.VisualScripting
-    className: UnityOnScrollMessageListener
+      Hash: b089034dcc727702d32ea8c715a3f9cd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Weather_Debug
   - hash:
       serializedVersion: 2
       Hash: 38987339eef692d14f76226bdb57e569
     assemblyName: PhotonUnityNetworking.Demos
     namespaceName: Photon.Pun.Demo.SlotRacer.Utils
     className: BezierCurve
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Unity.VisualScripting.Core
+    namespaceName: Unity.VisualScripting
+    className: UnityOnScrollMessageListener
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1155,12 +1209,6 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Unity.VisualScripting.Core
-    namespaceName: Unity.VisualScripting
-    className: UnityOnCollisionStay2DMessageListener
-  - hash:
-      serializedVersion: 2
       Hash: 13c320424e15e88a0527d7477a4188bb
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1177,6 +1225,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos
     namespaceName: Photon.Pun.Demo.Cockpit
     className: PlayerListView
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Unity.VisualScripting.Core
+    namespaceName: Unity.VisualScripting
+    className: UnityOnCollisionStay2DMessageListener
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1281,6 +1335,12 @@ ScriptsOnlyBuild:
     className: UnityOnCancelMessageListener
   - hash:
       serializedVersion: 2
+      Hash: add53e17e003e353705cddbb973282a5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Weather_Base
+  - hash:
+      serializedVersion: 2
       Hash: ec9349ed75ec2e46ccf0a23fc70a9ac7
     assemblyName: PhotonUnityNetworking.Demos
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1339,6 +1399,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Door
+  - hash:
+      serializedVersion: 2
+      Hash: 99fb94afc59d84bf3608d8329e49a9d6
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Weather_Sun
+  - hash:
+      serializedVersion: 2
+      Hash: 015a24c7cf70e334ce0200caf730f7a9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Weather_Controller
   - hash:
       serializedVersion: 2
       Hash: c7b9385de9fd55499d563ac8783bbda2
@@ -1519,6 +1591,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.AI.Navigation
     namespaceName: Unity.AI.Navigation
     className: NavMeshModifierVolume
+  - hash:
+      serializedVersion: 2
+      Hash: 1d41ec40b1cc1b932394f0500c05762a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ToD_Base
   - hash:
       serializedVersion: 2
       Hash: bef4f13469786d3ed6d3de4f94d15a78
@@ -1821,6 +1899,12 @@ ScriptsOnlyBuild:
     className: PlayerNameInputField
   - hash:
       serializedVersion: 2
+      Hash: 6afad29407bf102dedf14cbb9da04ad7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Weather_Thunderstorm
+  - hash:
+      serializedVersion: 2
       Hash: c7b9385de9fd55499d563ac8783bbda2
     assemblyName: PhotonUnityNetworking.Demos
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1911,6 +1995,12 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 63f150f201486f9dfe7ce6b70f3e05b4
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Weather_Snow
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.Animation.Rigging
     namespaceName: UnityEngine.Animations.Rigging
@@ -1975,6 +2065,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: PositionAsUV1
+  - hash:
+      serializedVersion: 2
+      Hash: d75e8ac56f8243f8051c6f2a101785d1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Weather_Rain
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -2277,6 +2373,12 @@ ScriptsOnlyBuild:
     className: FriendListCell
   - hash:
       serializedVersion: 2
+      Hash: dc5507c5844ddb88f34dea35f431dab8
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ToD_Clock
+  - hash:
+      serializedVersion: 2
       Hash: ebaf7144edff218592123ae94dbc546f
     assemblyName: PhotonUnityNetworking
     namespaceName: Photon.Pun
@@ -2395,6 +2497,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: UserIdUiForm
+  - hash:
+      serializedVersion: 2
+      Hash: 99fb94afc59d84bf3608d8329e49a9d6
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Weather_Cloudy
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b

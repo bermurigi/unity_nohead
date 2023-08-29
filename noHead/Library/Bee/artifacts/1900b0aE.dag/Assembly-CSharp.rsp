@@ -426,6 +426,19 @@
 "Assets/Scripts/Pick&Drop/Pick.cs"
 "Assets/Scripts/Rain/Raincontroller.cs"
 "Assets/Scripts/UI/restart.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/DocuScript.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/TimeOfDay/ToD_Base.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/TimeOfDay/ToD_Clock.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/TimeOfDay/ToD_Debug.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/WeatherSystem/Weather_Base.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/WeatherSystem/Weather_Cloudy.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/WeatherSystem/Weather_Controller.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/WeatherSystem/Weather_Debug.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/WeatherSystem/Weather_Rain.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/WeatherSystem/Weather_Snow.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/WeatherSystem/Weather_SoundFade.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/WeatherSystem/Weather_Sun.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/WeatherSystem/Weather_Thunderstorm.cs"
 -langversion:9.0
 
 /deterministic

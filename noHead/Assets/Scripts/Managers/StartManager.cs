@@ -53,6 +53,8 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
         photonView.RPC("MovePlayerToStartPoint", RpcTarget.All);
         photonView.RPC("DeleteStartCanvas", RpcTarget.All);
         
+        Open.instance.StartRand();
+        
         Invoke("SpawnEnemyDelayed", 10.0f);
         
     }
