@@ -5,6 +5,7 @@ using Photon.Pun;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.Playables;
+using UnityEngine.UI;
 
 
 public class Open : MonoBehaviourPunCallbacks, IPunObservable
@@ -19,6 +20,8 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
     public PlayableDirector EndingAnim;
     public GameObject Enemy;
     AudioSource FireSound;
+
+    public GameObject KeycountText;
 
     private void Awake()
     {
@@ -37,6 +40,7 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
         FireSound = GetComponent<AudioSource>(); 
 
     }
+    
 
 
     [PunRPC]
@@ -82,6 +86,22 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
             //Door door = DoorObject.GetComponent<Door>();
             //door.Opendoor = true;
             Keycount = -1;
+        }
+
+        if (KeycountText == null)
+        {
+            KeycountText=GameObject.FindWithTag("Count");
+            if (KeycountText != null)
+            {
+                KeycountText.SetActive(false);
+
+            }
+
+
+        }
+        else if (KeycountText != null)
+        {
+            KeycountText.GetComponent<Text>().text = "남은 수: " + Keycount.ToString();
         }
 
         /*

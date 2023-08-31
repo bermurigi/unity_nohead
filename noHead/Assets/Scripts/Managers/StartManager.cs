@@ -13,11 +13,15 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
     [SerializeField] private GameObject Enemy;
     [SerializeField] private GameObject StartBgm;
 
+    
+
     public bool start1;
     
     private void start(){
         start1 = false;
     }
+
+   
    
     private void Update()
     {
@@ -32,7 +36,7 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
         {
             StartButton.SetActive(false);
         }
-        
+
         
     }
 
@@ -54,6 +58,7 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
         photonView.RPC("DeleteStartCanvas", RpcTarget.All);
         
         Open.instance.StartRand();
+        Open.instance.KeycountText.SetActive(true);
         
         Invoke("SpawnEnemyDelayed", 10.0f);
         

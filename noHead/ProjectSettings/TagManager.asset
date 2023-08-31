@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Dead
   - endingGhost
+  - Count
   layers:
   - Default
   - TransparentFX

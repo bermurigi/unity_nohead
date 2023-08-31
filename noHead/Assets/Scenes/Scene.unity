@@ -9360,6 +9360,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1882913813}
+        m_TargetAssemblyTypeName: Open, Assembly-CSharp
+        m_MethodName: CountSetting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &414818169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34259,6 +34271,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1135875395}
+        m_TargetAssemblyTypeName: StartManager, Assembly-CSharp
+        m_MethodName: CountSetting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1518763574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41807,6 +41831,7 @@ MonoBehaviour:
   Keycount: 1
   EndingAnim: {fileID: 1610047924}
   Enemy: {fileID: 0}
+  KeycountText: {fileID: 0}
 --- !u!65 &1882913814
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46716,6 +46741,10 @@ PrefabInstance:
       propertyPath: StartCanvas
       value: 
       objectReference: {fileID: 1579492374}
+    - target: {fileID: 8421353575585613186, guid: d6e8eed36290c6245a6503bca96e8b41, type: 3}
+      propertyPath: KeycountText
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6191631562471060410, guid: d6e8eed36290c6245a6503bca96e8b41, type: 3}
     - {fileID: 0}
