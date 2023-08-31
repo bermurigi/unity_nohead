@@ -13,6 +13,8 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
     [SerializeField] private GameObject Enemy;
     [SerializeField] private GameObject StartBgm;
 
+    public GameObject ExplanationCanvas;
+
     
 
     public bool start1;
@@ -46,6 +48,16 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
         //Enemy.SetActive(true);
         
 
+    }
+
+    public void ExplanationButtonClick()
+    {
+        ExplanationCanvas.SetActive(true);
+    }
+    
+    public void ExplanationCancleButtonClick()
+    {
+        ExplanationCanvas.SetActive(false);
     }
 
     

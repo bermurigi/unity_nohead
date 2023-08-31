@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0888db1d9f84d6da3b0d5de41f42c2d, type: 3}
   m_Name: Global Settings
   m_EditorClassIdentifier: 
-  m_RecordMode: 1
+  m_RecordMode: 0
   m_FrameRatePlayback: 0
   m_FrameRateType: 4
   m_CustomFrameRateValue: 30
@@ -37,7 +37,7 @@ MonoBehaviour:
   m_Name: Image Sequence
   m_EditorClassIdentifier: 
   enabled: 1
-  take: 1
+  take: 7
   captureEveryNthFrame: 1
   fileNameGenerator:
     m_Path:
