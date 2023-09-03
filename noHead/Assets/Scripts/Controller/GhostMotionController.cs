@@ -21,6 +21,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     AudioSource audioSource;
     public bool soundOnOff = false;
     public bool FollowingOnOff = false;
+    public AudioSource LightSound;
 
     [SerializeField]
     Animator GAnimator;
@@ -195,7 +196,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
             //light On/Off
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                
+                LightSound.Play();
                 isOn = !isOn; // 손전등의 상태를 변경합니다.
                 photonView.RPC("ToggleFlashlight", RpcTarget.All, isOn);
                 
