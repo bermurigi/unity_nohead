@@ -428,6 +428,8 @@
 "Assets/Scripts/Pick&Drop/Open2.cs"
 "Assets/Scripts/Pick&Drop/Pick.cs"
 "Assets/Scripts/Rain/Raincontroller.cs"
+"Assets/Scripts/UI/Fadein.cs"
+"Assets/Scripts/UI/GameOver.cs"
 "Assets/Scripts/UI/restart.cs"
 "Assets/TimeOfDay&WeatherSystem/Code/DocuScript.cs"
 "Assets/TimeOfDay&WeatherSystem/Code/TimeOfDay/ToD_Base.cs"

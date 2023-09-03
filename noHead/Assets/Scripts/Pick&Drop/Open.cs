@@ -24,7 +24,9 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
     public GameObject KeycountText;
 
     
-    public GameObject startPoint;
+    public GameObject startPoint; 
+    public bool gameStart = false;//힌트주는용도
+    public bool hintStart = false;
 
     private void Awake()
     {

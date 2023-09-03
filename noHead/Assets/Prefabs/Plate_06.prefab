@@ -39,7 +39,7 @@ Transform:
   m_Children:
   - {fileID: 2593066478649400641}
   m_Father: {fileID: 0}
-  m_RootOrder: 110
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &672031449507396762
 MeshFilter:
@@ -130,6 +130,8 @@ MonoBehaviour:
   rb: {fileID: 5401737919011506632}
   PickingItem: 0
   playerNum: 
+  startPoint: {fileID: 0}
+  hintLight: {fileID: 0}
 --- !u!54 &5401737919011506632
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -251,7 +253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2593066478649400641
 Transform:
   m_ObjectHideFlags: 0

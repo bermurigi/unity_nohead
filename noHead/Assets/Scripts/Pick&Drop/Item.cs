@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using Unity.VisualScripting;
 
 public class Item : MonoBehaviourPun
 {
@@ -20,6 +21,8 @@ public class Item : MonoBehaviourPun
 
     [SerializeField]
     private GameObject startPoint;
+
+    [SerializeField] private GameObject hintLight;
     
     
 
@@ -31,6 +34,8 @@ public class Item : MonoBehaviourPun
         meshRenderer = GetComponent<MeshRenderer>();
 
         playerNum = new int[2];
+        hintLight = GetComponentInChildren<Light>().gameObject;
+        hintLight.SetActive(false);
 
 
 
@@ -63,6 +68,11 @@ public class Item : MonoBehaviourPun
             }
 
             ischange = true;
+        }
+
+        if (Open.instance.hintStart)
+        {
+            hintLight.SetActive(true);
         }
        
         

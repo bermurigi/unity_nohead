@@ -65,6 +65,7 @@ MonoBehaviour:
   - testing
   - start1Equal
   - RPCItem
+  - ToggleDoor
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

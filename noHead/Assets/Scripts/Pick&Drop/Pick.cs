@@ -134,12 +134,22 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
     {
         
         raycastHit = ghostMotionController.rayHit;
-        
-        // Debug.Log(raycastHit.transform.tag+"2");
-        if(raycastHit.transform.CompareTag("Key") && ItemPick && nearObject == null)
+        if (raycastHit.collider != null)
         {
-            nearObject = raycastHit.collider.gameObject;
-            
+
+
+            // Debug.Log(raycastHit.transform.tag+"2"); 
+
+            // Debug.Log(raycastHit.transform.tag+"2");
+            if (raycastHit.transform.CompareTag("Key") && ItemPick && nearObject == null)
+            {
+                nearObject = raycastHit.collider.gameObject;
+
+            }
+            else
+            {
+                Debug.Log("레이캐스트값 없음");
+            }
         }
         // Debug.Log(nearObject);
       

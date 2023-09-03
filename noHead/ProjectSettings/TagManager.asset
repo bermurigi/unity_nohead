@@ -11,6 +11,8 @@ TagManager:
   - endingGhost
   - Count
   - MapOutside
+  - Hiding
+  - Hide
   layers:
   - Default
   - TransparentFX
