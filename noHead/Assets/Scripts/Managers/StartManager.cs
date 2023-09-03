@@ -13,11 +13,20 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
     [SerializeField] private GameObject Enemy;
     [SerializeField] private GameObject StartBgm;
 
+    public GameObject ExplanationCanvas;
+    public AudioSource startBell;
+
+    
+
     public bool start1;
+    
+    public float delayInSeconds; //힌트지연시간
     
     private void start(){
         start1 = false;
     }
+
+   
    
     private void Update()
     {
@@ -32,7 +41,7 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
         {
             StartButton.SetActive(false);
         }
-        
+
         
     }
 
@@ -44,6 +53,16 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
 
     }
 
+    public void ExplanationButtonClick()
+    {
+        ExplanationCanvas.SetActive(true);
+    }
+    
+    public void ExplanationCancleButtonClick()
+    {
+        ExplanationCanvas.SetActive(false);
+    }
+
     
 
     
@@ -53,8 +72,25 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
         photonView.RPC("MovePlayerToStartPoint", RpcTarget.All);
         photonView.RPC("DeleteStartCanvas", RpcTarget.All);
         
-        Invoke("SpawnEnemyDelayed", 10.0f);
+        Open.instance.StartRand();
+        Open.instance.gameStart = true;
+        Open.instance.KeycountText.SetActive(true);
+        startBell.Play();
         
+        
+        Invoke("SpawnEnemyDelayed", 10.0f);
+        StartCoroutine(StartHintCoroutine());
+        
+    }
+    private IEnumerator StartHintCoroutine()
+    {
+        // delayInSeconds 만큼 대기합니다.
+        yield return new WaitForSeconds(delayInSeconds);
+
+        // hintStart를 true로 설정합니다.
+        Open.instance.hintStart = true;
+
+        // 다른 작업을 수행할 수 있습니다.
     }
 
     [PunRPC]

@@ -33,7 +33,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     public Material[] mat = new Material[3];
     public SkinnedMeshRenderer playerRenderer;
     public bool test;
-    
+    public GameObject keyCountText;
    
 
     public int i = 0;
@@ -44,7 +44,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     
     public RaycastHit rayHit;
     private Ray ray;
-    private float MAX_DISTANCE = 500.0f;
+    private float MAX_DISTANCE = 2.0f;
     private Transform highlight;
     private Transform selection;
     private int layerMask;
@@ -52,6 +52,20 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     private GameObject nowObject_clone;
     private StartManager startManger;
     private GameObject startMangerobject;
+
+    public AudioSource FlashLightSound;
+    
+    
+    //숨기 & 엔딩
+    private GameObject hidingC;
+    private Animator Hanimator;
+    private bool openorclose;
+    [SerializeField]private bool inputproceed;
+    private GameObject navmeshlink;
+    private float delay;
+    
+    
+    
     
         
 
@@ -63,6 +77,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         NickNameText.color = PV.IsMine ? Color.green : Color.red;
         this.gameObject.tag = "Player"; //적 오브젝트가 추적하기 위해서 태그 추가 여기 입니다!!@@!@!!@@!@!@
         camera.enabled = false;
+        keyCountText.SetActive(false);
         MLight.SetActive(false);
         audioSource = GetComponent<AudioSource>();
         startMangerobject = GameObject.Find("StartManager");
@@ -80,6 +95,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         if (PV.IsMine)
         {
             camera.enabled = true;
+            keyCountText.SetActive(true);
 
             this.gameObject.layer = 7;
             ChangeLayer(transform);
@@ -88,6 +104,16 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
             
 
         }
+        
+        //숨기 & 엔딩
+        hidingC = GameObject.Find("HidingCurtain");
+        Hanimator = hidingC.GetComponent<Animator>();
+        navmeshlink = GameObject.Find("BathLink3");
+        openorclose = true;
+        delay = 1.8f;
+
+
+
     }
     
 
@@ -125,9 +151,9 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         
 
         photonView.RPC("RPC_ChangeMaterial", RpcTarget.AllBuffered, i);
-        
-        
-        
+
+
+        inputproceed = false;
         
         if (PV.IsMine) //본인 캐릭터만 조종할 수 있게해줌 (바라보는방향)
         {
@@ -162,51 +188,61 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         if (PV.IsMine) //본인 캐릭터만 조종할 수 있게해줌
         {
 
-
-            if (Input.GetKey(KeyCode.W))
+            if (!this.gameObject.CompareTag("Dead"))
             {
-                GAnimator.SetBool("Fly", true);
-                //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.forward), 0.2f);
-                transform.position += transform.TransformDirection(Vector3.forward * Time.deltaTime * _speed);
 
-            }
 
-            if (Input.GetKey(KeyCode.S))
-            {
-                GAnimator.SetBool("Fly", true);
-                //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.back), 0.2f);
-                transform.position += transform.TransformDirection(Vector3.back * Time.deltaTime * _speed);
-            }
+                if (Input.GetKey(KeyCode.W))
+                {
+                    GAnimator.SetBool("Fly", true);
+                    //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.forward), 0.2f);
+                    transform.position += transform.TransformDirection(Vector3.forward * Time.deltaTime * _speed);
 
-            if (Input.GetKey(KeyCode.A))
-            {
-                GAnimator.SetBool("Fly", true);
-                //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.left), 0.2f);
-                transform.position += transform.TransformDirection(Vector3.left * Time.deltaTime * _speed);
-            }
+                }
 
-            if (Input.GetKey(KeyCode.D))
-            {
-                GAnimator.SetBool("Fly", true);
-                //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.right), 0.2f);
-                transform.position += transform.TransformDirection(Vector3.right * Time.deltaTime * _speed);
-            }
+                if (Input.GetKey(KeyCode.S))
+                {
+                    GAnimator.SetBool("Fly", true);
+                    //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.back), 0.2f);
+                    transform.position += transform.TransformDirection(Vector3.back * Time.deltaTime * _speed);
+                }
 
-            //light On/Off
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                
-                isOn = !isOn; // 손전등의 상태를 변경합니다.
-                photonView.RPC("ToggleFlashlight", RpcTarget.All, isOn);
-                
-            }
+                if (Input.GetKey(KeyCode.A))
+                {
+                    GAnimator.SetBool("Fly", true);
+                    //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.left), 0.2f);
+                    transform.position += transform.TransformDirection(Vector3.left * Time.deltaTime * _speed);
+                }
 
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                soundOnOff = !soundOnOff; //유인용 라디오 ON
-                photonView.RPC("ToggleRadioOn", RpcTarget.All, soundOnOff);
-                
+                if (Input.GetKey(KeyCode.D))
+                {
+                    GAnimator.SetBool("Fly", true);
+                    //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.right), 0.2f);
+                    transform.position += transform.TransformDirection(Vector3.right * Time.deltaTime * _speed);
+                }
 
+                //light On/Off
+                if (Input.GetKeyDown(KeyCode.LeftShift))
+                {
+                    if (this.gameObject.tag != "Hide")
+                    {
+                        isOn = !isOn; // 손전등의 상태를 변경합니다.
+                        photonView.RPC("ToggleFlashlight", RpcTarget.All, isOn);
+                    }
+
+                }
+
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    if (this.gameObject.tag != "Hide")
+                    {
+
+                        soundOnOff = !soundOnOff; //유인용 라디오 ON
+                        photonView.RPC("ToggleRadioOn", RpcTarget.All, soundOnOff);
+
+                    }
+
+                }
             }
         }
     }
@@ -217,6 +253,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         // 부모 오브젝트의 자식들에 대해 레이어를 변경합니다.
         foreach (Transform child in parent)
         {
+            if (child.name != "GameOver");
             child.gameObject.layer = LayerMask.NameToLayer("Player");
 
             // 자식 오브젝트가 다른 자식을 가지고 있다면 재귀적으로 호출합니다.
@@ -233,10 +270,12 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         if (state)
         {
             MLight.SetActive(true);
+            FlashLightSound.Play();
         }
         else
         {
             MLight.SetActive(false);
+            FlashLightSound.Play();
         }
     }
 
@@ -259,6 +298,34 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         }
 
     }
+    [PunRPC]
+    private void ToggleDoor(bool state){
+        if(state){
+                        
+            Debug.Log(state);
+            
+            Hanimator.SetBool("Open",true);
+            Hanimator.SetBool("Close",false);
+            this.gameObject.tag = "Player";
+            navmeshlink.gameObject.SetActive(true);
+                        
+        }
+        else{
+            Debug.Log(state);
+                        
+            Hanimator.SetBool("Close",true);
+            Hanimator.SetBool("Open",false);
+            this.gameObject.tag = "Hide";
+            navmeshlink.gameObject.SetActive(false);
+            if(soundOnOff){
+                photonView.RPC("ToggleRadioOn", RpcTarget.All, state);
+            }
+            if(isOn){
+                photonView.RPC("ToggleFlashlight", RpcTarget.All, state);
+            }
+        }
+    }
+
 
     void MouseEvent()
     {
@@ -310,10 +377,27 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     }
     void OnTriggerEnter(Collider other){
        
-        if(other.CompareTag("Enemy")){
+        if(other.CompareTag("Enemy") && this.gameObject.tag!="Hide"){
             this.gameObject.transform.position = new Vector3(-2.2f,7f,5f);
-            this.gameObject.tag = "Dead";
-        
+            StartCoroutine(DelayAndActivate());
+
         }
     }
+    
+    void OnTriggerStay(Collider other){
+        if(other.CompareTag("Hiding")){
+            if(Input.GetKeyDown(KeyCode.V) && !inputproceed){
+                openorclose = !openorclose;
+                inputproceed = true;
+                photonView.RPC("ToggleDoor", RpcTarget.All, openorclose);
+                    
+            }
+        }
+    }
+    
+    private IEnumerator DelayAndActivate(){
+        yield return new WaitForSeconds(delay);
+        this.gameObject.tag = "Dead";
+    }
+
 }

@@ -16,6 +16,8 @@ public class MaterialManager : MonoBehaviour
     Open IsOpen;
     GhostMotionController[] Ghosts;
 
+    public GameObject[] endingGhostParent;
+
     private void Awake()
     {
         if (Instance == null)
@@ -35,6 +37,8 @@ public class MaterialManager : MonoBehaviour
     {
         if (IsOpen.Keycount == 0)
         {
+            endingGhostParent[0].SetActive(true);
+            endingGhostParent[1].SetActive(true);
             endingGhost = GameObject.FindGameObjectsWithTag("endingGhost");
             Ghosts = FindObjectsOfType<GhostMotionController>();
             int i = 0;

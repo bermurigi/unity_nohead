@@ -5,6 +5,7 @@ using Photon.Pun;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.Playables;
+using UnityEngine.UI;
 
 
 public class Open : MonoBehaviourPunCallbacks, IPunObservable
@@ -19,6 +20,13 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
     public PlayableDirector EndingAnim;
     public GameObject Enemy;
     AudioSource FireSound;
+
+    public GameObject KeycountText;
+
+    
+    public GameObject startPoint; 
+    public bool gameStart = false;//힌트주는용도
+    public bool hintStart = false;
 
     private void Awake()
     {
@@ -37,6 +45,7 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
         FireSound = GetComponent<AudioSource>(); 
 
     }
+    
 
 
     [PunRPC]
@@ -44,8 +53,8 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
     {
         
             for (int i = 0; i < 3; i++)
-            {
-                rand = Random.Range(0, 4);
+            {   //이게 키아이템 뽑는거
+                rand = Random.Range(0, 18);
                 if (RandomItem[rand] == false)
                 {
                     RandomItem[rand] = true;
@@ -58,6 +67,17 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
             
         
     }
+    /*
+
+    [PunRPC]
+    void RPCItem()
+    {
+        for (int i = 0; i < 1; i++)
+        {
+            RandomItem[i] = RandomItem[i];
+        }
+    }
+    */
    
    
 
@@ -68,18 +88,44 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
         {
             //���� �ִϸ��̼� ����
             Enemy=GameObject.FindGameObjectWithTag("Enemy");
-            Enemy.SetActive(false);
+            //Enemy.SetActive(false);
             EndingAnim.Play();
             //Door door = DoorObject.GetComponent<Door>();
             //door.Opendoor = true;
             Keycount = -1;
         }
 
-        if (PhotonNetwork.IsMasterClient && isRand == false) 
+        if (KeycountText == null)
         {
-            photonView.RPC("RandItem",RpcTarget.AllBuffered);
-            isRand = true;
+            KeycountText=GameObject.FindWithTag("Count");
+            if (KeycountText != null)
+            {
+                KeycountText.SetActive(false);
+
+            }
+
+
         }
+        else if (KeycountText != null)
+        {
+            KeycountText.GetComponent<Text>().text = "남은 수: " + Keycount.ToString();
+        }
+
+        /*
+        if (PhotonNetwork.IsMasterClient && !isRand) 
+        {
+            
+            //RandItem();
+            
+        }
+        */
+    }
+
+    public void StartRand()
+    
+    {
+        photonView.RPC("RandItem",RpcTarget.AllBuffered);
+        isRand = true;
     }
 
     void OnTriggerStay(Collider other)

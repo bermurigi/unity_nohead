@@ -23,6 +23,8 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
     private StartManager startManger;
     private GameObject startMangerobject;
 
+    private bool ChDead;
+
     void Start(){
         ghostMotionController = GetComponent<GhostMotionController>();
         startMangerobject = GameObject.Find("StartManager");
@@ -49,6 +51,13 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
             
             
             nowObject.transform.position = PlayerTransform.position;
+        }
+        if (gameObject.tag == "Dead" && ChDead == false)
+        {
+            ItemPick = true;
+            PickUp();
+            ChDead = true;
+            ItemPick = false;
         }
 
         
@@ -125,12 +134,22 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
     {
         
         raycastHit = ghostMotionController.rayHit;
-        
-        // Debug.Log(raycastHit.transform.tag+"2");
-        if(raycastHit.transform.CompareTag("Key") && ItemPick && nearObject == null)
+        if (raycastHit.collider != null)
         {
-            nearObject = raycastHit.collider.gameObject;
-            
+
+
+            // Debug.Log(raycastHit.transform.tag+"2"); 
+
+            // Debug.Log(raycastHit.transform.tag+"2");
+            if (raycastHit.transform.CompareTag("Key") && ItemPick && nearObject == null)
+            {
+                nearObject = raycastHit.collider.gameObject;
+
+            }
+            else
+            {
+                Debug.Log("레이캐스트값 없음");
+            }
         }
         // Debug.Log(nearObject);
       

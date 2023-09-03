@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using Unity.VisualScripting;
 
 public class Item : MonoBehaviourPun
 {
@@ -16,6 +17,12 @@ public class Item : MonoBehaviourPun
     private MeshRenderer meshRenderer;
     private bool ischange;
     public int[] playerNum;
+
+
+    [SerializeField]
+    private GameObject startPoint;
+
+    [SerializeField] private GameObject hintLight;
     
     
 
@@ -27,6 +34,8 @@ public class Item : MonoBehaviourPun
         meshRenderer = GetComponent<MeshRenderer>();
 
         playerNum = new int[2];
+        hintLight = GetComponentInChildren<Light>().gameObject;
+        hintLight.SetActive(false);
 
 
 
@@ -59,6 +68,11 @@ public class Item : MonoBehaviourPun
             }
 
             ischange = true;
+        }
+
+        if (Open.instance.hintStart)
+        {
+            hintLight.SetActive(true);
         }
        
         
@@ -94,9 +108,15 @@ public class Item : MonoBehaviourPun
         }
     }
 
-    
 
-    
-    
+    void OnTriggerEnter(Collider other){
+       
+        if(other.CompareTag("MapOutside"))
+        {
+            this.gameObject.transform.position = Open.instance.startPoint.transform.position;
+
+
+        }
+    }
 }
 

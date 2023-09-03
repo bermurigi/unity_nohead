@@ -399,6 +399,13 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/Unity 2022.3.4f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Photon/PhotonChat/Demos/DemoChat/Editor/ChatEditor.cs"
 "Assets/RainMaker/Editor/RainMakerEditor.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/Editor/ToD_Editor.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/Editor/WeatherCloudy_Editor.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/Editor/WeatherController_Editor.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/Editor/WeatherRain_Editor.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/Editor/WeatherSnow_Editor.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/Editor/WeatherSun_Editor.cs"
+"Assets/TimeOfDay&WeatherSystem/Code/Editor/WeatherThunderstorm_Editor.cs"
 -langversion:9.0
 
 /deterministic
