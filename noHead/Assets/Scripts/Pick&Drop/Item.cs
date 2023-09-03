@@ -16,6 +16,10 @@ public class Item : MonoBehaviourPun
     private MeshRenderer meshRenderer;
     private bool ischange;
     public int[] playerNum;
+
+
+    [SerializeField]
+    private GameObject startPoint;
     
     
 
@@ -94,9 +98,15 @@ public class Item : MonoBehaviourPun
         }
     }
 
-    
 
-    
-    
+    void OnTriggerEnter(Collider other){
+       
+        if(other.CompareTag("MapOutside"))
+        {
+            this.gameObject.transform.position = Open.instance.startPoint.transform.position;
+
+
+        }
+    }
 }
 

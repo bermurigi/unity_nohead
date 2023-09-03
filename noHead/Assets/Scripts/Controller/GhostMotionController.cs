@@ -33,7 +33,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     public Material[] mat = new Material[3];
     public SkinnedMeshRenderer playerRenderer;
     public bool test;
-    
+    public GameObject keyCountText;
    
 
     public int i = 0;
@@ -63,6 +63,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         NickNameText.color = PV.IsMine ? Color.green : Color.red;
         this.gameObject.tag = "Player"; //적 오브젝트가 추적하기 위해서 태그 추가 여기 입니다!!@@!@!!@@!@!@
         camera.enabled = false;
+        keyCountText.SetActive(false);
         MLight.SetActive(false);
         audioSource = GetComponent<AudioSource>();
         startMangerobject = GameObject.Find("StartManager");
@@ -80,6 +81,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         if (PV.IsMine)
         {
             camera.enabled = true;
+            keyCountText.SetActive(true);
 
             this.gameObject.layer = 7;
             ChangeLayer(transform);

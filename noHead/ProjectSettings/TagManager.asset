@@ -10,6 +10,7 @@ TagManager:
   - Dead
   - endingGhost
   - Count
+  - MapOutside
   layers:
   - Default
   - TransparentFX

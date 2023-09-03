@@ -23,6 +23,8 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
     private StartManager startManger;
     private GameObject startMangerobject;
 
+    private bool ChDead;
+
     void Start(){
         ghostMotionController = GetComponent<GhostMotionController>();
         startMangerobject = GameObject.Find("StartManager");
@@ -49,6 +51,13 @@ public class Pick : MonoBehaviourPunCallbacks, IPunObservable//이윤기
             
             
             nowObject.transform.position = PlayerTransform.position;
+        }
+        if (gameObject.tag == "Dead" && ChDead == false)
+        {
+            ItemPick = true;
+            PickUp();
+            ChDead = true;
+            ItemPick = false;
         }
 
         

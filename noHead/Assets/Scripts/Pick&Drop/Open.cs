@@ -23,6 +23,9 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
 
     public GameObject KeycountText;
 
+    
+    public GameObject startPoint;
+
     private void Awake()
     {
         if (null == instance)
@@ -47,9 +50,9 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
     void RandItem()
     {
         
-            for (int i = 0; i < 1; i++)
-            {
-                rand = Random.Range(0, 4);
+            for (int i = 0; i < 3; i++)
+            {   //이게 키아이템 뽑는거
+                rand = Random.Range(0, 18);
                 if (RandomItem[rand] == false)
                 {
                     RandomItem[rand] = true;
@@ -62,6 +65,7 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
             
         
     }
+    /*
 
     [PunRPC]
     void RPCItem()
@@ -71,6 +75,7 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
             RandomItem[i] = RandomItem[i];
         }
     }
+    */
    
    
 
