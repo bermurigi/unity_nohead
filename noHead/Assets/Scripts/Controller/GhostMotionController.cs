@@ -44,7 +44,7 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     
     public RaycastHit rayHit;
     private Ray ray;
-    private float MAX_DISTANCE = 500.0f;
+    private float MAX_DISTANCE = 2.0f;
     private Transform highlight;
     private Transform selection;
     private int layerMask;
@@ -52,6 +52,10 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
     private GameObject nowObject_clone;
     private StartManager startManger;
     private GameObject startMangerobject;
+
+    public AudioSource FlashLightSound;
+    
+    
     
         
 
@@ -235,10 +239,12 @@ public class GhostMotionController : MonoBehaviourPunCallbacks, IPunObservable /
         if (state)
         {
             MLight.SetActive(true);
+            FlashLightSound.Play();
         }
         else
         {
             MLight.SetActive(false);
+            FlashLightSound.Play();
         }
     }
 

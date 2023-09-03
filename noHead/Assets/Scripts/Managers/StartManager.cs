@@ -14,6 +14,7 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
     [SerializeField] private GameObject StartBgm;
 
     public GameObject ExplanationCanvas;
+    public AudioSource startBell;
 
     
 
@@ -71,6 +72,7 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
         
         Open.instance.StartRand();
         Open.instance.KeycountText.SetActive(true);
+        startBell.Play();
         
         Invoke("SpawnEnemyDelayed", 10.0f);
         
