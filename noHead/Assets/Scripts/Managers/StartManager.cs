@@ -12,6 +12,7 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
     [SerializeField] private GameObject StartPoint;
     [SerializeField] private GameObject Enemy;
     [SerializeField] private GameObject StartBgm;
+    [SerializeField] private AudioSource SummonPrist;
 
     public bool start1;
     
@@ -39,9 +40,8 @@ public class StartManager : MonoBehaviourPunCallbacks, IPunObservable
     [PunRPC]
     void EnemySpawn()
     {
+        //SummonPrist.Play();
         //Enemy.SetActive(true);
-        
-
     }
 
     

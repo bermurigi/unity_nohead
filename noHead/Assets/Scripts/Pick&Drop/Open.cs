@@ -43,9 +43,9 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
     void RandItem()
     {
         
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 5; i++)
             {
-                rand = Random.Range(0, 4);
+                rand = Random.Range(0, 19);
                 if (RandomItem[rand] == false)
                 {
                     RandomItem[rand] = true;
@@ -64,11 +64,11 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
     void Update()
     {
         
-        if(Keycount == 0)
+        if(Keycount == 2)
         {
             //���� �ִϸ��̼� ����
             Enemy=GameObject.FindGameObjectWithTag("Enemy");
-            Enemy.SetActive(false);
+            //Enemy.SetActive(false);
             EndingAnim.Play();
             //Door door = DoorObject.GetComponent<Door>();
             //door.Opendoor = true;
