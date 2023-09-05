@@ -9,6 +9,9 @@ TagManager:
   - Enemy
   - Dead
   - endingGhost
+  - Hiding
+  - MapOutside
+  - Count
   layers:
   - Default
   - TransparentFX

@@ -54,7 +54,7 @@ public class Open : MonoBehaviourPunCallbacks, IPunObservable
         
             for (int i = 0; i < 3; i++)
             {   //이게 키아이템 뽑는거
-                rand = Random.Range(0, 18);
+                rand = Random.Range(0, 52);
                 if (RandomItem[rand] == false)
                 {
                     RandomItem[rand] = true;
