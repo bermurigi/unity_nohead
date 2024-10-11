@@ -1,2 +1,2 @@
-# unity_nohead_t
-team project repository for unity
+# 칼레이도 소모임 2023-1 프로젝트 시연회
+이윤기 안지원 이정원 조병윤
